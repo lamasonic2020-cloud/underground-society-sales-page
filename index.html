@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="一整年，陪妳看懂男人、拆掉爛局，把被他捏在手上的主導權拿回來。">
+  <meta name="theme-color" content="#080808">
+  <title>凡氏可行 | 地下會社</title>
+  <style>
+    :root{
+      color-scheme:dark;--black:#080808;--panel:#111112;--red:#c91639;
+      --wine:#8f132b;--cream:#eee8df;--muted:#918a86;--paper:#e9e3da;
+      --ink:#181516;--line:rgba(255,255,255,.13)
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;background:var(--black)}
+    body{margin:0;background:var(--black);color:var(--cream);font-family:Arial,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none} button{font:inherit}
+    ::selection{background:var(--red);color:#fff}
+    .wrap{width:min(1180px,88vw);margin:auto}
+    .serif{font-family:"Noto Serif TC","Songti TC","Times New Roman",serif}
+    .eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 26px;color:#9f9894;font-size:10px;font-weight:800;letter-spacing:.26em}
+    .eyebrow:before{content:"";width:34px;height:1px;background:var(--red)}
+    .section{padding:120px 0}
+    .section-head{display:grid;grid-template-columns:1fr .75fr;gap:90px;align-items:end;margin-bottom:70px}
+    h2{margin:0;font-family:"Noto Serif TC","Songti TC",serif;font-size:clamp(42px,5vw,70px);line-height:1.22;letter-spacing:-.05em;font-weight:600}
+    .sidecopy{margin:0;color:#69615d;font-size:15px;line-height:2}
+    nav{position:absolute;z-index:5;left:0;right:0;top:0;height:88px;border-bottom:1px solid rgba(255,255,255,.09);display:flex;align-items:center;justify-content:space-between;padding:0 6vw}
+    .brand{display:flex;align-items:center;gap:13px}
+    .brand-mark{display:grid;place-items:center;width:38px;height:38px;border:1px solid rgba(255,255,255,.4);font-family:"Noto Serif TC","Songti TC",serif;font-size:12px;letter-spacing:.1em}
+    .brand strong{font-size:13px;letter-spacing:.1em}
+    .nav-link{font-size:11px;font-weight:800;letter-spacing:.1em}
+    .hero{position:relative;min-height:900px;height:100vh;display:flex;align-items:center;overflow:hidden;background:radial-gradient(circle at 78% 45%,rgba(170,13,46,.32),transparent 28%),linear-gradient(90deg,#050505,#080708 68%,#090506)}
+    .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(90deg,transparent 40%,#000)}
+    .orbit{position:absolute;right:-80px;top:150px;width:560px;height:560px;border:1px solid rgba(207,23,57,.2);border-radius:50%}
+    .orbit:before{content:"";position:absolute;inset:100px;border:1px solid rgba(207,23,57,.15);border-radius:50%}
+    .orbit:after{content:"";position:absolute;left:50%;top:50%;width:12px;height:12px;border-radius:50%;background:var(--red);box-shadow:0 0 30px var(--red)}
+    .hero-content{position:relative;z-index:2;width:min(880px,80vw)}
+    .hero h1{margin:0;font-family:"Noto Serif TC","Songti TC","Times New Roman",serif;font-size:clamp(52px,6vw,92px);line-height:1.22;letter-spacing:-.055em;font-weight:600}
+    em{font-style:normal;color:#df1d42}
+    .lead{margin:35px 0 0;color:rgba(238,232,223,.72);font-size:19px;line-height:1.9;letter-spacing:.03em}
+    .actions{display:flex;align-items:center;gap:30px;margin-top:42px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:16px;min-width:225px;padding:19px 24px;background:#a70f2d;border:1px solid #c31839;color:#fff;font-size:12px;font-weight:800;letter-spacing:.08em;transition:.25s}
+    .btn:hover{background:#ce173b;transform:translateY(-2px);box-shadow:0 18px 55px rgba(190,15,49,.35)}
+    .btn:after{content:"→";font-size:18px;font-weight:400}
+    .underlink{padding-bottom:5px;border-bottom:1px solid rgba(255,255,255,.3);color:#aaa3a0;font-size:11px;letter-spacing:.08em}
+    .hero-note{position:absolute;z-index:2;right:6vw;bottom:100px;width:330px;padding-left:22px;border-left:1px solid var(--red)}
+    .hero-note small{display:block;margin-bottom:9px;color:#9b9490}
+    .hero-note strong{font-family:"Noto Serif TC","Songti TC",serif;font-size:18px;line-height:1.65}
+    .ticker{overflow:hidden;padding:20px 0;border-top:1px solid #43101a;border-bottom:1px solid #43101a;background:#10080a}
+    .ticker div{width:max-content;display:flex;gap:27px;animation:move 22s linear infinite;font-family:"Noto Serif TC","Songti TC",serif;color:#c8bdbe;font-size:14px;letter-spacing:.15em}
+    .ticker i{color:var(--red);font-style:normal}
+    @keyframes move{to{transform:translateX(-50%)}}
+    .paper{background:var(--paper);color:var(--ink)}
+    .trap-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #bdb5ac;border-left:1px solid #bdb5ac}
+    .trap{min-height:210px;display:grid;grid-template-columns:70px 1fr;gap:20px;padding:38px;border-right:1px solid #bdb5ac;border-bottom:1px solid #bdb5ac}
+    .num{color:#ad1733;font-family:"Times New Roman",serif;font-style:italic;font-size:18px}
+    .trap h3{margin:0 0 16px;font-size:20px}.trap p{margin:0;color:#69615d;font-size:14px;line-height:1.8}
+    .quote{max-width:940px;margin:105px auto 0;text-align:center}
+    .quote p{color:#8c847f;font-size:13px;letter-spacing:.08em}
+    .quote strong{font-family:"Noto Serif TC","Songti TC",serif;font-size:clamp(34px,4vw,58px);line-height:1.45;font-weight:500;letter-spacing:-.04em}
+    .translator{padding:120px 0;background:#10090b}
+    .translate-box{min-height:520px;padding:70px;display:grid;grid-template-columns:.85fr 1fr;gap:70px;align-items:center;border:1px solid rgba(205,23,57,.28);background:radial-gradient(circle at 12% 10%,rgba(173,19,48,.22),transparent 38%),#0c0b0c}
+    .translate-box h2{font-size:clamp(38px,4vw,57px);line-height:1.35}
+    .dialogue{border:1px solid var(--line);background:rgba(255,255,255,.025)}
+    .line{padding:34px 38px}.line span{color:#8a8380;font-size:9px;font-weight:800;letter-spacing:.22em}
+    .line p{margin:16px 0 0;font-family:"Noto Serif TC","Songti TC",serif;font-size:20px;line-height:1.7}
+    .line.answer{border-top:1px solid var(--line)}.line.answer p{color:#ef3658}
+    .stages{border-top:1px solid #bdb5ac}
+    .stage{display:grid;grid-template-columns:90px 1.2fr .75fr;gap:35px;padding:48px 0;border-bottom:1px solid #bdb5ac}
+    .stage .num{font-size:48px}.stage small{color:#9f1831;font-size:9px;font-weight:800;letter-spacing:.28em}
+    .stage h3{margin:12px 0 16px;font-family:"Noto Serif TC","Songti TC",serif;font-size:27px}.stage p{margin:0;color:#69615d;font-size:14px;line-height:1.8}
+    ul.clean{list-style:none;margin:2px 0 0;padding:0}.clean li{margin-bottom:14px;font-size:13px}.clean li:before{content:"✓";margin-right:10px;color:#ad1733;font-weight:800}
+    .dark{background:#0b0b0c}
+    .center-head{max-width:770px;margin:0 auto 70px;text-align:center}.center-head .eyebrow{justify-content:center}.center-head p:last-child{color:#8f8884;line-height:1.8}
+    .benefits{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+    .benefit{position:relative;min-height:275px;padding:34px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .benefit.feature{grid-column:span 2;background:radial-gradient(circle at 92% 20%,rgba(202,20,57,.2),transparent 35%),#141012}
+    .benefit b{color:var(--red);font-family:"Times New Roman",serif;font-style:italic}.benefit h3{margin:50px 0 14px;font-family:"Noto Serif TC","Songti TC",serif;font-size:22px}.benefit p{margin:0;color:#8f8985;font-size:13px;line-height:1.8}
+    .change{padding:115px 0;background:var(--wine)}
+    .change-grid{display:grid;grid-template-columns:.8fr 1fr;gap:90px;align-items:center}.change h2 em{color:#12090b}
+    .compare{border-top:1px solid rgba(255,255,255,.3)}.compare-row{display:grid;grid-template-columns:1fr 42px 1fr;align-items:center;min-height:72px;border-bottom:1px solid rgba(255,255,255,.2);font-size:13px}.compare-row span:first-child{color:rgba(255,255,255,.65)}.compare-row i{font-style:normal;color:rgba(255,255,255,.45)}
+    .fit{display:grid;grid-template-columns:1fr 1fr}.fit article{padding:100px 7vw;background:#111112}.fit article:last-child{background:#171214}.fit h2{font-size:clamp(34px,3.5vw,50px)}.fit .clean{margin-top:40px}.fit .clean li{padding:16px 0;margin:0;border-bottom:1px solid rgba(255,255,255,.1);color:#bbb4b0}.fit article:last-child .clean li:before{content:"×"}
+    .plans{padding:125px 0;background:radial-gradient(circle at 50% 52%,rgba(152,14,43,.2),transparent 34%),#09090a}
+    .plan-head{max-width:940px;margin:0 auto 70px;text-align:center}.plan-head .eyebrow{justify-content:center}
+    .price-grid{max-width:1000px;margin:auto;display:grid;grid-template-columns:.9fr 1.1fr;align-items:center}
+    .card{position:relative;padding:48px;border:1px solid var(--line);background:#111112}.card+ .card{padding:66px 56px 56px;border-color:#9f1a34;background:linear-gradient(145deg,#1a1114,#100e0f 60%);box-shadow:0 35px 100px #000}
+    .tag{position:absolute;left:-1px;right:-1px;top:-1px;padding:11px;background:#a1122f;text-align:center;font-size:9px;font-weight:800;letter-spacing:.16em}
+    .card h3{margin:0;font-family:"Noto Serif TC","Songti TC",serif;font-size:25px}.card>p{min-height:45px;color:#837c79;font-size:12px;line-height:1.7}
+    .price{display:flex;align-items:baseline;padding:20px 0 28px;border-bottom:1px solid var(--line)}.price small{color:var(--red);font-weight:800}.price strong{margin-left:8px;font-family:"Times New Roman",serif;font-size:64px;font-weight:400}.price span{color:#77716e;font-size:12px}
+    .saving{display:flex;justify-content:space-between;gap:12px;margin-top:18px;padding:16px;background:rgba(172,15,46,.12);font-size:10px}.saving b{color:#ee2d50}
+    .card .clean{margin:30px 0}.card .clean li{color:#aaa3a0}
+    .card .btn{width:100%;justify-content:space-between}.card:first-child .btn{background:transparent;border-color:rgba(255,255,255,.25)}
+    .card:first-child .btn:hover{background:#fff;color:#111}
+    .plan-note{text-align:center;margin-top:48px;color:#77706d;font-size:12px}.plan-note strong{color:#c6bebb}
+    .faq{padding:115px 0}.faq-grid{display:grid;grid-template-columns:.65fr 1fr;gap:80px}.faq h2{font-size:clamp(38px,4vw,58px)}
+    details{border-top:1px solid #bcb4aa}details:last-child{border-bottom:1px solid #bcb4aa}summary{list-style:none;display:flex;justify-content:space-between;gap:20px;padding:27px 0;cursor:pointer;font-weight:700;font-size:14px}summary::-webkit-details-marker{display:none}summary:after{content:"＋";font-size:19px}details[open] summary:after{transform:rotate(45deg)}details p{padding:0 45px 27px;margin:0;color:#665f5b;font-size:13px;line-height:1.9}
+    .final{position:relative;min-height:720px;padding:120px 24px 45px;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;text-align:center;background:radial-gradient(circle at 50% 50%,rgba(148,14,41,.24),transparent 28%),#09090a}
+    .final:before{content:"";position:absolute;width:560px;height:560px;border:1px solid rgba(193,20,53,.18);border-radius:50%}.final>*{position:relative;z-index:1}.final .eyebrow{justify-content:center}.final h2{font-size:clamp(43px,5vw,72px)}.final>p{color:#8d8581;line-height:1.8;font-size:13px}
+    footer{display:flex;align-items:center;justify-content:space-between;padding:34px 6vw;border-top:1px solid var(--line)}footer p{color:#55504e;font-size:10px;letter-spacing:.1em}
+    @media(max-width:900px){
+      .section{padding:90px 0}.section-head,.translate-box,.change-grid,.faq-grid{grid-template-columns:1fr;gap:40px}.hero{min-height:800px;height:auto;padding:145px 0 65px}.hero-content{width:100%}.hero-note{position:relative;right:auto;bottom:auto;margin:70px 6vw 0 auto}.stage{grid-template-columns:65px 1fr}.stage ul{grid-column:2}.benefits{grid-template-columns:1fr 1fr}.fit article{padding:80px 5vw}.card,.card+ .card{padding-left:30px;padding-right:30px}
+    }
+    @media(max-width:640px){
+      .wrap{width:min(100% - 40px,1180px)}nav{height:74px;padding:0 18px}.brand strong{display:none}.nav-link{font-size:10px}.hero{padding-top:120px;align-items:flex-start}.hero h1{font-size:41px;line-height:1.35}.lead{font-size:15px}.actions{align-items:stretch;flex-direction:column;gap:20px}.btn{width:100%}.underlink{align-self:flex-start}.hero-note{width:auto;margin-left:20px;margin-right:20px}.orbit{right:-380px}.trap-grid,.benefits,.fit,.price-grid{grid-template-columns:1fr}.trap{grid-template-columns:45px 1fr;padding:28px 23px}.translate-box{padding:40px 20px}.stage{grid-template-columns:42px 1fr;gap:17px}.stage .num{font-size:32px}.stage ul{grid-column:1/-1;padding-left:58px}.benefit,.benefit.feature{grid-column:auto}.change{padding:85px 0}.fit article{padding:75px 24px}.price-grid{gap:26px}.card:first-child{border-right:1px solid var(--line)}.faq{padding:85px 0}.final h2{font-size:38px}footer{justify-content:center}footer p{display:none}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ticker div{animation:none}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="brand" href="#top"><span class="brand-mark">凡氏</span><strong>凡氏可行 | 地下會社</strong></a>
+    <a class="nav-link" href="#plans">查看會員方案　→</a>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="orbit" aria-hidden="true"></div>
+    <div class="wrap hero-content">
+      <p class="eyebrow">YEAR-LONG RELATIONSHIP INTELLIGENCE</p>
+      <h1>妳不是看不懂。<br>妳只是每次看懂後，<br><em>又被他哄回去。</em></h1>
+      <p class="lead">一整年，陪妳看懂男人、拆掉爛局，<br>把被他捏在手上的主導權拿回來。</p>
+      <div class="actions">
+        <a class="btn" href="#plans">我要看會員方案</a>
+        <a class="underlink" href="#problem">先看看我是不是也在局裡</a>
+      </div>
+    </div>
+    <div class="hero-note"><small>妳缺的不是更多感情雞湯。</small><strong>妳缺的是有人直接告訴妳：<br>這個男人，到底在玩什麼。</strong></div>
+  </header>
+
+  <div class="ticker"><div><span>不承諾</span><i>✦</i><span>不放手</span><i>✦</i><span>不負責</span><i>✦</i><span>卻要妳忠誠</span><i>✦</i><span>不承諾</span><i>✦</i><span>不放手</span><i>✦</i><span>不負責</span><i>✦</i><span>卻要妳忠誠</span><i>✦</i></div></div>
+
+  <section class="section paper" id="problem">
+    <div class="wrap">
+      <div class="section-head">
+        <div><p class="eyebrow">THE SITUATION</p><h2>妳是不是也卡在<br>這些狀況？</h2></div>
+        <p class="sidecopy">文章說不要戀愛腦、不要倒貼、沒有名分就離開。道理妳都懂，事情發生在自己身上，妳還是做不到。</p>
+      </div>
+      <div class="trap-grid">
+        <article class="trap"><span class="num">01</span><div><h3>不承諾，卻不放妳走</h3><p>他保留所有單身的自由，妳卻負責提供女朋友的待遇。</p></div></article>
+        <article class="trap"><span class="num">02</span><div><h3>什麼都做了，只差名分</h3><p>聊天、約會、過夜、想念都有。一問「我們算什麼」，他就開始裝死。</p></div></article>
+        <article class="trap"><span class="num">03</span><div><h3>知道他在拖，還是不敢走</h3><p>妳怕前面的投入全部白費；他的人生繼續往前，妳的人生卻被按下暫停。</p></div></article>
+        <article class="trap"><span class="num">04</span><div><h3>斷聯很多次，最後都破功</h3><p>他只要問一句「最近好嗎」，妳前面撐過的全部歸零。</p></div></article>
+      </div>
+      <div class="quote"><p>最慘的不是他還沒選妳。</p><strong>是妳的人生已經被他按下暫停，<br>他卻從來沒有停下來等妳。</strong></div>
+    </div>
+  </section>
+
+  <section class="translator">
+    <div class="wrap translate-box">
+      <div><p class="eyebrow">THE TRANSLATOR</p><h2>他說的，和他真正的意思，<br>常常不是同一件事。</h2></div>
+      <div class="dialogue">
+        <div class="line"><span>他說</span><p>「我現在真的沒有辦法談感情。」</p></div>
+        <div class="line answer"><span>翻成白話</span><p>「我不想對妳負責，但妳願意繼續陪我，我也不會拒絕。」</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section paper">
+    <div class="wrap">
+      <div class="section-head">
+        <div><p class="eyebrow">WHY A FULL YEAR</p><h2>地下關係，<br>不會四週就結束。</h2></div>
+        <p class="sidecopy">真正困難的不是把他看懂一次，而是每次他換一種方式回來搞妳，妳都能看懂，而且不再被拉回原位。</p>
+      </div>
+      <div class="stages">
+        <article class="stage"><span class="num">01</span><div><small>IDENTIFY</small><h3>先看懂，妳掉進哪一種局</h3><p>不再聽他怎麼說，先看他怎麼用妳。辨認免費女友、情緒垃圾桶、過渡品、多線發展，或一段還有推進空間的關係。</p></div><ul class="clean"><li>他拿走了什麼</li><li>妳免費提供了什麼</li><li>這一局還有沒有救</li></ul></article>
+        <article class="stage"><span class="num">02</span><div><small>WITHDRAW</small><h3>停止免費供應</h3><p>收回不對等的情侶待遇，調整訊息與見面頻率，設下界線，測試他願不願意付出時間、行動和成本。</p></div><ul class="clean"><li>停止隨傳隨到</li><li>拒絕深夜臨時邀約</li><li>讓他的反應開始說真話</li></ul></article>
+        <article class="stage"><span class="num">03</span><div><small>OBSERVE</small><h3>處理斷聯、復聯與拉扯</h3><p>他回來，不代表他變了。看懂哪些訊息只是在測試妳還能不能用，以及什麼行動才算真正改變。</p></div><ul class="clean"><li>看懂廉價復聯</li><li>處理戒斷與不甘心</li><li>不再一回頭就回到原位</li></ul></article>
+        <article class="stage"><span class="num">04</span><div><small>DECIDE</small><h3>該推進就推進，該清掉就清掉</h3><p>有機會的關係，設定期限、談清需求；沒有價值的關係，停止反覆研究，把生活和選擇權拿回來。</p></div><ul class="clean"><li>分辨承諾與畫餅</li><li>做最後一次判斷</li><li>不再愛上同一種垃圾</li></ul></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark">
+    <div class="wrap">
+      <div class="center-head"><p class="eyebrow">INSIDE THE SOCIETY</p><h2>加入會員，<br>妳會拿到什麼？</h2><p>不是再丟一堆道理給妳。是當局面發生時，妳手上真的有東西可以拆。</p></div>
+      <div class="benefits">
+        <article class="benefit feature"><b>01</b><h3>壞男套路拆解內容</h3><p>真實案例、地下關係結構與男人常用話術，持續更新。</p></article>
+        <article class="benefit"><b>02</b><h3>壞男話術翻譯機</h3><p>把他說過的話貼進去，直接翻成正常人聽得懂的白話。</p></article>
+        <article class="benefit"><b>03</b><h3>真實匿名案例拆解</h3><p>看別人的局，照見自己的盲點；直接判斷哪裡有救、哪裡該停。</p></article>
+        <article class="benefit"><b>04</b><h3>關係公式與行動工具</h3><p>驗屍表、免費待遇檢查、復聯判斷、攤牌準備與退場防復發。</p></article>
+        <article class="benefit"><b>05</b><h3>會員直播與完整回放</h3><p>關係判斷、訊息拆解、翻盤可能與停損時機，錯過也能看回放。</p></article>
+        <article class="benefit"><b>06</b><h3>會員社群與案例對照</h3><p>不集體灌雞湯。只看行動、成本、主導權與下一步。</p></article>
+        <article class="benefit"><b>07</b><h3>1 對 1 診斷優先預約</h3><p>複雜或緊急的局，可另外申請私聊診斷與深度陪跑。</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="change">
+    <div class="wrap change-grid">
+      <div><p class="eyebrow">BEFORE / AFTER</p><h2>不是讓他選妳。<br><em>是讓妳重新有得選。</em></h2></div>
+      <div class="compare">
+        <div class="compare-row"><span>每天等他的訊息</span><i>→</i><strong>看得懂他的行為</strong></div>
+        <div class="compare-row"><span>他一冷淡就焦慮</span><i>→</i><strong>不再被冷熱牽著跑</strong></div>
+        <div class="compare-row"><span>不敢問，又不甘心</span><i>→</i><strong>知道何時攤牌、停損</strong></div>
+        <div class="compare-row"><span>他一回頭就心軟</span><i>→</i><strong>只認成本與實際行動</strong></div>
+        <div class="compare-row"><span>反覆掉進同一種劇情</span><i>→</i><strong>提早辨認，拿回選擇權</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fit">
+    <article><p class="eyebrow">FOR YOU</p><h2>這裡適合妳，如果妳——</h2><ul class="clean"><li>長期卡在曖昧、炮友或地下關係</li><li>明知道有問題，還是會心軟</li><li>受夠每天猜他到底在想什麼</li><li>願意面對真相，也願意照著方法執行</li><li>想用一年修正自己的判斷與界線</li></ul></article>
+    <article><p class="eyebrow">NOT FOR YOU</p><h2>這裡不適合妳，如果妳——</h2><ul class="clean"><li>只想找人陪妳一起罵男人</li><li>希望我們保證某個男人愛上妳</li><li>只想學幾句話術操控或報復</li><li>拿到答案後，還是選擇繼續裝瞎</li><li>想把社群當成無限次免費一對一</li></ul></article>
+  </section>
+
+  <section class="plans" id="plans">
+    <div class="wrap">
+      <div class="plan-head"><p class="eyebrow">MEMBERSHIP</p><h2>妳可以繼續猜。<br>也可以從今天開始，<em>只看證據。</em></h2></div>
+      <div class="price-grid">
+        <article class="card">
+          <h3>月訂閱</h3><p>適合先進入社群，開始處理眼前這一局。</p>
+          <div class="price"><small>US$</small><strong>200</strong><span>／月</span></div>
+          <ul class="clean"><li>全部會員限定內容</li><li>話術翻譯與關係工具</li><li>直播、回放與會員社群</li><li>一對一服務優先預約</li></ul>
+          <a class="btn" href="https://www.skool.com/underground-society" target="_blank" rel="noopener">選擇月訂閱</a>
+        </article>
+        <article class="card">
+          <div class="tag">最推薦・省下 US$900</div>
+          <h3>年訂閱</h3><p>適合徹底修正反覆出現的判斷、界線與互動模式。</p>
+          <div class="price"><small>US$</small><strong>1,500</strong><span>／年</span></div>
+          <div class="saving"><span>等於每月 US$125</span><b>比月訂閱便宜 37.5%</b></div>
+          <ul class="clean"><li>包含月訂閱的所有內容</li><li>完整一年的會員資格</li><li>走過曖昧、升溫、復聯到停損</li><li>練到不用提醒，也能看懂局</li></ul>
+          <a class="btn" href="https://www.skool.com/underground-society" target="_blank" rel="noopener">選擇年訂閱</a>
+        </article>
+      </div>
+      <p class="plan-note">一個月，讓妳看懂眼前這一局。　<strong>一整年，讓妳不再掉進同一種局。</strong></p>
+    </div>
+  </section>
+
+  <section class="faq paper">
+    <div class="wrap faq-grid">
+      <div><p class="eyebrow">BEFORE YOU JOIN</p><h2>加入前，<br>妳可能還想問。</h2></div>
+      <div>
+        <details open><summary>這是無限次一對一諮詢嗎？</summary><p>不是。會員社群負責教妳看懂局、提供工具與案例；需要完整客製化處理時，可另外申請付費一對一診斷，會員享優先預約。</p></details>
+        <details><summary>加入後，能保證他愛上我嗎？</summary><p>不能，也不會用這種話騙妳。我們要做的是讓妳看懂真實意圖、停止不對等付出，並做出對自己有利的決定。</p></details>
+        <details><summary>我只想先處理眼前這個男人，可以月訂嗎？</summary><p>可以。月訂適合先拆眼前這一局；年訂更適合修正反覆出現的選人、界線與互動模式。</p></details>
+        <details><summary>內容會很溫柔地安慰我嗎？</summary><p>凡氏會把話講清楚。有些答案不好聽，但通常比繼續被同一個男人騙一年便宜。</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <p class="eyebrow">TAKE BACK CONTROL</p>
+    <h2>難聽的答案，<br>通常都比繼續被同一個男人<br><em>騙一年便宜。</em></h2>
+    <p>如果妳準備好了，現在就告訴凡氏：<br>「我想把主導權拿回來。」</p>
+    <a class="btn" href="https://www.skool.com/underground-society" target="_blank" rel="noopener">前往地下會社</a>
+  </section>
+
+  <footer><div class="brand"><span class="brand-mark">凡氏</span><strong>凡氏可行 | 地下會社</strong></div><p>看懂男人，拆掉爛局，拿回主導權。</p></footer>
+</body>
+</html>
