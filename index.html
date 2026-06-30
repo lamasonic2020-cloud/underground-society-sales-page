@@ -80,6 +80,12 @@
     .change{padding:115px 0;background:var(--wine)}
     .change-grid{display:grid;grid-template-columns:.8fr 1fr;gap:90px;align-items:center}.change h2 em{color:#12090b}
     .compare{border-top:1px solid rgba(255,255,255,.3)}.compare-row{display:grid;grid-template-columns:1fr 42px 1fr;align-items:center;min-height:72px;border-bottom:1px solid rgba(255,255,255,.2);font-size:13px}.compare-row span:first-child{color:rgba(255,255,255,.65)}.compare-row i{font-style:normal;color:rgba(255,255,255,.45)}
+    .testimonials{padding:120px 0;background:radial-gradient(circle at 50% 0,rgba(155,16,45,.15),transparent 30%),#0c0b0c}
+    .testimonial-head{display:grid;grid-template-columns:1fr .72fr;gap:80px;align-items:end;margin-bottom:65px}.testimonial-head p:last-child{margin:0;color:#8d8682;font-size:14px;line-height:1.9}
+    .testimonial-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+    .testimonial-card{overflow:hidden;border:1px solid rgba(255,255,255,.13);background:#141315;box-shadow:0 30px 75px rgba(0,0,0,.3)}
+    .testimonial-copy{min-height:210px;padding:38px}.testimonial-copy small{color:var(--red);font-size:9px;font-weight:800;letter-spacing:.22em}.testimonial-copy h3{margin:22px 0 18px;font-family:"Noto Serif TC","Songti TC",serif;font-size:clamp(24px,2.3vw,34px);line-height:1.45;font-weight:500}.testimonial-copy p{margin:0;color:#817a77;font-size:11px;letter-spacing:.08em}
+    .testimonial-shot{margin:0;padding:12px;border-top:1px solid rgba(255,255,255,.1);background:#090909}.testimonial-shot img{display:block;width:100%;height:auto;border:1px solid rgba(255,255,255,.08)}
     .fit{display:grid;grid-template-columns:1fr 1fr}.fit article{padding:100px 7vw;background:#111112}.fit article:last-child{background:#171214}.fit h2{font-size:clamp(34px,3.5vw,50px)}.fit .clean{margin-top:40px}.fit .clean li{padding:16px 0;margin:0;border-bottom:1px solid rgba(255,255,255,.1);color:#bbb4b0}.fit article:last-child .clean li:before{content:"×"}
     .plans{padding:125px 0;background:radial-gradient(circle at 50% 52%,rgba(152,14,43,.2),transparent 34%),#09090a}
     .plan-head{max-width:940px;margin:0 auto 70px;text-align:center}.plan-head .eyebrow{justify-content:center}
@@ -99,10 +105,10 @@
     .final:before{content:"";position:absolute;width:560px;height:560px;border:1px solid rgba(193,20,53,.18);border-radius:50%}.final>*{position:relative;z-index:1}.final .eyebrow{justify-content:center}.final h2{font-size:clamp(43px,5vw,72px)}.final>p{color:#8d8581;line-height:1.8;font-size:13px}
     footer{display:flex;align-items:center;justify-content:space-between;padding:34px 6vw;border-top:1px solid var(--line)}footer p{color:#55504e;font-size:10px;letter-spacing:.1em}
     @media(max-width:900px){
-      .section{padding:90px 0}.section-head,.translate-box,.change-grid,.faq-grid{grid-template-columns:1fr;gap:40px}.hero{min-height:800px;height:auto;padding:145px 0 65px}.hero-content{width:100%}.hero-note{position:relative;right:auto;bottom:auto;margin:70px 6vw 0 auto}.stage{grid-template-columns:65px 1fr}.stage ul{grid-column:2}.benefits{grid-template-columns:1fr 1fr}.fit article{padding:80px 5vw}.card,.card+ .card{padding-left:30px;padding-right:30px}
+      .section{padding:90px 0}.section-head,.translate-box,.change-grid,.testimonial-head,.faq-grid{grid-template-columns:1fr;gap:40px}.hero{min-height:800px;height:auto;padding:145px 0 65px}.hero-content{width:100%}.hero-note{position:relative;right:auto;bottom:auto;margin:70px 6vw 0 auto}.stage{grid-template-columns:65px 1fr}.stage ul{grid-column:2}.benefits{grid-template-columns:1fr 1fr}.fit article{padding:80px 5vw}.card,.card+ .card{padding-left:30px;padding-right:30px}
     }
     @media(max-width:640px){
-      .wrap{width:min(100% - 40px,1180px)}nav{height:74px;padding:0 18px}.brand strong{display:none}.nav-link{font-size:10px}.hero{padding-top:120px;align-items:flex-start}.hero h1{font-size:41px;line-height:1.35}.lead{font-size:15px}.actions{align-items:stretch;flex-direction:column;gap:20px}.btn{width:100%}.underlink{align-self:flex-start}.hero-note{width:auto;margin-left:20px;margin-right:20px}.orbit{right:-380px}.trap-grid,.benefits,.fit,.price-grid{grid-template-columns:1fr}.trap{grid-template-columns:45px 1fr;padding:28px 23px}.translate-box{padding:40px 20px}.stage{grid-template-columns:42px 1fr;gap:17px}.stage .num{font-size:32px}.stage ul{grid-column:1/-1;padding-left:58px}.benefit,.benefit.feature{grid-column:auto}.change{padding:85px 0}.fit article{padding:75px 24px}.price-grid{gap:26px}.card:first-child{border-right:1px solid var(--line)}.faq{padding:85px 0}.final h2{font-size:38px}footer{justify-content:center}footer p{display:none}
+      .wrap{width:min(100% - 40px,1180px)}nav{height:74px;padding:0 18px}.brand strong{display:none}.nav-link{font-size:10px}.hero{padding-top:120px;align-items:flex-start}.hero h1{font-size:41px;line-height:1.35}.lead{font-size:15px}.actions{align-items:stretch;flex-direction:column;gap:20px}.btn{width:100%}.underlink{align-self:flex-start}.hero-note{width:auto;margin-left:20px;margin-right:20px}.orbit{right:-380px}.trap-grid,.benefits,.testimonial-grid,.fit,.price-grid{grid-template-columns:1fr}.trap{grid-template-columns:45px 1fr;padding:28px 23px}.translate-box{padding:40px 20px}.stage{grid-template-columns:42px 1fr;gap:17px}.stage .num{font-size:32px}.stage ul{grid-column:1/-1;padding-left:58px}.benefit,.benefit.feature{grid-column:auto}.change{padding:85px 0}.testimonials{padding:85px 0}.testimonial-copy{min-height:0;padding:30px 25px}.testimonial-copy h3{font-size:27px}.fit article{padding:75px 24px}.price-grid{gap:26px}.card:first-child{border-right:1px solid var(--line)}.faq{padding:85px 0}.final h2{font-size:38px}footer{justify-content:center}footer p{display:none}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ticker div{animation:none}}
   </style>
@@ -178,9 +184,8 @@
         <article class="benefit"><b>02</b><h3>壞男話術翻譯機</h3><p>把他說過的話貼進去，直接翻成正常人聽得懂的白話。</p></article>
         <article class="benefit"><b>03</b><h3>真實匿名案例拆解</h3><p>看別人的局，照見自己的盲點；直接判斷哪裡有救、哪裡該停。</p></article>
         <article class="benefit"><b>04</b><h3>關係公式與行動工具</h3><p>驗屍表、免費待遇檢查、復聯判斷、攤牌準備與退場防復發。</p></article>
-        <article class="benefit"><b>05</b><h3>會員直播與完整回放</h3><p>關係判斷、訊息拆解、翻盤可能與停損時機，錯過也能看回放。</p></article>
-        <article class="benefit"><b>06</b><h3>會員社群與案例對照</h3><p>不集體灌雞湯。只看行動、成本、主導權與下一步。</p></article>
-        <article class="benefit"><b>07</b><h3>1 對 1 診斷優先預約</h3><p>複雜或緊急的局，可另外申請私聊診斷與深度陪跑。</p></article>
+        <article class="benefit"><b>05</b><h3>會員社群與案例對照</h3><p>不集體灌雞湯。只看行動、成本、主導權與下一步。</p></article>
+        <article class="benefit"><b>06</b><h3>1 對 1 診斷優先預約</h3><p>年費會員限定。複雜或緊急的局，可另外申請付費私聊診斷與深度陪跑。</p></article>
       </div>
     </div>
   </section>
@@ -198,6 +203,25 @@
     </div>
   </section>
 
+  <section class="testimonials" id="testimonials">
+    <div class="wrap">
+      <div class="testimonial-head">
+        <div><p class="eyebrow">REAL MEMBER RESULTS</p><h2>不是我們說有效。<br><em>是她們回來交作業。</em></h2></div>
+        <p>當妳不再追著答案跑，局勢才會開始說真話。以下為地下會社會員的真實戰績回報。</p>
+      </div>
+      <div class="testimonial-grid">
+        <article class="testimonial-card">
+          <div class="testimonial-copy"><small>戰績回報 01</small><h3>「我敢說換了腦袋、換了磁場。現在手上不缺籌碼。」</h3><p>KUMA LIN・加入會社 4 個月</p></div>
+          <figure class="testimonial-shot"><img src="public/testimonials/testimony-kuma-lin.png" alt="會員 Kuma Lin 分享加入四個月後，面對前任重新掌握主導權的戰績回報" loading="lazy"></figure>
+        </article>
+        <article class="testimonial-card">
+          <div class="testimonial-copy"><small>戰績回報 02</small><h3>「當初有多冷漠，現在就是要跪多低舔我。」</h3><p>LIN HSUAN・真實會員回報</p></div>
+          <figure class="testimonial-shot"><img src="public/testimonials/testimony-lin-hsuan.png" alt="會員 Lin Hsuan 分享對方從冷漠轉為主動靠近的戰績回報" loading="lazy"></figure>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section class="fit">
     <article><p class="eyebrow">FOR YOU</p><h2>這裡適合妳，如果妳——</h2><ul class="clean"><li>長期卡在曖昧、炮友或地下關係</li><li>明知道有問題，還是會心軟</li><li>受夠每天猜他到底在想什麼</li><li>願意面對真相，也願意照著方法執行</li><li>想用一年修正自己的判斷與界線</li></ul></article>
     <article><p class="eyebrow">NOT FOR YOU</p><h2>這裡不適合妳，如果妳——</h2><ul class="clean"><li>只想找人陪妳一起罵男人</li><li>希望我們保證某個男人愛上妳</li><li>只想學幾句話術操控或報復</li><li>拿到答案後，還是選擇繼續裝瞎</li><li>想把社群當成無限次免費一對一</li></ul></article>
@@ -210,7 +234,7 @@
         <article class="card">
           <h3>月訂閱</h3><p>適合先進入社群，開始處理眼前這一局。</p>
           <div class="price"><small>US$</small><strong>200</strong><span>／月</span></div>
-          <ul class="clean"><li>全部會員限定內容</li><li>話術翻譯與關係工具</li><li>直播、回放與會員社群</li><li>一對一服務優先預約</li></ul>
+          <ul class="clean"><li>全部會員限定內容</li><li>話術翻譯與關係工具</li><li>真實匿名案例與檢查表</li><li>會員社群資格</li></ul>
           <a class="btn" href="https://www.skool.com/underground-society" target="_blank" rel="noopener">選擇月訂閱</a>
         </article>
         <article class="card">
@@ -218,7 +242,7 @@
           <h3>年訂閱</h3><p>適合徹底修正反覆出現的判斷、界線與互動模式。</p>
           <div class="price"><small>US$</small><strong>1,500</strong><span>／年</span></div>
           <div class="saving"><span>等於每月 US$125</span><b>比月訂閱便宜 37.5%</b></div>
-          <ul class="clean"><li>包含月訂閱的所有內容</li><li>完整一年的會員資格</li><li>走過曖昧、升溫、復聯到停損</li><li>練到不用提醒，也能看懂局</li></ul>
+          <ul class="clean"><li>包含月訂閱的所有內容</li><li>完整一年的會員資格</li><li>1 對 1 診斷優先預約（年費限定）</li><li>練到不用提醒，也能看懂局</li></ul>
           <a class="btn" href="https://www.skool.com/underground-society" target="_blank" rel="noopener">選擇年訂閱</a>
         </article>
       </div>
@@ -230,7 +254,7 @@
     <div class="wrap faq-grid">
       <div><p class="eyebrow">BEFORE YOU JOIN</p><h2>加入前，<br>妳可能還想問。</h2></div>
       <div>
-        <details open><summary>這是無限次一對一諮詢嗎？</summary><p>不是。會員社群負責教妳看懂局、提供工具與案例；需要完整客製化處理時，可另外申請付費一對一診斷，會員享優先預約。</p></details>
+        <details open><summary>這是無限次一對一諮詢嗎？</summary><p>不是。會員社群負責教妳看懂局、提供工具與案例；需要完整客製化處理時，可另外申請付費一對一診斷。年費會員享有優先預約資格。</p></details>
         <details><summary>加入後，能保證他愛上我嗎？</summary><p>不能，也不會用這種話騙妳。我們要做的是讓妳看懂真實意圖、停止不對等付出，並做出對自己有利的決定。</p></details>
         <details><summary>我只想先處理眼前這個男人，可以月訂嗎？</summary><p>可以。月訂適合先拆眼前這一局；年訂更適合修正反覆出現的選人、界線與互動模式。</p></details>
         <details><summary>內容會很溫柔地安慰我嗎？</summary><p>凡氏會把話講清楚。有些答案不好聽，但通常比繼續被同一個男人騙一年便宜。</p></details>
