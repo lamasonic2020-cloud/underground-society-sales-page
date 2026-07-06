@@ -71,6 +71,17 @@
     .stage .num{font-size:48px}.stage small{color:#9f1831;font-size:9px;font-weight:800;letter-spacing:.28em}
     .stage h3{margin:12px 0 16px;font-family:"Noto Serif TC","Songti TC",serif;font-size:27px}.stage p{margin:0;color:#69615d;font-size:14px;line-height:1.8}
     ul.clean{list-style:none;margin:2px 0 0;padding:0}.clean li{margin-bottom:14px;font-size:13px}.clean li:before{content:"✓";margin-right:10px;color:#ad1733;font-weight:800}
+    .roadmap{padding:125px 0;background:radial-gradient(circle at 50% 0,rgba(156,16,45,.13),transparent 26%),#09090a}
+    .roadmap-head{max-width:790px;margin:0 auto 65px;text-align:center}.roadmap-head .eyebrow{justify-content:center}.roadmap-head p:last-child{margin:24px 0 0;color:#8e8783;font-size:16px;line-height:1.8}
+    .route{position:relative;max-width:940px;margin:auto;padding:18px 0}.route:before{content:"";position:absolute;left:85px;top:85px;bottom:90px;width:1px;background:linear-gradient(180deg,#fff 0%,#7d1730 48%,#fff 100%);opacity:.38}
+    .route-start,.route-end,.route-step{position:relative;display:grid;grid-template-columns:170px 1fr;gap:32px;align-items:start}
+    .route-start{padding:0 0 55px}.route-step{padding:0 0 50px}.route-end{padding-top:5px}
+    .route-time{position:relative;z-index:1;justify-self:center;min-width:110px;padding:11px 13px;border:1px solid rgba(255,255,255,.26);background:#0b0b0c;color:#fff;text-align:center;font-size:12px;font-weight:800;letter-spacing:.08em}
+    .route-start .route-time,.route-end .route-time{background:#eee8df;color:#121011;border-color:#eee8df}
+    .route-copy h3{margin:2px 0 12px;font-family:"Noto Serif TC","Songti TC",serif;font-size:clamp(24px,2.5vw,34px);line-height:1.4}.route-copy h3 span{display:inline-grid;place-items:center;width:34px;height:34px;margin-right:11px;border:1px solid rgba(255,255,255,.55);border-radius:50%;font-family:Arial,sans-serif;font-size:15px;vertical-align:3px}
+    .route-copy p{margin:0;color:#8e8783;font-size:14px;line-height:1.85}.route-copy strong{display:block;margin-top:7px;color:#e9e2dc;font-size:13px;line-height:1.75}
+    .route-start .route-copy h3,.route-end .route-copy h3{margin-top:2px}.route-start .route-copy p,.route-end .route-copy p{max-width:670px}
+    .route-promise{max-width:940px;margin:65px auto 0;padding-top:45px;border-top:1px solid rgba(255,255,255,.15);text-align:center}.route-promise strong{display:block;font-family:"Noto Serif TC","Songti TC",serif;font-size:24px}.route-promise p{margin:15px 0 0;color:#817a77;line-height:1.8}
     .dark{background:#0b0b0c}
     .center-head{max-width:770px;margin:0 auto 70px;text-align:center}.center-head .eyebrow{justify-content:center}.center-head p:last-child{color:#8f8884;line-height:1.8}
     .benefits{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
@@ -108,7 +119,7 @@
       .section{padding:90px 0}.section-head,.translate-box,.change-grid,.testimonial-head,.faq-grid{grid-template-columns:1fr;gap:40px}.hero{min-height:800px;height:auto;padding:145px 0 65px}.hero-content{width:100%}.hero-note{position:relative;right:auto;bottom:auto;margin:70px 6vw 0 auto}.stage{grid-template-columns:65px 1fr}.stage ul{grid-column:2}.benefits{grid-template-columns:1fr 1fr}.fit article{padding:80px 5vw}.card,.card+ .card{padding-left:30px;padding-right:30px}
     }
     @media(max-width:640px){
-      .wrap{width:min(100% - 40px,1180px)}nav{height:74px;padding:0 18px}.brand strong{display:none}.nav-link{font-size:10px}.hero{padding-top:120px;align-items:flex-start}.hero h1{font-size:41px;line-height:1.35}.lead{font-size:15px}.actions{align-items:stretch;flex-direction:column;gap:20px}.btn{width:100%}.underlink{align-self:flex-start}.hero-note{width:auto;margin-left:20px;margin-right:20px}.orbit{right:-380px}.trap-grid,.benefits,.testimonial-grid,.fit,.price-grid{grid-template-columns:1fr}.trap{grid-template-columns:45px 1fr;padding:28px 23px}.translate-box{padding:40px 20px}.stage{grid-template-columns:42px 1fr;gap:17px}.stage .num{font-size:32px}.stage ul{grid-column:1/-1;padding-left:58px}.benefit,.benefit.feature{grid-column:auto}.change{padding:85px 0}.testimonials{padding:85px 0}.testimonial-copy{min-height:0;padding:30px 25px}.testimonial-copy h3{font-size:27px}.fit article{padding:75px 24px}.price-grid{gap:26px}.card:first-child{border-right:1px solid var(--line)}.faq{padding:85px 0}.final h2{font-size:38px}footer{justify-content:center}footer p{display:none}
+      .wrap{width:min(100% - 40px,1180px)}nav{height:74px;padding:0 18px}.brand strong{display:none}.nav-link{font-size:10px}.hero{padding-top:120px;align-items:flex-start}.hero h1{font-size:41px;line-height:1.35}.lead{font-size:15px}.actions{align-items:stretch;flex-direction:column;gap:20px}.btn{width:100%}.underlink{align-self:flex-start}.hero-note{width:auto;margin-left:20px;margin-right:20px}.orbit{right:-380px}.trap-grid,.benefits,.testimonial-grid,.fit,.price-grid{grid-template-columns:1fr}.trap{grid-template-columns:45px 1fr;padding:28px 23px}.translate-box{padding:40px 20px}.stage{grid-template-columns:42px 1fr;gap:17px}.stage .num{font-size:32px}.stage ul{grid-column:1/-1;padding-left:58px}.roadmap{padding:85px 0}.roadmap-head{text-align:left}.roadmap-head .eyebrow{justify-content:flex-start}.route:before{left:14px;top:75px;bottom:100px}.route-start,.route-end,.route-step{grid-template-columns:1fr;gap:18px;padding-left:40px}.route-start,.route-step{padding-bottom:48px}.route-time{justify-self:start;min-width:0}.route-copy h3{font-size:25px}.route-copy h3 span{width:30px;height:30px;font-size:13px}.route-promise{text-align:left}.benefit,.benefit.feature{grid-column:auto}.change{padding:85px 0}.testimonials{padding:85px 0}.testimonial-copy{min-height:0;padding:30px 25px}.testimonial-copy h3{font-size:27px}.fit article{padding:75px 24px}.price-grid{gap:26px}.card:first-child{border-right:1px solid var(--line)}.faq{padding:85px 0}.final h2{font-size:38px}footer{justify-content:center}footer p{display:none}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ticker div{animation:none}}
   </style>
@@ -173,6 +184,51 @@
         <article class="stage"><span class="num">03</span><div><small>OBSERVE</small><h3>處理斷聯、復聯與拉扯</h3><p>他回來，不代表他變了。看懂哪些訊息只是在測試妳還能不能用，以及什麼行動才算真正改變。</p></div><ul class="clean"><li>看懂廉價復聯</li><li>處理戒斷與不甘心</li><li>不再一回頭就回到原位</li></ul></article>
         <article class="stage"><span class="num">04</span><div><small>DECIDE</small><h3>該推進就推進，該清掉就清掉</h3><p>有機會的關係，設定期限、談清需求；沒有價值的關係，停止反覆研究，把生活和選擇權拿回來。</p></div><ul class="clean"><li>分辨承諾與畫餅</li><li>做最後一次判斷</li><li>不再愛上同一種垃圾</li></ul></article>
       </div>
+    </div>
+  </section>
+
+  <section class="roadmap" id="roadmap">
+    <div class="wrap">
+      <div class="roadmap-head">
+        <p class="eyebrow">ONE-YEAR EVOLUTION ROUTE</p>
+        <h2>一年下船路線圖</h2>
+        <p>從隨傳隨到的免費備胎，到換他為妳發瘋失眠。</p>
+      </div>
+      <div class="route">
+        <div class="route-start">
+          <span class="route-time">起點</span>
+          <div class="route-copy"><h3>妳只是他不用負責的免費備胎</h3><p>不敢問、被動等，他一通訊息妳就推掉行程去配合。連生氣的資格都沒有，看他到處留情，妳只能憋屈內耗。</p></div>
+        </div>
+        <article class="route-step">
+          <span class="route-time">第 1–2 月</span>
+          <div class="route-copy"><h3><span>1</span>直接消失，拿回妳的規矩</h3><p>停秒回、停深夜召喚、直接封鎖。這次換妳說了算。</p><strong>→ 以前是妳等回覆等到死，現在換他抓不透妳</strong></div>
+        </article>
+        <article class="route-step">
+          <span class="route-time">第 2–3 月</span>
+          <div class="route-copy"><h3><span>2</span>換他當狗，跪著求妳回頭</h3><p>停看對話框、不私下通靈。妳一冷下來，他下半身就慌了。</p><strong>→ 換他瘋狂出現、裝偶遇、急著問妳在幹嘛</strong></div>
+        </article>
+        <article class="route-step">
+          <span class="route-time">第 3–4 月</span>
+          <div class="route-copy"><h3><span>3</span>看他演戲，妳內心毫無波動</h3><p>他再怎麼哭、怎麼承諾，妳都能冷眼看穿他的髒心思。</p><strong>→ 絕不接受他爽完之後，用幾句甜言蜜語低價哄回</strong></div>
+        </article>
+        <article class="route-step">
+          <span class="route-time">第 4–6 月</span>
+          <div class="route-copy"><h3><span>4</span>徹底下船，不爽就直接掀桌</h3><p>敢忽冷忽熱直接踢出局。妳不再是等著被臨幸的備胎。</p><strong>→ 妳太清楚他只是外面的不好找，想回來白嫖</strong></div>
+        </article>
+        <article class="route-step">
+          <span class="route-time">第 6–9 月</span>
+          <div class="route-copy"><h3><span>5</span>瘋狂搞錢搞外貌，去認識更頂的男人</h3><p>把時間拿去升級自己、把生活填滿，身邊選擇全部拉滿。</p><strong>→ 當妳變得更美更有錢，他那兩句屁話連彈珠都不如</strong></div>
+        </article>
+        <article class="route-step">
+          <span class="route-time">第 9–12 月</span>
+          <div class="route-copy"><h3><span>6</span>玩弄局勢，換妳挑選男人</h3><p>看透所有高階渣男的垃圾套路，誰要出局、誰能留下妳說了算。</p><strong>→ 妳已經不是當初那個，會為了他一句話哭整晚的傻子</strong></div>
+        </article>
+        <div class="route-end">
+          <span class="route-time">一年後</span>
+          <div class="route-copy"><h3>他回來求妳，妳都懶得理</h3><p>看得懂套路、斷得掉爛人、守得住底線。</p></div>
+        </div>
+      </div>
+      <div class="route-promise"><strong>這套方案不只幫妳離開一個爛男人</strong><p>以後任何高階渣男想用同一套垃圾手法搞妳，都沒那麼容易。</p></div>
     </div>
   </section>
 
