@@ -80,10 +80,22 @@
     .route-promise{max-width:940px;margin:65px auto 0;padding-top:45px;border-top:1px solid rgba(255,255,255,.15);text-align:center}.route-promise strong{display:block;font-family:"Noto Serif TC","Songti TC",serif;font-size:24px}.route-promise p{margin:15px 0 0;color:#817a77;line-height:1.8}
     .dark{background:#0b0b0c}
     .center-head{max-width:770px;margin:0 auto 70px;text-align:center}.center-head .eyebrow{justify-content:center}.center-head p:last-child{color:#8f8884;line-height:1.8}
-    .benefits{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+    .benefits{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
     .benefit{position:relative;min-height:275px;padding:34px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
     .benefit.feature{grid-column:span 2;background:radial-gradient(circle at 92% 20%,rgba(202,20,57,.2),transparent 35%),#141012}
     .benefit b{color:var(--red);font-family:"Times New Roman",serif;font-style:italic}.benefit h3{margin:50px 0 14px;font-family:"Noto Serif TC","Songti TC",serif;font-size:22px}.benefit p{margin:0;color:#8f8985;font-size:13px;line-height:1.8}
+    .system{padding:120px 0;background:var(--paper);color:var(--ink)}
+    .system-head{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:end;margin-bottom:58px}
+    .system-head p:last-child{margin:0;color:#69615d;font-size:15px;line-height:2}
+    .modules{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid #bdb5ac;border-left:1px solid #bdb5ac}
+    .module{display:grid;grid-template-columns:54px 1fr;gap:18px;min-height:155px;padding:28px;border-right:1px solid #bdb5ac;border-bottom:1px solid #bdb5ac}
+    .module b{color:#ad1733;font-family:"Times New Roman",serif;font-size:16px;font-style:italic}
+    .module h3{margin:0 0 10px;font-family:"Noto Serif TC","Songti TC",serif;font-size:19px}
+    .module p{margin:0;color:#69615d;font-size:12px;line-height:1.75}
+    .system-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:30px;background:#bdb5ac;border:1px solid #bdb5ac}
+    .system-flow div{padding:23px;background:#ddd6cd}
+    .system-flow small{display:block;margin-bottom:8px;color:#ad1733;font-weight:800;letter-spacing:.12em}
+    .system-flow strong{font-family:"Noto Serif TC","Songti TC",serif;font-size:17px}
     .change{padding:115px 0;background:var(--wine)}
     .change-grid{display:grid;grid-template-columns:.8fr 1fr;gap:90px;align-items:center}.change h2 em{color:#12090b}
     .compare{border-top:1px solid rgba(255,255,255,.3)}.compare-row{display:grid;grid-template-columns:1fr 42px 1fr;align-items:center;min-height:72px;border-bottom:1px solid rgba(255,255,255,.2);font-size:13px}.compare-row span:first-child{color:rgba(255,255,255,.65)}.compare-row i{font-style:normal;color:rgba(255,255,255,.45)}
@@ -96,11 +108,15 @@
     .fit{display:grid;grid-template-columns:1fr 1fr}.fit article{padding:100px 7vw;background:#111112}.fit article:last-child{background:#171214}.fit h2{font-size:clamp(34px,3.5vw,50px)}.fit .clean{margin-top:40px}.fit .clean li{padding:16px 0;margin:0;border-bottom:1px solid rgba(255,255,255,.1);color:#bbb4b0}.fit article:last-child .clean li:before{content:"×"}
     .plans{padding:125px 0;background:radial-gradient(circle at 50% 52%,rgba(152,14,43,.2),transparent 34%),#09090a}
     .plan-head{max-width:940px;margin:0 auto 70px;text-align:center}.plan-head .eyebrow{justify-content:center}
-    .price-grid{max-width:1000px;margin:auto;display:grid;grid-template-columns:.9fr 1.1fr;align-items:center}
+    .price-grid{max-width:1180px;margin:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch}
     .card{position:relative;padding:48px;border:1px solid var(--line);background:#111112}.card+ .card{padding:66px 56px 56px;border-color:#9f1a34;background:linear-gradient(145deg,#1a1114,#100e0f 60%);box-shadow:0 35px 100px #000}
+    .card.premium{border-color:#d4b16b;background:radial-gradient(circle at 90% 0,rgba(212,177,107,.18),transparent 32%),linear-gradient(145deg,#1b1711,#100e0f 65%)}
+    .card.premium .tag{background:#9a732e;color:#fff}
+    .card.premium .price small,.card.premium .clean li:before{color:#d4b16b}
+    .card.premium .btn{background:#9a732e;border-color:#c69a4d}
     .tag{position:absolute;left:-1px;right:-1px;top:-1px;padding:11px;background:#a1122f;text-align:center;font-size:9px;font-weight:800;letter-spacing:.16em}
     .card h3{margin:0;font-family:"Noto Serif TC","Songti TC",serif;font-size:25px}.card>p{min-height:45px;color:#837c79;font-size:12px;line-height:1.7}
-    .price{display:flex;align-items:baseline;padding:20px 0 28px;border-bottom:1px solid var(--line)}.price small{color:var(--red);font-weight:800}.price strong{margin-left:8px;font-family:"Times New Roman",serif;font-size:64px;font-weight:400}.price span{color:#77716e;font-size:12px}
+    .price{display:flex;align-items:baseline;padding:20px 0 28px;border-bottom:1px solid var(--line)}.price small{color:var(--red);font-weight:800}.price strong{margin-left:8px;font-family:"Times New Roman",serif;font-size:56px;font-weight:400}.price span{color:#77716e;font-size:12px}
     .saving{display:flex;justify-content:space-between;gap:12px;margin-top:18px;padding:16px;background:rgba(172,15,46,.12);font-size:10px}.saving b{color:#ee2d50}
     .card .clean{margin:30px 0}.card .clean li{color:#aaa3a0}
     .card .btn{width:100%;justify-content:space-between}.card:first-child .btn{background:transparent;border-color:rgba(255,255,255,.25)}
@@ -112,10 +128,10 @@
     .final:before{content:"";position:absolute;width:560px;height:560px;border:1px solid rgba(193,20,53,.18);border-radius:50%}.final>*{position:relative;z-index:1}.final .eyebrow{justify-content:center}.final h2{font-size:clamp(43px,5vw,72px)}.final>p{color:#8d8581;line-height:1.8;font-size:13px}
     footer{display:flex;align-items:center;justify-content:space-between;padding:34px 6vw;border-top:1px solid var(--line)}footer p{color:#55504e;font-size:10px;letter-spacing:.1em}
     @media(max-width:900px){
-      .section{padding:90px 0}.section-head,.translate-box,.change-grid,.testimonial-head,.faq-grid{grid-template-columns:1fr;gap:40px}.hero{min-height:800px;height:auto;padding:145px 0 65px}.hero-content{width:100%}.hero-note{position:relative;right:auto;bottom:auto;margin:70px 6vw 0 auto}.stage{grid-template-columns:65px 1fr}.stage ul{grid-column:2}.benefits{grid-template-columns:1fr 1fr}.fit article{padding:80px 5vw}.card,.card+ .card{padding-left:30px;padding-right:30px}
+      .section{padding:90px 0}.section-head,.translate-box,.change-grid,.testimonial-head,.faq-grid,.system-head{grid-template-columns:1fr;gap:40px}.hero{min-height:800px;height:auto;padding:145px 0 65px}.hero-content{width:100%}.hero-note{position:relative;right:auto;bottom:auto;margin:70px 6vw 0 auto}.stage{grid-template-columns:65px 1fr}.stage ul{grid-column:2}.benefits{grid-template-columns:1fr 1fr}.fit article{padding:80px 5vw}.price-grid{grid-template-columns:1fr 1fr}.card,.card+ .card{padding-left:30px;padding-right:30px}.card.premium{grid-column:1/-1}.system-flow{grid-template-columns:1fr 1fr}
     }
     @media(max-width:640px){
-      .wrap{width:min(100% - 40px,1180px)}nav{height:74px;padding:0 18px}.brand strong{display:none}.nav-link{font-size:10px}.hero{padding-top:120px;align-items:flex-start}.hero h1{font-size:41px;line-height:1.35}.lead{font-size:15px}.actions{align-items:stretch;flex-direction:column;gap:20px}.btn{width:100%}.underlink{align-self:flex-start}.hero-note{width:auto;margin-left:20px;margin-right:20px}.orbit{right:-380px}.trap-grid,.benefits,.testimonial-grid,.fit,.price-grid{grid-template-columns:1fr}.trap{grid-template-columns:45px 1fr;padding:28px 23px}.translate-box{padding:40px 20px}.stage{grid-template-columns:42px 1fr;gap:17px}.stage .num{font-size:32px}.stage ul{grid-column:1/-1;padding-left:58px}.roadmap{padding:85px 0}.roadmap-head{text-align:left}.roadmap-head .eyebrow{justify-content:flex-start}.route:before{left:14px;top:75px;bottom:100px}.route-start,.route-end,.route-step{grid-template-columns:1fr;gap:18px;padding-left:40px}.route-start,.route-step{padding-bottom:48px}.route-time{justify-self:start;min-width:0}.route-copy h3{font-size:25px}.route-copy h3 span{width:30px;height:30px;font-size:13px}.route-promise{text-align:left}.benefit,.benefit.feature{grid-column:auto}.change{padding:85px 0}.testimonials{padding:85px 0}.testimonial-copy{min-height:0;padding:30px 25px}.testimonial-copy h3{font-size:27px}.fit article{padding:75px 24px}.price-grid{gap:26px}.card:first-child{border-right:1px solid var(--line)}.faq{padding:85px 0}.final h2{font-size:38px}footer{justify-content:center}footer p{display:none}
+      .wrap{width:min(100% - 40px,1180px)}nav{height:74px;padding:0 18px}.brand strong{display:none}.nav-link{font-size:10px}.hero{padding-top:120px;align-items:flex-start}.hero h1{font-size:41px;line-height:1.35}.lead{font-size:15px}.actions{align-items:stretch;flex-direction:column;gap:20px}.btn{width:100%}.underlink{align-self:flex-start}.hero-note{width:auto;margin-left:20px;margin-right:20px}.orbit{right:-380px}.trap-grid,.benefits,.testimonial-grid,.fit,.price-grid,.modules,.system-flow{grid-template-columns:1fr}.trap{grid-template-columns:45px 1fr;padding:28px 23px}.translate-box{padding:40px 20px}.stage{grid-template-columns:42px 1fr;gap:17px}.stage .num{font-size:32px}.stage ul{grid-column:1/-1;padding-left:58px}.roadmap{padding:85px 0}.roadmap-head{text-align:left}.roadmap-head .eyebrow{justify-content:flex-start}.route:before{left:14px;top:75px;bottom:100px}.route-start,.route-end,.route-step{grid-template-columns:1fr;gap:18px;padding-left:40px}.route-start,.route-step{padding-bottom:48px}.route-time{justify-self:start;min-width:0}.route-copy h3{font-size:25px}.route-copy h3 span{width:30px;height:30px;font-size:13px}.route-promise{text-align:left}.benefit,.benefit.feature{grid-column:auto}.system{padding:85px 0}.module{grid-template-columns:42px 1fr;padding:24px 20px}.change{padding:85px 0}.testimonials{padding:85px 0}.testimonial-copy{min-height:0;padding:30px 25px}.testimonial-copy h3{font-size:27px}.fit article{padding:75px 24px}.price-grid{gap:26px}.card.premium{grid-column:auto}.card:first-child{border-right:1px solid var(--line)}.faq{padding:85px 0}.final h2{font-size:38px}footer{justify-content:center}footer p{display:none}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ticker div{animation:none}}
   </style>
@@ -215,14 +231,43 @@
 
   <section class="section dark">
     <div class="wrap">
-      <div class="center-head"><p class="eyebrow">INSIDE THE SOCIETY</p><h2>加入會員，<br>妳會拿到什麼？</h2><p>不是再丟一堆道理給妳。是當局面發生時，妳手上真的有東西可以拆。</p></div>
+      <div class="center-head"><p class="eyebrow">INSIDE THE SOCIETY</p><h2>加入會員，<br>妳會拿到什麼？</h2><p>局面一發生，妳先跑系統、看報告、拆訊息。真的卡死，再把完整證據交給凡氏。</p></div>
       <div class="benefits">
-        <article class="benefit feature"><b>01</b><h3>壞男套路拆解內容</h3><p>真實案例、地下關係結構與男人常用話術，持續更新。</p></article>
-        <article class="benefit"><b>02</b><h3>壞男話術翻譯機</h3><p>把他說過的話貼進去，直接翻成正常人聽得懂的白話。</p></article>
-        <article class="benefit"><b>03</b><h3>真實匿名案例拆解</h3><p>看別人的局，照見自己的盲點；直接判斷哪裡有救、哪裡該停。</p></article>
-        <article class="benefit"><b>04</b><h3>關係公式與行動工具</h3><p>驗屍表、免費待遇檢查、復聯判斷、攤牌準備與退場防復發。</p></article>
-        <article class="benefit"><b>05</b><h3>會員社群與案例對照</h3><p>不集體灌雞湯。只看行動、成本、主導權與下一步。</p></article>
-        <article class="benefit"><b>06</b><h3>1 對 1 診斷優先預約</h3><p>年費會員限定。複雜或緊急的局，可另外申請付費私聊診斷與深度陪跑。</p></article>
+        <article class="benefit feature"><b>01</b><h3>壞男系統 2.0・十篇互動診斷</h3><p>從關係驗屍、男人成分、忽冷忽熱，一路拆到備胎養殖與總驗屍報告。</p></article>
+        <article class="benefit"><b>02</b><h3>凡氏關係急診分流</h3><p>回答幾個問題，直接找到妳現在該進哪一關，少在錯的問題上浪費命。</p></article>
+        <article class="benefit"><b>03</b><h3>壞男話術翻譯機</h3><p>把他的原話貼進去，先看他在逃責任、吊胃口、留後路，還是把妳當免費供應。</p></article>
+        <article class="benefit"><b>04</b><h3>個人診斷報告</h3><p>每一關都留下妳的選項、風險與結果。發文時有證據，凡氏才能直接下刀。</p></article>
+        <article class="benefit"><b>05</b><h3>真實匿名案例拆解</h3><p>看別人的局，照見自己的盲點；直接判斷哪裡有救、哪裡該停。</p></article>
+        <article class="benefit"><b>06</b><h3>社群求診 SOP</h3><p>先分流、跑關卡、用翻譯機，工具跑完還卡住，再帶報告找凡氏。</p></article>
+        <article class="benefit"><b>07</b><h3>關係公式與行動工具</h3><p>驗屍表、免費待遇檢查、復聯判斷、攤牌準備與退場防復發。</p></article>
+        <article class="benefit"><b>08</b><h3>1 對 1 診斷與陪跑</h3><p>需要完整客製化處理，可申請付費診斷或三個月深度陪跑。</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="system" id="system">
+    <div class="wrap">
+      <div class="system-head">
+        <div><p class="eyebrow">BAD MAN SYSTEM 2.0</p><h2>十個關卡，<br>把妳的爛局拆乾淨。</h2></div>
+        <p>妳不需要記一堆專有名詞。照著題目填，系統會把男人拿走的待遇、沒扛的責任、反覆使用的手法，全部攤在妳面前。</p>
+      </div>
+      <div class="modules">
+        <article class="module"><b>01</b><div><h3>關係驗屍室</h3><p>找出這段關係到底死在哪裡。</p></div></article>
+        <article class="module"><b>02</b><div><h3>他在測妳有多好拿</h3><p>看清底線被踩、被酸、被試探的地方。</p></div></article>
+        <article class="module"><b>03</b><div><h3>男人成分表</h3><p>驗他的穩定度、責任感與風險成分。</p></div></article>
+        <article class="module"><b>04</b><div><h3>快速親密檢查</h3><p>查清過快升溫與滿嘴承諾有多少水分。</p></div></article>
+        <article class="module"><b>05</b><div><h3>壞男話術翻譯機</h3><p>把鬼話翻成妳聽得懂的人話。</p></div></article>
+        <article class="module"><b>06</b><div><h3>忽冷忽熱循環</h3><p>抓出他怎麼用消失和回頭訓練妳。</p></div></article>
+        <article class="module"><b>07</b><div><h3>伴侶待遇零責任</h3><p>列清妳給的待遇，以及他逃掉的責任。</p></div></article>
+        <article class="module"><b>08</b><div><h3>未來支票兌現所</h3><p>每一句「以後會」，都拿具體行動驗。</p></div></article>
+        <article class="module"><b>09</b><div><h3>備胎養殖場</h3><p>看妳是不是正在他的選項裡自我證明。</p></div></article>
+        <article class="module"><b>10</b><div><h3>關係總驗屍報告</h3><p>把整段關係一次結算，停止被片段洗腦。</p></div></article>
+      </div>
+      <div class="system-flow">
+        <div><small>STEP 01</small><strong>先做急診分流</strong></div>
+        <div><small>STEP 02</small><strong>完成指定關卡</strong></div>
+        <div><small>STEP 03</small><strong>收到訊息先翻譯</strong></div>
+        <div><small>STEP 04</small><strong>仍然卡住再求診</strong></div>
       </div>
     </div>
   </section>
@@ -271,7 +316,7 @@
         <article class="card">
           <h3>月訂閱</h3><p>適合先進入社群，開始處理眼前這一局。</p>
           <div class="price"><small>US$</small><strong>200</strong><span>／月</span></div>
-          <ul class="clean"><li>全部會員限定內容</li><li>話術翻譯與關係工具</li><li>真實匿名案例與檢查表</li><li>會員社群資格</li></ul>
+          <ul class="clean"><li>壞男系統 2.0 十篇互動課程</li><li>急診分流與壞男翻譯機</li><li>真實匿名案例與檢查表</li><li>會員社群資格</li></ul>
           <a class="btn" href="https://www.skool.com/underground-society" target="_blank" rel="noopener">選擇月訂閱</a>
         </article>
         <article class="card">
@@ -279,11 +324,18 @@
           <h3>年訂閱</h3><p>適合徹底修正反覆出現的判斷、界線與互動模式。</p>
           <div class="price"><small>US$</small><strong>1,500</strong><span>／年</span></div>
           <div class="saving"><span>等於每月 US$125</span><b>比月訂閱便宜 37.5%</b></div>
-          <ul class="clean"><li>包含月訂閱的所有內容</li><li>完整一年的會員資格</li><li>1 對 1 診斷優先預約（年費限定）</li><li>練到不用提醒，也能看懂局</li></ul>
+          <ul class="clean"><li>包含月訂閱的所有系統與內容</li><li>完整一年的會員資格</li><li>1 對 1 診斷優先預約（年費限定）</li><li>練到不用提醒，也能看懂局</li></ul>
           <a class="btn" href="https://www.skool.com/underground-society" target="_blank" rel="noopener">選擇年訂閱</a>
         </article>
+        <article class="card premium">
+          <div class="tag">最高規格・限額申請</div>
+          <h3>3 個月 1 對 1 陪跑</h3><p>適合局勢複雜、反覆破功，需要凡氏盯著妳走完整段的人。</p>
+          <div class="price"><small>US$</small><strong>5,000</strong><span>／3 個月</span></div>
+          <ul class="clean"><li>三個月客製化 1 對 1 陪跑</li><li>依實際局勢制定行動順序</li><li>重要訊息、攤牌與退場策略拆解</li><li>每個階段復盤，避免妳又被哄回去</li></ul>
+          <a class="btn" href="https://www.skool.com/underground-society" target="_blank" rel="noopener">申請 1 對 1 陪跑</a>
+        </article>
       </div>
-      <p class="plan-note">一個月，讓妳看懂眼前這一局。　<strong>一整年，讓妳不再掉進同一種局。</strong></p>
+      <p class="plan-note">一個月，先拆眼前這一局。　<strong>一整年，修掉反覆掉坑的腦迴路。</strong>　三個月 1 對 1，凡氏陪妳把複雜局走完。</p>
     </div>
   </section>
 
@@ -294,6 +346,7 @@
         <details open><summary>這是無限次一對一諮詢嗎？</summary><p>不是。會員社群負責教妳看懂局、提供工具與案例；需要完整客製化處理時，可另外申請付費一對一診斷。年費會員享有優先預約資格。</p></details>
         <details><summary>加入後，能保證他愛上我嗎？</summary><p>不能，也不會用這種話騙妳。我們要做的是讓妳看懂真實意圖、停止不對等付出，並做出對自己有利的決定。</p></details>
         <details><summary>我只想先處理眼前這個男人，可以月訂嗎？</summary><p>可以。月訂適合先拆眼前這一局；年訂更適合修正反覆出現的選人、界線與互動模式。</p></details>
+        <details><summary>US$5,000 的三個月 1 對 1 陪跑，會怎麼進行？</summary><p>凡氏會依照妳的實際局勢，安排判斷順序、行動策略與階段復盤。重要訊息、攤牌和退場都會放進同一條策略線處理。實際溝通頻率、開始時間與名額，會在付款前確認清楚。</p></details>
         <details><summary>內容會很溫柔地安慰我嗎？</summary><p>凡氏會把話講清楚。有些答案不好聽，但通常比繼續被同一個男人騙一年便宜。</p></details>
       </div>
     </div>
