@@ -1,504 +1,261 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="凡氏可行 IG、Skool、私訊、一對一諮詢轉化心智圖純文字版">
-  <title>凡氏可行｜IG → Skool → 私訊 → 一對一諮詢轉化心智圖</title>
-  <style>
-    :root { color-scheme: light; --ink:#202124; --muted:#5f6368; --line:#e0e0e0; --accent:#875f00; }
-    * { box-sizing:border-box; }
-    body { margin:0; background:#f7f5f0; color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif; line-height:1.8; }
-    main { width:min(860px,100%); margin:auto; padding:48px 24px 80px; background:#fff; min-height:100vh; box-shadow:0 0 40px rgba(0,0,0,.04); }
-    h1 { margin:0 0 24px; font-size:clamp(28px,6vw,46px); line-height:1.25; letter-spacing:-.025em; }
-    h2 { margin:48px 0 8px; padding-top:8px; font-size:clamp(22px,4vw,30px); line-height:1.4; }
-    h3 { margin:28px 0 8px; font-size:18px; line-height:1.5; color:#302b23; }
-    p { margin:10px 0; }
-    blockquote { margin:12px 0 24px; padding:12px 16px; color:var(--muted); background:#f5f3ee; border-left:4px solid #c5a65b; border-radius:0 8px 8px 0; }
-    ul { margin:8px 0 20px; padding-left:1.4em; }
-    li { margin:4px 0; }
-    strong { color:var(--accent); }
-    hr { margin:44px 0; border:0; border-top:1px solid var(--line); }
-    @media (max-width:600px) { main { padding:30px 18px 60px; box-shadow:none; } h2 { margin-top:38px; } }
-    @media print { body { background:#fff; } main { width:100%; box-shadow:none; padding:0; } }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>凡氏可行｜IG → Skool → 私訊 → 一對一諮詢轉化心智圖</title>
+<style>
+:root {
+  --bg:#090909; --panel:#111214; --panel2:#17181b; --line:#2b2d31;
+  --text:#f3f3f3; --muted:#a7a7aa; --gold:#d6b25e; --red:#e35b5b;
+  --shadow: 0 16px 40px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:
+  radial-gradient(circle at 20% -10%, rgba(214,178,94,.12), transparent 32%),
+  radial-gradient(circle at 90% 10%, rgba(227,91,91,.09), transparent 28%),
+  var(--bg);
+  color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+}
+header{
+  position:sticky; top:0; z-index:20; backdrop-filter:blur(14px);
+  background:rgba(9,9,9,.82); border-bottom:1px solid #242424;
+}
+.toolbar{max-width:1500px;margin:auto;padding:14px 18px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.brand{font-weight:900;letter-spacing:.02em;margin-right:auto}
+.brand small{display:block;color:var(--muted);font-weight:500;font-size:12px;margin-top:4px}
+button,input{
+  border:1px solid #303237;background:#151619;color:#eee;border-radius:10px;
+  padding:9px 12px;font-size:14px
+}
+button{cursor:pointer}
+button:hover{border-color:#555}
+input{min-width:220px}
+.hero{max-width:1500px;margin:0 auto;padding:30px 18px 8px}
+.hero h1{font-size:clamp(28px,4vw,54px);line-height:1.08;margin:0 0 12px;letter-spacing:-.03em}
+.hero p{color:#c9c9cb;max-width:980px;font-size:17px;line-height:1.7;margin:0}
+.core{
+  margin:26px auto 8px;max-width:1500px;padding:0 18px
+}
+.core-card{
+  border:1px solid rgba(214,178,94,.42);background:linear-gradient(180deg,rgba(214,178,94,.09),rgba(255,255,255,.015));
+  box-shadow:var(--shadow);border-radius:18px;padding:22px
+}
+.core-kicker{color:var(--gold);font-weight:900;font-size:12px;letter-spacing:.16em}
+.core-title{font-size:24px;font-weight:900;margin-top:6px}
+.core-flow{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:14px}
+.core-flow span{border:1px solid #373737;border-radius:999px;padding:7px 10px;background:#111}
+.core-flow b{color:var(--gold)}
+.map-wrap{max-width:1500px;margin:0 auto;padding:18px;overflow:auto}
+#map{transform-origin:top left; transition:transform .15s ease; min-width:1100px}
+.branch-grid{display:grid;grid-template-columns:repeat(3,minmax(340px,1fr));gap:16px;align-items:start}
+.branch{
+  background:rgba(18,19,22,.86);border:1px solid var(--line);border-radius:18px;overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,.22)
+}
+.branch-head{
+  padding:17px 18px;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:flex-start;cursor:pointer
+}
+.branch-head:hover{background:rgba(255,255,255,.02)}
+.badge{width:10px;height:10px;border-radius:50%;margin-top:7px;flex:0 0 auto;box-shadow:0 0 16px currentColor}
+.branch h2{font-size:17px;margin:0;line-height:1.4}
+.branch-summary{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+.branch-body{padding:8px 14px 14px}
+.item{position:relative;margin:9px 0 0 18px;border-left:2px solid #2c2e32;padding-left:15px}
+.item:before{content:"";position:absolute;left:-2px;top:14px;width:12px;border-top:2px solid #2c2e32}
+.item-title{
+  display:flex;justify-content:space-between;gap:10px;align-items:center;
+  background:#151619;border:1px solid #2b2d31;border-radius:12px;padding:11px 12px;
+  font-weight:800;font-size:14px;line-height:1.45;cursor:pointer
+}
+.item-title:hover{border-color:#4a4c52}
+.chev{color:#777;font-size:12px;transition:.2s}
+.item.collapsed .chev{transform:rotate(-90deg)}
+.children{margin:8px 0 2px 4px;padding-left:16px;border-left:1px dashed #303238}
+.child{position:relative;color:#c9c9cc;font-size:13px;line-height:1.6;padding:5px 0 5px 10px}
+.child:before{content:"";position:absolute;width:4px;height:4px;border-radius:50%;background:#666;left:-2px;top:14px}
+.collapsed>.children{display:none}
+.branch.is-collapsed .branch-body{display:none}
+.search-hit{outline:2px solid #d6b25e!important;background:rgba(214,178,94,.08)!important}
+.dimmed{opacity:.16}
+footer{max-width:1500px;margin:auto;padding:28px 18px 50px;color:#747478;font-size:12px;line-height:1.7}
+.legend{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.legend span{font-size:12px;color:#aaa;border:1px solid #2c2c2f;padding:6px 9px;border-radius:999px;background:#121214}
+@media(max-width:1150px){
+  #map{min-width:0}
+  .branch-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:760px){
+  .branch-grid{grid-template-columns:1fr}
+  .hero h1{font-size:34px}
+  input{min-width:0;flex:1 1 100%}
+  .toolbar{padding:10px}
+  .map-wrap{padding:10px}
+  .hero,.core{padding-left:12px;padding-right:12px}
+}
+@media print{
+  header{display:none}
+  body{background:white;color:black}
+  .hero p,.branch-summary,.child{color:#333}
+  .branch,.core-card{box-shadow:none;background:white;border-color:#aaa;break-inside:avoid}
+  .item-title{background:white;color:black}
+  #map{transform:none!important}
+}
+</style>
 </head>
-<body><main><h1>凡氏可行｜IG → Skool → 私訊 → 一對一諮詢轉化心智圖</h1>
-<blockquote>核心目標：把「只想看內容、倒情緒的人」逐步篩成「願意改變局面、適合進諮詢的人」</blockquote>
-<h2>核心原則</h2>
-<p>不要再把「入群問題」當完整診斷，改成多層篩選。</p>
-<p><strong>完整流程：</strong> IG 吸引 → Skool 分類＋加熱 → 驗屍單篩選 → 私訊診斷意願 → 諮詢決策 → 90 天交付結果</p>
-<ul>
-<li>核心定位：看懂局，不只看懂男人</li>
-<li>核心篩選：想知道答案 ≠ 願意改變</li>
-<li>核心指標：高意圖名單 → 諮詢 → 成交</li>
-</ul>
-<hr>
-<h2>01｜目前真正的問題</h2>
-<blockquote>不是單純 IG 沒流量，而是中間的篩選機制失效</blockquote>
-<h3>前端吸來的是「想知道答案的人」</h3>
-<ul>
-<li>想知道他愛不愛我</li>
-<li>想知道他為什麼忽冷忽熱</li>
-<li>想知道他是不是在玩我</li>
-<li>願意看內容，不代表願意改變</li>
-</ul>
-<h3>Skool 入群問題失去篩選功能</h3>
-<ul>
-<li>回答越來越短</li>
-<li>開始出現「曖昧／不知道／想看看」這種低資訊答案</li>
-<li>很難直接判斷痛點、急迫性、行動意願</li>
-</ul>
-<h3>私訊容易變成免費情緒垃圾桶</h3>
-<ul>
-<li>太快開始分析男人</li>
-<li>對方一直補故事，你一直拆</li>
-<li>她在私訊裡先拿完答案</li>
-<li>最後說「謝謝，我懂了」然後消失</li>
-</ul>
-<h3>諮詢端收到的名單不夠成熟</h3>
-<ul>
-<li>還在想知道男人怎麼想</li>
-<li>還沒決定要改變</li>
-<li>把諮詢當情緒出口</li>
-<li>缺乏問題成本與行動意願</li>
-</ul>
-<hr>
-<h2>02｜定位重新對焦</h2>
-<blockquote>從「幫妳看懂他」升級成「幫妳看懂這個局，拿回選擇權」</blockquote>
-<h3>前端不要急著賣「心態改變」</h3>
-<ul>
-<li>客戶一開始買的是：我想把這個爛局翻掉</li>
-<li>不要直接賣：愛自己、心靈成長、自我提升</li>
-<li>心態改變是交付方法，不是第一購買理由</li>
-</ul>
-<h3>真正可長期佔據的利基市場</h3>
-<ul>
-<li>卡在不對等關係裡的女性</li>
-<li>曖昧／砲友／地下關係／小三／婚外／分手後回收</li>
-<li>不承諾又不放人</li>
-<li>明知道有問題，但走不了</li>
-</ul>
-<h3>核心承諾</h3>
-<ul>
-<li>先把關係主導權拿回來</li>
-<li>值得留：重新談條件</li>
-<li>不值得留：建立真的能離開的能力</li>
-<li>最終不是「一定追回他」，而是「有資格決定還要不要他」</li>
-</ul>
-<h3>底層邏輯</h3>
-<ul>
-<li>關係權力 ≈ 選擇權 + 自主性 + 離開能力 − 依賴</li>
-<li>前端賣痛點</li>
-<li>中段賣主導權</li>
-<li>後端交付心態、行為、生活重建、選擇權</li>
-</ul>
-<hr>
-<h2>03｜新版完整轉化路徑</h2>
-<blockquote>把篩選從「入群表單一次做完」改成多層篩選</blockquote>
-<h3>步驟 1｜IG</h3>
-<ul>
-<li>壞男套路：拿觸及</li>
-<li>女性卡點：讓她看到自己為什麼走不了</li>
-<li>奪權方法：建立方法論</li>
-<li>案例／見證：建立信任證據</li>
-<li>篩選型行動呼籲：導入 Skool</li>
-</ul>
-<h3>步驟 2｜行動呼籲</h3>
-<ul>
-<li>不要只賣「免費社群」</li>
-<li>改賣「免費地下關係診斷室／壞男驗屍房」</li>
-<li>重點：進去看妳現在到底卡在哪一種局</li>
-</ul>
-<h3>步驟 3｜Skool 入群問題</h3>
-<ul>
-<li>只做快速分類</li>
-<li>不要要求完整故事</li>
-<li>任務：提供私訊開場鉤子</li>
-</ul>
-<h3>步驟 4｜新手入口</h3>
-<ul>
-<li>讓新人先自行對號入座</li>
-<li>建立「凡氏懂這種局」的認知</li>
-<li>降低後續私訊的陌生感</li>
-</ul>
-<h3>步驟 5｜3 分鐘關係驗屍單</h3>
-<ul>
-<li>二次表單</li>
-<li>只讓高意圖者主動填</li>
-<li>開始真正做篩選</li>
-</ul>
-<h3>步驟 6｜名單評分</h3>
-<ul>
-<li>依關係時間</li>
-<li>痛苦程度</li>
-<li>嘗試失敗次數</li>
-<li>改變意願</li>
-<li>排私訊優先級</li>
-</ul>
-<h3>步驟 7｜私訊</h3>
-<ul>
-<li>問 → 判斷 → 再問 → 再判斷 → 意願測試</li>
-<li>不做完整免費診斷</li>
-<li>把情緒型、觀望型、高意圖型分流</li>
-</ul>
-<h3>步驟 8｜一對一諮詢</h3>
-<ul>
-<li>只讓「願意改變局面」的人進</li>
-<li>談關係結構與模式，不陪聊訊息細節</li>
-</ul>
-<h3>步驟 9｜90 天方案</h3>
-<ul>
-<li>止血</li>
-<li>奪權</li>
-<li>選擇</li>
-<li>最終讓她重新擁有選擇權</li>
-</ul>
-<hr>
-<h2>04｜Skool 入群 4 題</h2>
-<blockquote>低阻力、可分類、可直接拿來私訊</blockquote>
-<h3>第 1 題｜妳現在最接近哪一種狀況？</h3>
-<ul>
-<li>曖昧很久，始終不確認關係</li>
-<li>有發生關係，但不知道自己算什麼</li>
-<li>他忽冷忽熱／斷聯／消失</li>
-<li>他有另一半／我是地下關係</li>
-<li>分手了，但還反覆聯絡</li>
-<li>我知道這段關係有問題，但走不了</li>
-<li>其他</li>
-</ul>
-<h3>第 2 題｜這個狀況大概多久了？</h3>
-<ul>
-<li>不到 1 個月</li>
-<li>1–3 個月</li>
-<li>3–6 個月</li>
-<li>6–12 個月</li>
-<li>超過 1 年</li>
-</ul>
-<h3>第 3 題｜妳現在最想解決的是？</h3>
-<ul>
-<li>搞懂他到底認不認真</li>
-<li>想把關係拉回來</li>
-<li>想讓他更投入／給出明確關係</li>
-<li>想離開，但每次都做不到</li>
-<li>不知道該留還是該走</li>
-<li>先看別人的案例</li>
-</ul>
-<h3>第 4 題｜最近發生哪一件事，讓妳開始覺得這段關係不太對？</h3>
-<ul>
-<li>用「事件」取代「請簡單描述狀況」</li>
-<li>希望拿到可直接開私訊的具體鉤子</li>
-<li>例如：上週喝酒後突然不讀不回</li>
-</ul>
-<hr>
-<h2>05｜免費 Skool 的任務</h2>
-<blockquote>不是停車場，要負責加熱、自我辨識、升級意圖</blockquote>
-<h3>第 0 天｜新手入口</h3>
-<ul>
-<li>置頂：第一次進來先看這篇</li>
-<li>主題：妳現在到底卡在哪一種局</li>
-<li>列出 5–7 種典型關係讓她自行分類</li>
-</ul>
-<h3>第 1–3 天｜加熱內容</h3>
-<ul>
-<li>真實案例拆解</li>
-<li>壞男套路</li>
-<li>女生為什麼走不了</li>
-<li>會員真實狀況</li>
-<li>凡氏怎麼判斷一段關係</li>
-</ul>
-<h3>免費群的內容目的</h3>
-<ul>
-<li>讓她從「看熱鬧」變「對號入座」</li>
-<li>讓她看到問題不是只有男人</li>
-<li>讓她理解真正要處理的是關係結構與自己的位置</li>
-</ul>
-<h3>二次行動呼籲</h3>
-<ul>
-<li>想讓凡氏直接判斷妳這局還有沒有救？</li>
-<li>填「3 分鐘關係驗屍單」</li>
-<li>主動填＝天然高意圖訊號</li>
-</ul>
-<hr>
-<h2>06｜3 分鐘關係驗屍單</h2>
-<blockquote>完整篩選放在這裡，不要塞進入群表單</blockquote>
-<h3>關係結構</h3>
-<ul>
-<li>關係多久</li>
-<li>有沒有發生性關係</li>
-<li>有沒有第三者</li>
-<li>有沒有正式承諾</li>
-<li>誰比較常主動</li>
-</ul>
-<h3>過去嘗試</h3>
-<ul>
-<li>試過哪些方式</li>
-<li>想離開幾次</li>
-<li>要求說清楚後發生什麼</li>
-<li>每次回去的觸發點是什麼</li>
-</ul>
-<h3>目前代價</h3>
-<ul>
-<li>情緒</li>
-<li>睡眠</li>
-<li>工作</li>
-<li>食慾</li>
-<li>金錢</li>
-<li>社交</li>
-<li>自尊</li>
-</ul>
-<h3>結果與意願</h3>
-<ul>
-<li>最想得到什麼結果</li>
-<li>半年後完全沒變能不能接受</li>
-<li>如果有策略，願不願意真的照著執行</li>
-</ul>
-<hr>
-<h2>07｜名單評分</h2>
-<blockquote>不是每個新人都給同樣的私訊時間</blockquote>
-<h3>關係時間｜0–3 分</h3>
-<ul>
-<li>不到 1 個月：0 分</li>
-<li>1–3 個月：1 分</li>
-<li>3–6 個月：2 分</li>
-<li>超過 6 個月：3 分</li>
-</ul>
-<h3>痛苦程度｜0–2 分</h3>
-<ul>
-<li>只是好奇：0 分</li>
-<li>明顯困擾：1 分</li>
-<li>已影響生活：2 分</li>
-</ul>
-<h3>改變意願｜0–3 分</h3>
-<ul>
-<li>只是看看：0 分</li>
-<li>不知道：1 分</li>
-<li>明確想改：3 分</li>
-</ul>
-<h3>嘗試過但失敗｜0–2 分</h3>
-<ul>
-<li>沒有：0 分</li>
-<li>有：2 分</li>
-</ul>
-<h3>優先級</h3>
-<ul>
-<li>6 分以上：優先私訊</li>
-<li>有填關係驗屍單：優先</li>
-<li>長期卡關＋生活受影響：優先</li>
-<li>純看內容：低優先</li>
-</ul>
-<hr>
-<h2>08｜私訊核心流程</h2>
-<blockquote>不再「陪她分析男人」，改成「診斷她要不要改變」</blockquote>
-<h3>正確節奏</h3>
-<ul>
-<li>問</li>
-<li>給一小段判斷</li>
-<li>再問</li>
-<li>再給一小段判斷</li>
-<li>測改變意願</li>
-<li>才決定是否推諮詢</li>
-</ul>
-<h3>固定 5 題</h3>
-<ul>
-<li>1. 現在這個狀況維持多久了？</li>
-<li>2. 妳有沒有試過離開／不理他／要求說清楚？結果怎樣？</li>
-<li>3. 目前最影響妳的是什麼？</li>
-<li>4. 如果半年後還是一模一樣，妳可以接受嗎？</li>
-<li>5. 妳現在是想知道答案，還是真的想把這個狀況改掉？</li>
-</ul>
-<h3>一句核心篩選問題</h3>
-<ul>
-<li>「妳現在是真的想改變這個局面，還是目前主要只是想知道他到底怎麼想？」</li>
-</ul>
-<h3>不要做</h3>
-<ul>
-<li>不要一次拆完整個故事</li>
-<li>不要在私訊免費做 30 分鐘診斷</li>
-<li>不要每一個訊息細節都分析</li>
-<li>不要讓她只靠抱怨取得大量注意力</li>
-</ul>
-<h3>適合推諮詢時</h3>
-<ul>
-<li>「如果妳是真的想改現在的局，我會比較建議不要再用私訊一句一句猜了」</li>
-<li>「可以直接做一次完整診斷，把關係結構、他的行為模式跟妳現在能動的地方一次拆清楚」</li>
-</ul>
-<hr>
-<h2>09｜私訊三種人分流</h2>
-<blockquote>目標不是每個人都推諮詢，而是把時間放在對的人身上</blockquote>
-<h3>甲類｜情緒傾倒型</h3>
-<ul>
-<li>一直講故事</li>
-<li>只問男人怎麼想</li>
-<li>完全不談自己要怎麼做</li>
-<li>處理：丟對應免費內容 → 結束</li>
-</ul>
-<h3>乙類｜有痛點、沒決心</h3>
-<ul>
-<li>知道很累，但還想再等等</li>
-<li>還沒有明確行動意願</li>
-<li>處理：留在 Skool 持續加熱，不急著推諮詢</li>
-</ul>
-<h3>丙類｜真正高意圖名單</h3>
-<ul>
-<li>卡超過幾個月</li>
-<li>已嘗試很多次</li>
-<li>生活開始受影響</li>
-<li>不想維持原樣</li>
-<li>願意改自己的做法</li>
-<li>處理：推完整診斷／一對一諮詢</li>
-</ul>
-<hr>
-<h2>10｜IG 前端內容</h2>
-<blockquote>壞男內容拿流量，但一定要逐步導回「妳的位置」</blockquote>
-<h3>內容比例建議</h3>
-<ul>
-<li>30% 男人套路拆解｜拿觸及</li>
-<li>25% 妳為什麼走不了｜自我辨識</li>
-<li>20% 奪回主導權方法｜建立方法論</li>
-<li>15% 客戶案例／結果｜建立信任證據</li>
-<li>10% 方案／篩選型行動呼籲｜促進轉化</li>
-</ul>
-<h3>內容結構</h3>
-<ul>
-<li>第一句抓住注意</li>
-<li>拆機制</li>
-<li>指出妳目前的位置</li>
-<li>給一個測試</li>
-<li>逼出決策</li>
-<li>最後給行動呼籲</li>
-</ul>
-<h3>行動呼籲改法</h3>
-<ul>
-<li>不要：想看更多壞男套路就進免費社群</li>
-<li>改：如果妳也卡在說不清、走不了、一直內耗的關係，進免費診斷室先看妳卡在哪一種局</li>
-<li>把「免費內容」改成「問題診斷入口」</li>
-</ul>
-<h3>高轉化內容核心句</h3>
-<ul>
-<li>知道他在玩什麼，只是第一步</li>
-<li>真正值錢的是：妳知道之後敢不敢改自己的位置</li>
-</ul>
-<hr>
-<h2>11｜一對一諮詢結構</h2>
-<blockquote>不要變成情緒陪聊，要把她從故事拉回模式與決策</blockquote>
-<h3>0–10 分鐘｜現在的局</h3>
-<ul>
-<li>發生什麼</li>
-<li>目前關係狀態</li>
-<li>她最想解決什麼</li>
-</ul>
-<h3>10–20 分鐘｜找循環</h3>
-<ul>
-<li>他做了什麼</li>
-<li>她跟著做了什麼</li>
-<li>他因此拿到什麼</li>
-<li>所以這個模式為什麼一直繼續</li>
-</ul>
-<h3>20–30 分鐘｜看代價</h3>
-<ul>
-<li>如果半年不變</li>
-<li>感情／時間／工作／金錢／睡眠／自尊／社交會怎樣</li>
-</ul>
-<h3>30–40 分鐘｜指出真正缺口</h3>
-<ul>
-<li>不是缺一句完美訊息</li>
-<li>缺的是規則、選擇權、退出能力</li>
-<li>說明方案如何處理</li>
-</ul>
-<h3>40 分鐘後｜決策</h3>
-<ul>
-<li>合適 → 提出方案</li>
-<li>不合適 → 結束</li>
-<li>不繼續陪聊男人昨晚為什麼已讀</li>
-</ul>
-<hr>
-<h2>12｜90 天方案交付</h2>
-<blockquote>客戶因為怕失去他進來，最後變成有能力決定還要不要他</blockquote>
-<h3>第一階段｜止血</h3>
-<ul>
-<li>確認關係結構</li>
-<li>找出對方反覆出現的行為模式</li>
-<li>找她的觸發點</li>
-<li>建立聯絡／見面／性／金錢／情緒陪伴界線</li>
-<li>先停止繼續輸</li>
-</ul>
-<h3>第二階段｜奪權</h3>
-<ul>
-<li>工作</li>
-<li>身材／外貌</li>
-<li>社交</li>
-<li>興趣</li>
-<li>生活安排</li>
-<li>新異性互動</li>
-<li>把人生重新做大</li>
-</ul>
-<h3>第三階段｜選擇</h3>
-<ul>
-<li>看對方是否投入</li>
-<li>看對方是否承擔</li>
-<li>看行動是否一致</li>
-<li>值得留 → 重建</li>
-<li>不值得留 → 降級／離開</li>
-<li>她有其他更好選擇 → 自己選</li>
-</ul>
-<hr>
-<h2>13｜真正要追的關鍵指標</h2>
-<blockquote>不要再只看觀看數，要看高意圖名單與成交</blockquote>
-<h3>轉化路徑數據</h3>
-<ul>
-<li>觸及人數</li>
-<li>個人檔案瀏覽</li>
-<li>加入 Skool</li>
-<li>驗屍單完成</li>
-<li>高意圖名單</li>
-<li>預約諮詢</li>
-<li>實際到場</li>
-<li>成交</li>
-</ul>
-<h3>每篇內容要標來源</h3>
-<ul>
-<li>例如：第 09 支短影片＿免費女友待遇</li>
-<li>最後追到：哪一類內容帶來最多高意圖名單</li>
-<li>哪一類內容成交率最高</li>
-</ul>
-<h3>判斷爆款的標準</h3>
-<ul>
-<li>80 萬播放但 0 成交＝垃圾流量爆款</li>
-<li>3 萬播放但帶來合格諮詢與成交＝真正可複製內容</li>
-</ul>
-<hr>
-<h2>14｜現在先做什麼</h2>
-<blockquote>先修中段，再放大前端</blockquote>
-<h3>最高優先｜這週就改</h3>
-<ul>
-<li>重寫 Skool 入群問題</li>
-<li>建立新手入口</li>
-<li>建立 3 分鐘關係驗屍單</li>
-<li>建立名單評分</li>
-<li>重寫私訊流程</li>
-</ul>
-<h3>第二優先｜下一步</h3>
-<ul>
-<li>改 IG 行動呼籲</li>
-<li>免費群置頂案例分類</li>
-<li>建立甲／乙／丙三類名單標記</li>
-<li>建立諮詢前篩選</li>
-</ul>
-<h3>第三優先｜開始優化</h3>
-<ul>
-<li>追每篇內容的高意圖名單</li>
-<li>找出高成交內容主題</li>
-<li>用案例與見證增加信任證據</li>
-<li>逐步把更多 IG 流量導到「診斷入口」而不是「免費內容」</li>
-</ul>
-<h3>最終判斷標準</h3>
-<ul>
-<li>不是「今天多幾個人進群」</li>
-<li>而是「這週多幾個真正願意改變的人進諮詢」</li>
-</ul>
-<hr>
-<h2>文件用途</h2>
-<p>凡氏可行前端內容、免費 Skool、私訊、諮詢與 90 天方案整體轉化設計。</p>
-<p>底層研究框架可延伸自《預判他的預判》研究版 v2.0：以可觀察訊號、機制、反應與下一步來拆關係模式；實際營運時仍以真實名單行為與轉化數據校正。</p></main></body>
+<body>
+<header>
+  <div class="toolbar">
+    <div class="brand">凡氏可行｜轉化心智圖
+      <small>IG → 免費 Skool → 私訊 → 一對一諮詢 → 90 天方案</small>
+    </div>
+    <input id="search" placeholder="搜尋：私訊、Skool、行動呼籲、名單…" />
+    <button id="expandAll">展開全部</button>
+    <button id="collapseAll">收合細節</button>
+    <button id="zoomOut">縮小</button>
+    <button id="zoomReset">100%</button>
+    <button id="zoomIn">放大</button>
+    <button onclick="window.print()">列印 / 存成 PDF</button>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>凡氏可行｜IG → Skool → 私訊 → 一對一諮詢轉化心智圖</h1>
+  <p>核心目標：把「只想看內容、倒情緒的人」逐步篩成「願意改變局面、適合進諮詢的人」</p>
+</section>
+
+<section class="core">
+  <div class="core-card">
+    <div class="core-kicker">核心原則</div>
+    <div class="core-title">不要再把「入群問題」當完整診斷，改成多層篩選。</div>
+    <div class="core-flow">
+      <span>IG <b>吸引</b></span><span>→</span>
+      <span>Skool <b>分類＋加熱</b></span><span>→</span>
+      <span>驗屍單 <b>篩選</b></span><span>→</span>
+      <span>私訊 <b>診斷意願</b></span><span>→</span>
+      <span>諮詢 <b>決策</b></span><span>→</span>
+      <span>90 天 <b>交付結果</b></span>
+    </div>
+    <div class="legend">
+      <span>核心定位：看懂局，不只看懂男人</span>
+      <span>核心篩選：想知道答案 ≠ 願意改變</span>
+      <span>核心指標：高意圖名單 → 諮詢 → 成交</span>
+    </div>
+  </div>
+</section>
+
+<main class="map-wrap">
+  <div id="map"></div>
+</main>
+
+<footer>
+  <div>用途：凡氏可行前端內容、免費 Skool、私訊、諮詢與 90 天方案整體轉化設計。</div>
+  <div>底層研究框架可延伸自《預判他的預判》研究版 v2.0：以可觀察訊號、機制、反應與下一步來拆關係模式；實際營運時仍以真實名單行為與轉化數據校正。</div>
+</footer>
+
+<script>
+const DATA = {"title": "凡氏可行｜IG → Skool → 私訊 → 一對一諮詢轉化心智圖", "subtitle": "核心目標：把「只想看內容、倒情緒的人」逐步篩成「願意改變局面、適合進諮詢的人」", "branches": [{"id": "problem", "title": "01｜目前真正的問題", "tone": "red", "summary": "不是單純 IG 沒流量，而是中間的篩選機制失效", "items": [{"title": "前端吸來的是「想知道答案的人」", "children": ["想知道他愛不愛我", "想知道他為什麼忽冷忽熱", "想知道他是不是在玩我", "願意看內容，不代表願意改變"]}, {"title": "Skool 入群問題失去篩選功能", "children": ["回答越來越短", "開始出現「曖昧／不知道／想看看」這種低資訊答案", "很難直接判斷痛點、急迫性、行動意願"]}, {"title": "私訊容易變成免費情緒垃圾桶", "children": ["太快開始分析男人", "對方一直補故事，你一直拆", "她在私訊裡先拿完答案", "最後說「謝謝，我懂了」然後消失"]}, {"title": "諮詢端收到的名單不夠成熟", "children": ["還在想知道男人怎麼想", "還沒決定要改變", "把諮詢當情緒出口", "缺乏問題成本與行動意願"]}]}, {"id": "positioning", "title": "02｜定位重新對焦", "tone": "gold", "summary": "從「幫妳看懂他」升級成「幫妳看懂這個局，拿回選擇權」", "items": [{"title": "前端不要急著賣「心態改變」", "children": ["客戶一開始買的是：我想把這個爛局翻掉", "不要直接賣：愛自己、心靈成長、自我提升", "心態改變是交付方法，不是第一購買理由"]}, {"title": "真正可長期佔據的利基市場", "children": ["卡在不對等關係裡的女性", "曖昧／砲友／地下關係／小三／婚外／分手後回收", "不承諾又不放人", "明知道有問題，但走不了"]}, {"title": "核心承諾", "children": ["先把關係主導權拿回來", "值得留：重新談條件", "不值得留：建立真的能離開的能力", "最終不是「一定追回他」，而是「有資格決定還要不要他」"]}, {"title": "底層邏輯", "children": ["關係權力 ≈ 選擇權 + 自主性 + 離開能力 − 依賴", "前端賣痛點", "中段賣主導權", "後端交付心態、行為、生活重建、選擇權"]}]}, {"id": "funnel", "title": "03｜新版完整轉化路徑", "tone": "green", "summary": "把篩選從「入群表單一次做完」改成多層篩選", "items": [{"title": "步驟 1｜IG", "children": ["壞男套路：拿觸及", "女性卡點：讓她看到自己為什麼走不了", "奪權方法：建立方法論", "案例／見證：建立信任證據", "篩選型行動呼籲：導入 Skool"]}, {"title": "步驟 2｜行動呼籲", "children": ["不要只賣「免費社群」", "改賣「免費地下關係診斷室／壞男驗屍房」", "重點：進去看妳現在到底卡在哪一種局"]}, {"title": "步驟 3｜Skool 入群問題", "children": ["只做快速分類", "不要要求完整故事", "任務：提供私訊開場鉤子"]}, {"title": "步驟 4｜新手入口", "children": ["讓新人先自行對號入座", "建立「凡氏懂這種局」的認知", "降低後續私訊的陌生感"]}, {"title": "步驟 5｜3 分鐘關係驗屍單", "children": ["二次表單", "只讓高意圖者主動填", "開始真正做篩選"]}, {"title": "步驟 6｜名單評分", "children": ["依關係時間", "痛苦程度", "嘗試失敗次數", "改變意願", "排私訊優先級"]}, {"title": "步驟 7｜私訊", "children": ["問 → 判斷 → 再問 → 再判斷 → 意願測試", "不做完整免費診斷", "把情緒型、觀望型、高意圖型分流"]}, {"title": "步驟 8｜一對一諮詢", "children": ["只讓「願意改變局面」的人進", "談關係結構與模式，不陪聊訊息細節"]}, {"title": "步驟 9｜90 天方案", "children": ["止血", "奪權", "選擇", "最終讓她重新擁有選擇權"]}]}, {"id": "join", "title": "04｜Skool 入群 4 題", "tone": "blue", "summary": "低阻力、可分類、可直接拿來私訊", "items": [{"title": "第 1 題｜妳現在最接近哪一種狀況？", "children": ["曖昧很久，始終不確認關係", "有發生關係，但不知道自己算什麼", "他忽冷忽熱／斷聯／消失", "他有另一半／我是地下關係", "分手了，但還反覆聯絡", "我知道這段關係有問題，但走不了", "其他"]}, {"title": "第 2 題｜這個狀況大概多久了？", "children": ["不到 1 個月", "1–3 個月", "3–6 個月", "6–12 個月", "超過 1 年"]}, {"title": "第 3 題｜妳現在最想解決的是？", "children": ["搞懂他到底認不認真", "想把關係拉回來", "想讓他更投入／給出明確關係", "想離開，但每次都做不到", "不知道該留還是該走", "先看別人的案例"]}, {"title": "第 4 題｜最近發生哪一件事，讓妳開始覺得這段關係不太對？", "children": ["用「事件」取代「請簡單描述狀況」", "希望拿到可直接開私訊的具體鉤子", "例如：上週喝酒後突然不讀不回"]}]}, {"id": "skool", "title": "05｜免費 Skool 的任務", "tone": "purple", "summary": "不是停車場，要負責加熱、自我辨識、升級意圖", "items": [{"title": "第 0 天｜新手入口", "children": ["置頂：第一次進來先看這篇", "主題：妳現在到底卡在哪一種局", "列出 5–7 種典型關係讓她自行分類"]}, {"title": "第 1–3 天｜加熱內容", "children": ["真實案例拆解", "壞男套路", "女生為什麼走不了", "會員真實狀況", "凡氏怎麼判斷一段關係"]}, {"title": "免費群的內容目的", "children": ["讓她從「看熱鬧」變「對號入座」", "讓她看到問題不是只有男人", "讓她理解真正要處理的是關係結構與自己的位置"]}, {"title": "二次行動呼籲", "children": ["想讓凡氏直接判斷妳這局還有沒有救？", "填「3 分鐘關係驗屍單」", "主動填＝天然高意圖訊號"]}]}, {"id": "autopsy", "title": "06｜3 分鐘關係驗屍單", "tone": "orange", "summary": "完整篩選放在這裡，不要塞進入群表單", "items": [{"title": "關係結構", "children": ["關係多久", "有沒有發生性關係", "有沒有第三者", "有沒有正式承諾", "誰比較常主動"]}, {"title": "過去嘗試", "children": ["試過哪些方式", "想離開幾次", "要求說清楚後發生什麼", "每次回去的觸發點是什麼"]}, {"title": "目前代價", "children": ["情緒", "睡眠", "工作", "食慾", "金錢", "社交", "自尊"]}, {"title": "結果與意願", "children": ["最想得到什麼結果", "半年後完全沒變能不能接受", "如果有策略，願不願意真的照著執行"]}]}, {"id": "score", "title": "07｜名單評分", "tone": "cyan", "summary": "不是每個新人都給同樣的私訊時間", "items": [{"title": "關係時間｜0–3 分", "children": ["不到 1 個月：0 分", "1–3 個月：1 分", "3–6 個月：2 分", "超過 6 個月：3 分"]}, {"title": "痛苦程度｜0–2 分", "children": ["只是好奇：0 分", "明顯困擾：1 分", "已影響生活：2 分"]}, {"title": "改變意願｜0–3 分", "children": ["只是看看：0 分", "不知道：1 分", "明確想改：3 分"]}, {"title": "嘗試過但失敗｜0–2 分", "children": ["沒有：0 分", "有：2 分"]}, {"title": "優先級", "children": ["6 分以上：優先私訊", "有填關係驗屍單：優先", "長期卡關＋生活受影響：優先", "純看內容：低優先"]}]}, {"id": "dm", "title": "08｜私訊核心流程", "tone": "pink", "summary": "不再「陪她分析男人」，改成「診斷她要不要改變」", "items": [{"title": "正確節奏", "children": ["問", "給一小段判斷", "再問", "再給一小段判斷", "測改變意願", "才決定是否推諮詢"]}, {"title": "固定 5 題", "children": ["1. 現在這個狀況維持多久了？", "2. 妳有沒有試過離開／不理他／要求說清楚？結果怎樣？", "3. 目前最影響妳的是什麼？", "4. 如果半年後還是一模一樣，妳可以接受嗎？", "5. 妳現在是想知道答案，還是真的想把這個狀況改掉？"]}, {"title": "一句核心篩選問題", "children": ["「妳現在是真的想改變這個局面，還是目前主要只是想知道他到底怎麼想？」"]}, {"title": "不要做", "children": ["不要一次拆完整個故事", "不要在私訊免費做 30 分鐘診斷", "不要每一個訊息細節都分析", "不要讓她只靠抱怨取得大量注意力"]}, {"title": "適合推諮詢時", "children": ["「如果妳是真的想改現在的局，我會比較建議不要再用私訊一句一句猜了」", "「可以直接做一次完整診斷，把關係結構、他的行為模式跟妳現在能動的地方一次拆清楚」"]}]}, {"id": "segments", "title": "09｜私訊三種人分流", "tone": "violet", "summary": "目標不是每個人都推諮詢，而是把時間放在對的人身上", "items": [{"title": "甲類｜情緒傾倒型", "children": ["一直講故事", "只問男人怎麼想", "完全不談自己要怎麼做", "處理：丟對應免費內容 → 結束"]}, {"title": "乙類｜有痛點、沒決心", "children": ["知道很累，但還想再等等", "還沒有明確行動意願", "處理：留在 Skool 持續加熱，不急著推諮詢"]}, {"title": "丙類｜真正高意圖名單", "children": ["卡超過幾個月", "已嘗試很多次", "生活開始受影響", "不想維持原樣", "願意改自己的做法", "處理：推完整診斷／一對一諮詢"]}]}, {"id": "ig", "title": "10｜IG 前端內容", "tone": "lime", "summary": "壞男內容拿流量，但一定要逐步導回「妳的位置」", "items": [{"title": "內容比例建議", "children": ["30% 男人套路拆解｜拿觸及", "25% 妳為什麼走不了｜自我辨識", "20% 奪回主導權方法｜建立方法論", "15% 客戶案例／結果｜建立信任證據", "10% 方案／篩選型行動呼籲｜促進轉化"]}, {"title": "內容結構", "children": ["第一句抓住注意", "拆機制", "指出妳目前的位置", "給一個測試", "逼出決策", "最後給行動呼籲"]}, {"title": "行動呼籲改法", "children": ["不要：想看更多壞男套路就進免費社群", "改：如果妳也卡在說不清、走不了、一直內耗的關係，進免費診斷室先看妳卡在哪一種局", "把「免費內容」改成「問題診斷入口」"]}, {"title": "高轉化內容核心句", "children": ["知道他在玩什麼，只是第一步", "真正值錢的是：妳知道之後敢不敢改自己的位置"]}]}, {"id": "consult", "title": "11｜一對一諮詢結構", "tone": "amber", "summary": "不要變成情緒陪聊，要把她從故事拉回模式與決策", "items": [{"title": "0–10 分鐘｜現在的局", "children": ["發生什麼", "目前關係狀態", "她最想解決什麼"]}, {"title": "10–20 分鐘｜找循環", "children": ["他做了什麼", "她跟著做了什麼", "他因此拿到什麼", "所以這個模式為什麼一直繼續"]}, {"title": "20–30 分鐘｜看代價", "children": ["如果半年不變", "感情／時間／工作／金錢／睡眠／自尊／社交會怎樣"]}, {"title": "30–40 分鐘｜指出真正缺口", "children": ["不是缺一句完美訊息", "缺的是規則、選擇權、退出能力", "說明方案如何處理"]}, {"title": "40 分鐘後｜決策", "children": ["合適 → 提出方案", "不合適 → 結束", "不繼續陪聊男人昨晚為什麼已讀"]}]}, {"id": "program", "title": "12｜90 天方案交付", "tone": "emerald", "summary": "客戶因為怕失去他進來，最後變成有能力決定還要不要他", "items": [{"title": "第一階段｜止血", "children": ["確認關係結構", "找出對方反覆出現的行為模式", "找她的觸發點", "建立聯絡／見面／性／金錢／情緒陪伴界線", "先停止繼續輸"]}, {"title": "第二階段｜奪權", "children": ["工作", "身材／外貌", "社交", "興趣", "生活安排", "新異性互動", "把人生重新做大"]}, {"title": "第三階段｜選擇", "children": ["看對方是否投入", "看對方是否承擔", "看行動是否一致", "值得留 → 重建", "不值得留 → 降級／離開", "她有其他更好選擇 → 自己選"]}]}, {"id": "kpi", "title": "13｜真正要追的關鍵指標", "tone": "teal", "summary": "不要再只看觀看數，要看高意圖名單與成交", "items": [{"title": "轉化路徑數據", "children": ["觸及人數", "個人檔案瀏覽", "加入 Skool", "驗屍單完成", "高意圖名單", "預約諮詢", "實際到場", "成交"]}, {"title": "每篇內容要標來源", "children": ["例如：第 09 支短影片＿免費女友待遇", "最後追到：哪一類內容帶來最多高意圖名單", "哪一類內容成交率最高"]}, {"title": "判斷爆款的標準", "children": ["80 萬播放但 0 成交＝垃圾流量爆款", "3 萬播放但帶來合格諮詢與成交＝真正可複製內容"]}]}, {"id": "priority", "title": "14｜現在先做什麼", "tone": "white", "summary": "先修中段，再放大前端", "items": [{"title": "最高優先｜這週就改", "children": ["重寫 Skool 入群問題", "建立新手入口", "建立 3 分鐘關係驗屍單", "建立名單評分", "重寫私訊流程"]}, {"title": "第二優先｜下一步", "children": ["改 IG 行動呼籲", "免費群置頂案例分類", "建立甲／乙／丙三類名單標記", "建立諮詢前篩選"]}, {"title": "第三優先｜開始優化", "children": ["追每篇內容的高意圖名單", "找出高成交內容主題", "用案例與見證增加信任證據", "逐步把更多 IG 流量導到「診斷入口」而不是「免費內容」"]}, {"title": "最終判斷標準", "children": ["不是「今天多幾個人進群」", "而是「這週多幾個真正願意改變的人進諮詢」"]}]}]};
+const COLORS = {
+ red:"#e35b5b", gold:"#d6b25e", green:"#63c58f", blue:"#6fa8ff",
+ purple:"#a98cff", orange:"#f3a35c", cyan:"#62cbd8", pink:"#ef7dac",
+ violet:"#b188ff", lime:"#9ccc65", amber:"#e2bd62", emerald:"#55c98a",
+ teal:"#5cc7b2", white:"#e5e5e5"
+};
+
+function render() {
+  const map = document.getElementById("map");
+  const grid = document.createElement("div");
+  grid.className = "branch-grid";
+  DATA.branches.forEach((b) => {
+    const section = document.createElement("section");
+    section.className = "branch";
+    section.dataset.search = (b.title+" "+b.summary+" "+b.items.map(x=>x.title+" "+(x.children||[]).join(" ")).join(" ")).toLowerCase();
+
+    const head = document.createElement("div");
+    head.className = "branch-head";
+    head.innerHTML = `
+      <span class="badge" style="color:${COLORS[b.tone]||COLORS.white};background:${COLORS[b.tone]||COLORS.white}"></span>
+      <div><h2>${b.title}</h2><div class="branch-summary">${b.summary}</div></div>`;
+    head.addEventListener("click", ()=> section.classList.toggle("is-collapsed"));
+    section.appendChild(head);
+
+    const body = document.createElement("div");
+    body.className = "branch-body";
+
+    b.items.forEach(item => {
+      const wrap = document.createElement("div");
+      wrap.className = "item";
+      wrap.dataset.search = (item.title+" "+(item.children||[]).join(" ")).toLowerCase();
+
+      const title = document.createElement("div");
+      title.className = "item-title";
+      title.innerHTML = `<span>${item.title}</span><span class="chev">▼</span>`;
+      title.addEventListener("click", ()=>wrap.classList.toggle("collapsed"));
+      wrap.appendChild(title);
+
+      if(item.children?.length) {
+        const children = document.createElement("div");
+        children.className = "children";
+        item.children.forEach(c => {
+          const ch = document.createElement("div");
+          ch.className = "child";
+          ch.textContent = c;
+          children.appendChild(ch);
+        });
+        wrap.appendChild(children);
+      }
+      body.appendChild(wrap);
+    });
+
+    section.appendChild(body);
+    grid.appendChild(section);
+  });
+  map.appendChild(grid);
+}
+render();
+
+document.getElementById("expandAll").onclick = () => {
+  document.querySelectorAll(".branch").forEach(x=>x.classList.remove("is-collapsed"));
+  document.querySelectorAll(".item").forEach(x=>x.classList.remove("collapsed"));
+};
+document.getElementById("collapseAll").onclick = () => {
+  document.querySelectorAll(".branch").forEach(x=>x.classList.remove("is-collapsed"));
+  document.querySelectorAll(".item").forEach(x=>x.classList.add("collapsed"));
+};
+
+let zoom = 1;
+function applyZoom(){
+  document.getElementById("map").style.transform = `scale(${zoom})`;
+  document.getElementById("zoomReset").textContent = Math.round(zoom*100)+"%";
+}
+document.getElementById("zoomIn").onclick=()=>{ zoom=Math.min(1.6,zoom+.1); applyZoom(); };
+document.getElementById("zoomOut").onclick=()=>{ zoom=Math.max(.6,zoom-.1); applyZoom(); };
+document.getElementById("zoomReset").onclick=()=>{ zoom=1; applyZoom(); };
+
+const search = document.getElementById("search");
+search.addEventListener("input", e => {
+  const q = e.target.value.trim().toLowerCase();
+  const branches = [...document.querySelectorAll(".branch")];
+  if(!q) {
+    branches.forEach(b=>b.classList.remove("dimmed","search-hit"));
+    document.querySelectorAll(".item").forEach(i=>i.classList.remove("dimmed","search-hit"));
+    return;
+  }
+  branches.forEach(b => {
+    const branchHit = b.dataset.search.includes(q);
+    b.classList.toggle("dimmed", !branchHit);
+    b.classList.toggle("search-hit", branchHit);
+    if(branchHit) b.classList.remove("is-collapsed");
+  });
+  document.querySelectorAll(".item").forEach(i => {
+    const hit = i.dataset.search.includes(q);
+    i.classList.toggle("search-hit", hit);
+    i.classList.toggle("dimmed", !hit);
+    if(hit) i.classList.remove("collapsed");
+  });
+});
+</script>
+</body>
 </html>
