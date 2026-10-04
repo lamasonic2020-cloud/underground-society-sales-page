@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>凡氏可行｜4 次小勝利計畫</title>
+  <meta name="description" content="凡氏可行一對一諮詢：第一次免費驗屍，單次 NT$3,980，4 次小勝利計畫 NT$8,950，每次附完整關係驗屍報告">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    /* Layout: same dark / blood-red / paper system as the blueprint page; one paper "autopsy report" as the signature object */
+    :root{
+      --bg:#080708;
+      --bg2:#0b0a0b;
+      --ink:#f4eee8;
+      --muted:#a29994;
+      --soft:#d7cec8;
+      --line:rgba(255,255,255,.14);
+      --red:#c31538;
+      --red-hi:#ff3158;
+      --gold:#b58835;
+      --gold-hi:#e0b85f;
+      --paper:#e8e1d8;
+      --paper2:#f3eee7;
+      --paper-line:#c9beb5;
+      --paper-ink:#131011;
+      --paper-muted:#6b625d;
+      --serif:"Noto Serif TC","Songti TC","PMingLiU",serif;
+      --sans:"Noto Sans TC",system-ui,-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;
+      color-scheme:dark;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;overflow-x:hidden}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);letter-spacing:.01em;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    a:focus-visible{outline:2px solid var(--red-hi);outline-offset:3px}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,h3,p,li{max-width:100%;overflow-wrap:anywhere}
+    .wrap{width:min(100% - 56px,1180px);margin-inline:auto}
+    .eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:18px;color:#ad9d97;font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:40px;height:1px;background:var(--red);flex:0 0 40px}
+    .paper .eyebrow{color:#8a7d76}
+    .btn{display:inline-flex;align-items:center;justify-content:space-between;gap:28px;min-width:220px;padding:20px 26px;border:1px solid rgba(255,255,255,.24);background:var(--red);color:#fff;font-weight:700;transition:transform .25s ease,background .25s ease}
+    .btn:hover{transform:translateY(-2px);background:#df193f}
+    .btn.ghost{background:transparent}
+    .btn.ghost:hover{background:rgba(255,255,255,.06)}
+    .btn.gold{background:var(--gold);border-color:#d1a34d}
+
+    /* nav */
+    nav{position:fixed;inset:0 0 auto 0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:calc(18px + env(safe-area-inset-top,0px)) 44px 18px;background:rgba(8,7,8,.82);border-bottom:1px solid var(--line);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+    .brand{display:flex;align-items:center;gap:14px;font-weight:700}
+    .mark{display:grid;place-items:center;width:38px;height:38px;border:1px solid rgba(255,255,255,.25);font-family:var(--serif);font-size:13px}
+    .nav-links{display:flex;align-items:center;gap:24px;color:#cabfb9;font-size:13px;font-weight:700}
+    .nav-links .nav-cta{padding:10px 16px;background:var(--red);color:#fff}
+
+    /* hero */
+    .hero{position:relative;padding:170px 0 110px;overflow:hidden;background:radial-gradient(circle at 76% 40%,rgba(195,21,56,.24),transparent 28%),linear-gradient(90deg,rgba(195,21,56,.12),transparent 38%),var(--bg)}
+    .hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:92px 92px;mask-image:linear-gradient(90deg,#000 0%,rgba(0,0,0,.8) 62%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,#000 0%,rgba(0,0,0,.8) 62%,transparent 100%);pointer-events:none}
+    .orbit{position:absolute;right:-180px;top:120px;width:650px;height:650px;border:1px solid rgba(195,21,56,.35);border-radius:50%}
+    .orbit:before,.orbit:after{content:"";position:absolute;inset:95px;border:1px solid rgba(195,21,56,.22);border-radius:50%}
+    .orbit:after{inset:205px}
+    .hero-grid{position:relative;display:grid;grid-template-columns:1.1fr .8fr;gap:64px;align-items:center}
+    .hero-grid>*,.split>*,.offer-main>*,.offer-more>*,.report-grid>*,.testimonial-grid>*,.win-grid>*,.free-grid>*{min-width:0}
+    h1{margin:6px 0 28px;font-family:var(--serif);font-size:clamp(38px,4.6vw,66px);line-height:1.22;letter-spacing:-.045em;font-weight:700;text-wrap:balance}
+    h1 em{color:var(--red-hi);font-style:normal}
+    .lead{max-width:640px;color:var(--soft);font-size:18px;line-height:1.9;font-weight:500;text-wrap:pretty}
+    .hero-actions{display:flex;gap:18px;margin-top:40px;flex-wrap:wrap}
+
+    .ladder{position:relative;z-index:1;border:1px solid rgba(255,255,255,.16);background:linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.015));box-shadow:0 28px 90px rgba(0,0,0,.35)}
+    .ladder-head{padding:22px 28px;border-bottom:1px solid var(--line);color:#a89d98;font-size:11px;font-weight:700;letter-spacing:.22em}
+    .rung{display:grid;grid-template-columns:1fr auto;gap:6px 18px;align-items:baseline;padding:22px 28px;border-bottom:1px solid var(--line)}
+    .rung:last-child{border-bottom:0}
+    .rung b{font-family:var(--serif);font-size:20px;font-weight:700}
+    .rung span{color:var(--muted);font-size:13px;font-weight:500;grid-column:1}
+    .rung strong{grid-column:2;grid-row:1/3;align-self:center;font-family:var(--serif);font-size:24px;font-variant-numeric:tabular-nums;white-space:nowrap}
+    .rung strong small{font-family:var(--sans);font-size:12px;color:var(--muted);margin-right:4px}
+    .rung.free strong{color:var(--gold-hi)}
+    .rung.core{background:rgba(195,21,56,.12);box-shadow:inset 3px 0 0 var(--red)}
+    .rung.core strong{color:var(--red-hi)}
+
+    /* sections */
+    .section{padding-block:112px}
+    .section h2{font-family:var(--serif);font-size:clamp(30px,3.7vw,50px);line-height:1.35;letter-spacing:-.035em;font-weight:700;text-wrap:balance;margin-bottom:22px}
+    .paper{background:var(--paper);color:var(--paper-ink)}
+    .dark{background:var(--bg2)}
+    .split{display:grid;grid-template-columns:.95fr 1fr;gap:64px;align-items:end}
+    .section-copy{color:var(--paper-muted);font-size:16px;line-height:1.9;font-weight:500;text-wrap:pretty;margin-bottom:22px}
+    .dark .section-copy,.offers .section-copy{color:var(--muted)}
+
+    .bug-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid var(--paper-line);background:var(--paper-line);margin-top:56px}
+    .bug{background:#eee8df;padding:36px}
+    .bug h3{font-family:var(--serif);font-size:23px;margin:0 0 16px;font-weight:700;text-wrap:balance}
+    .bug p{color:var(--paper-muted);line-height:1.85;font-weight:500;margin:0;text-wrap:pretty}
+
+    /* free consult */
+    .free{background:radial-gradient(circle at 12% 0,rgba(181,136,53,.14),transparent 40%),var(--bg2)}
+    .free-grid{display:grid;grid-template-columns:.9fr 1fr;gap:64px;align-items:start}
+    .free-list{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+    .free-item{padding:26px 28px;background:var(--bg2)}
+    .free-item h3{margin:0 0 8px;font-size:19px;font-weight:700;color:var(--gold-hi)}
+    .free-item p{margin:0;color:var(--muted);line-height:1.8;font-weight:500}
+    .rule-note{margin:28px 0 32px;padding-left:20px;border-left:2px solid var(--gold);color:var(--soft);line-height:1.85;font-weight:500}
+
+    /* plan timeline */
+    .plan{background:radial-gradient(circle at 50% 0,rgba(195,21,56,.18),transparent 32%),#090909}
+    .plan-head{text-align:center;max-width:820px;margin:0 auto 64px}
+    .plan-head .eyebrow{justify-content:center}
+    .plan-head p{color:var(--muted);font-size:16px;line-height:1.85;font-weight:500}
+    .stage-list{position:relative;max-width:980px;margin:auto;display:grid;gap:40px}
+    .stage-list:before{content:"";position:absolute;left:95px;top:30px;bottom:30px;width:1px;background:linear-gradient(#fff,var(--red),#fff);opacity:.34}
+    .stage{position:relative;display:grid;grid-template-columns:190px 1fr;gap:34px}
+    .stage-time{position:relative;z-index:1;align-self:start;justify-self:center;min-width:132px;padding:13px 15px;border:1px solid rgba(255,255,255,.25);background:#0b0b0c;color:#fff;text-align:center;font-weight:700;font-size:13px;letter-spacing:.08em}
+    .stage-card{padding:32px 36px;border:1px solid rgba(255,255,255,.13);background:linear-gradient(135deg,rgba(255,255,255,.045),rgba(255,255,255,.012))}
+    .stage-card h3{font-family:var(--serif);font-size:28px;margin:0 0 12px;font-weight:700}
+    .stage-card p{color:#a9a09b;line-height:1.85;font-weight:500;text-wrap:pretty}
+    .chip{display:inline-flex;padding:10px 14px;border:1px solid rgba(195,21,56,.55);background:rgba(195,21,56,.12);color:#ff7088;font-weight:700;font-size:13px;line-height:1.5}
+
+    /* small win */
+    .win-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid var(--paper-line);background:var(--paper-line);margin-top:52px}
+    .win{background:var(--paper2);padding:34px 32px}
+    .win b{display:block;margin-bottom:14px;color:var(--red);font-size:12px;font-weight:900;letter-spacing:.16em}
+    .win p{margin:0;font-family:var(--serif);font-size:21px;line-height:1.6;font-weight:700;text-wrap:balance}
+
+    /* report mock */
+    .report-sec{background:linear-gradient(180deg,var(--bg2),var(--bg))}
+    .report-grid{display:grid;grid-template-columns:.85fr 1fr;gap:64px;align-items:center}
+    .report-grid .lead{font-size:16px;color:var(--muted)}
+    .report-points{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:12px}
+    .report-points li{display:flex;gap:14px;color:var(--soft);font-weight:500;line-height:1.7}
+    .report-points li:before{content:"";flex:0 0 8px;height:8px;margin-top:10px;background:var(--red)}
+    .doc{position:relative;background:var(--paper2);color:var(--paper-ink);padding:38px 40px 34px;box-shadow:0 40px 100px rgba(0,0,0,.5);transform:rotate(1.2deg)}
+    .doc:after{content:"";position:absolute;inset:auto 0 -10px 10px;height:10px;background:#cfc6bb;transform:skewX(-40deg);transform-origin:top;z-index:-1}
+    .doc-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding-bottom:18px;border-bottom:2px solid var(--paper-ink)}
+    .doc-top h3{margin:0;font-family:var(--serif);font-size:24px;font-weight:900;letter-spacing:.02em}
+    .doc-top small{display:block;margin-top:6px;color:var(--paper-muted);font-size:12px;font-weight:700;letter-spacing:.1em;font-variant-numeric:tabular-nums}
+    .stamp{flex:0 0 auto;padding:6px 10px;border:2px solid var(--red);color:var(--red);font-family:var(--serif);font-weight:900;font-size:15px;letter-spacing:.18em;transform:rotate(-8deg)}
+    .doc-row{display:grid;grid-template-columns:96px 1fr;gap:16px;padding:14px 0;border-bottom:1px dashed var(--paper-line);font-size:14px;line-height:1.7}
+    .doc-row dt{color:var(--paper-muted);font-weight:700;font-size:12px;letter-spacing:.08em;padding-top:2px}
+    .doc-row dd{margin:0;font-weight:500}
+    .doc-row dd em{font-style:normal;color:var(--red);font-weight:700}
+    .checks{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+    .checks li:before{content:"☐ ";color:var(--paper-muted)}
+    .doc-foot{margin-top:16px;color:var(--paper-muted);font-size:11px;letter-spacing:.12em;font-weight:700}
+
+    /* guarantee */
+    .guarantee{background:var(--bg)}
+    .guarantee-panel{max-width:980px;margin:auto;padding:56px;border:1px solid rgba(195,21,56,.4);background:radial-gradient(circle at 15% 0,rgba(195,21,56,.2),transparent 45%),#0d0a0b}
+    .guarantee-panel p{color:var(--soft);line-height:1.9;font-weight:500;max-width:760px;margin-bottom:0}
+    .guarantee-panel p strong{color:#fff}
+
+    /* testimonials */
+    .testimonials{background:#0a0909}
+    .testimonial-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:48px}
+    .testimonial-card{overflow:hidden;border:1px solid rgba(255,255,255,.14);background:#111}
+    .testimonial-copy{padding:30px}
+    .testimonial-copy small{color:var(--red-hi);font-weight:900;letter-spacing:.16em}
+    .testimonial-copy h3{font-family:var(--serif);font-size:23px;line-height:1.6;font-weight:700;margin:12px 0 10px}
+    .testimonial-copy p{color:#9b928d;font-weight:700;margin:0;font-size:13px;letter-spacing:.06em}
+    .testimonial-shot{margin:0;background:#080808}
+    .testimonial-shot img{display:block;width:100%;height:auto}
+
+    /* offers */
+    .offers{background:#070607}
+    .free-bar{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:52px;padding:28px 32px;border:1px solid rgba(181,136,53,.6);background:linear-gradient(90deg,rgba(181,136,53,.16),rgba(181,136,53,.03))}
+    .free-bar h3{margin:0 0 6px;font-family:var(--serif);font-size:26px;font-weight:700}
+    .free-bar h3 span{color:var(--gold-hi)}
+    .free-bar p{margin:0;color:var(--muted);font-weight:500;line-height:1.7}
+    .offer-main{display:grid;grid-template-columns:1fr 1.12fr;gap:26px;margin-top:26px;align-items:stretch}
+    .offer{position:relative;display:flex;flex-direction:column;padding:72px 38px 38px;border:1px solid rgba(255,255,255,.17);background:linear-gradient(160deg,rgba(255,255,255,.045),rgba(255,255,255,.01))}
+    .offer.featured{border-color:rgba(195,21,56,.75);box-shadow:0 0 0 1px rgba(195,21,56,.4),0 30px 90px rgba(195,21,56,.14)}
+    .tag{position:absolute;left:0;right:0;top:0;padding:14px 20px;text-align:center;background:#2a2426;font-size:12px;font-weight:700;letter-spacing:.14em}
+    .featured .tag{background:var(--red)}
+    .offer h3{font-family:var(--serif);font-size:30px;margin:0 0 12px;font-weight:700}
+    .offer>p{color:var(--muted);line-height:1.8;font-weight:500;margin-bottom:0}
+    .price{margin:26px 0 8px;display:flex;align-items:flex-end;gap:8px;flex-wrap:wrap}
+    .price small{color:var(--red-hi);font-weight:900;padding-bottom:6px}
+    .price strong{font-family:var(--serif);font-size:58px;line-height:.9;font-variant-numeric:tabular-nums}
+    .price span{color:#918781;font-weight:700;padding-bottom:4px}
+    .price-note{margin:0 0 24px;color:var(--muted);font-size:14px;font-weight:700;line-height:1.7}
+    .price-note em{color:var(--gold-hi);font-style:normal}
+    ul.clean{list-style:none;margin:8px 0 32px;padding:0;display:grid;gap:14px}
+    .clean li{position:relative;padding-left:28px;color:#d2c8c2;font-weight:500;line-height:1.65}
+    .clean li:before{content:"✓";position:absolute;left:0;color:var(--red-hi);font-weight:900}
+    .offer .btn{margin-top:auto;width:100%}
+    .offer-more-head{margin:72px 0 0;color:#a89d98;font-size:12px;font-weight:700;letter-spacing:.22em}
+    .offer-more{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:18px}
+    .mini{display:flex;flex-direction:column;padding:34px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.02)}
+    .mini.gold{border-color:rgba(181,136,53,.5)}
+    .mini h3{font-family:var(--serif);font-size:24px;margin:0 0 10px;font-weight:700}
+    .mini>p{color:var(--muted);line-height:1.8;font-weight:500;margin:0}
+    .mini .price strong{font-size:38px}
+    .mini.gold .price strong{color:var(--gold-hi)}
+    .mini.gold .clean li:before{color:var(--gold-hi)}
+    .mini ul.clean{margin-bottom:28px;gap:10px}
+    .mini .btn{margin-top:auto;width:100%}
+
+    /* faq */
+    .faq-list{margin-top:44px;border-top:1px solid var(--paper-line)}
+    .faq-list details{border-bottom:1px solid var(--paper-line)}
+    .faq-list summary{display:flex;justify-content:space-between;gap:20px;padding:26px 0;cursor:pointer;list-style:none;font-family:var(--serif);font-size:21px;font-weight:700}
+    .faq-list summary::-webkit-details-marker{display:none}
+    .faq-list summary:after{content:"+";color:var(--red);font-family:var(--sans);font-weight:900}
+    .faq-list details[open] summary:after{content:"−"}
+    .faq-list summary:focus-visible{outline:2px solid var(--red);outline-offset:4px}
+    .faq-list details p{margin:0 0 26px;max-width:760px;color:var(--paper-muted);line-height:1.9;font-weight:500}
+
+    /* final */
+    .final{padding-block:120px;background:linear-gradient(135deg,#16080b,#050505);text-align:center}
+    .final .eyebrow{justify-content:center}
+    .final h2{font-family:var(--serif);font-size:clamp(30px,4vw,56px);line-height:1.35;font-weight:700;text-wrap:balance}
+    .final p{max-width:720px;margin:0 auto 36px;color:#c9beb8;line-height:1.9;font-weight:500}
+    footer{display:flex;justify-content:space-between;gap:20px;padding:30px 44px calc(30px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);color:#827973;font-size:12px;background:var(--bg)}
+
+    @media (max-width:980px){
+      .hero-grid,.split,.free-grid,.report-grid,.offer-main,.offer-more,.testimonial-grid{grid-template-columns:1fr}
+      .bug-grid,.win-grid{grid-template-columns:1fr}
+      .split{align-items:start}
+      .doc{transform:none}
+    }
+    @media (max-width:640px){
+      .wrap{width:min(100% - 36px,1180px)}
+      nav{padding:calc(14px + env(safe-area-inset-top,0px)) 18px 14px}
+      .brand strong{display:none}
+      .nav-links a:not(.nav-cta){display:none}
+      .eyebrow{font-size:9px;letter-spacing:.16em;gap:10px}.eyebrow:before{width:28px;flex-basis:28px}
+      .hero{padding:120px 0 72px}
+      h1{font-size:32px;line-height:1.38}
+      .lead{font-size:15px;line-height:1.85}
+      .hero-actions{flex-direction:column}.btn{width:100%;min-width:0;padding:18px 20px}
+      .rung{padding:18px 20px}.rung b{font-size:17px}.rung strong{font-size:20px}
+      .section{padding-block:76px}
+      .section h2{font-size:29px;line-height:1.45}
+      .bug,.win{padding:28px 22px}
+      .free-item{padding:22px 20px}
+      .stage-list:before{left:12px}
+      .stage{grid-template-columns:1fr;gap:14px;padding-left:30px}
+      .stage-time{justify-self:start}
+      .stage-card{padding:24px 20px}.stage-card h3{font-size:24px}
+      .doc{padding:28px 20px 24px}
+      .doc-row{grid-template-columns:1fr;gap:4px}
+      .guarantee-panel{padding:34px 22px}
+      .free-bar{padding:24px 20px}
+      .offer{padding:66px 22px 26px}.offer h3{font-size:26px}.price strong{font-size:48px}
+      .mini{padding:26px 22px}
+      .faq-list summary{font-size:18px}
+      footer{justify-content:center;padding-inline:18px}footer span:last-child{display:none}
+    }
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn:hover{transform:none}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="brand" href="#top"><span class="mark">凡氏</span><strong>凡氏可行｜地下會社</strong></a>
+    <div class="nav-links">
+      <a href="#free">免費驗屍</a>
+      <a href="#plan">4 次計畫</a>
+      <a href="#offers">方案</a>
+      <a class="nav-cta js-book" href="#offers">預約免費驗屍 →</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="orbit" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">4 SESSIONS · 1 SMALL WIN</p>
+        <h1>他一冷淡<br>妳整個人就跟著失控<br><em>4 次諮詢 先讓妳停下來</em></h1>
+        <p class="lead">第一次免費，凡氏先判讀妳這局卡在哪。之後每一次諮詢，妳都會帶走一份完整的關係驗屍報告<br>4 次之內，先讓妳拿到一個自己做得到的小勝利</p>
+        <div class="hero-actions">
+          <a class="btn js-book" href="#offers">預約免費驗屍 <span>→</span></a>
+          <a class="btn ghost" href="#plan">看 4 次怎麼走 <span>→</span></a>
+        </div>
+      </div>
+      <aside class="ladder" aria-label="方案一覽">
+        <div class="ladder-head">從這裡開始</div>
+        <div class="rung free"><b>第一次・免費驗屍</b><span>約 20 分鐘局勢判讀</span><strong>免費</strong></div>
+        <div class="rung"><b>單次諮詢</b><span>附 1 份驗屍報告</span><strong><small>NT$</small>3,980</strong></div>
+        <div class="rung core"><b>4 次小勝利計畫</b><span>附 4 份驗屍報告・平均每次不到 2,240</span><strong><small>NT$</small>8,950</strong></div>
+      </aside>
+    </div>
+  </header>
+
+  <section class="section paper">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">WHY YOU KEEP LOSING</p>
+        <h2>妳一次次回到他身邊<br>因為他早已訓練好妳的反應</h2>
+      </div>
+      <p class="section-copy">妳現在需要有人直接把局拆開：他拿走了什麼、妳免費供應了什麼、妳又在哪一個破口被一句話哄回去</p>
+    </div>
+    <div class="wrap bug-grid">
+      <article class="bug">
+        <h3>「我再等等，他就會懂」</h3>
+        <p>他很清楚妳會等。只要妳願意留下，他就能零承諾、零成本地繼續享受女朋友待遇</p>
+      </article>
+      <article class="bug">
+        <h3>「一定是我做錯什麼，所以他才冷？」</h3>
+        <p>妳一直檢討自己，剛好替他省掉所有解釋。現在該檢查他拿了多少待遇，又扛了多少責任</p>
+      </article>
+      <article class="bug">
+        <h3>「我現在走，前面就都白費了」</h3>
+        <p>繼續留下，才會被同一套忽冷忽熱反覆收割。看懂局、停止被牽著走，才算真正拿回這一局</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section free" id="free">
+    <div class="wrap free-grid">
+      <div>
+        <p class="eyebrow">FIRST SESSION · FREE</p>
+        <h2>第一次免費<br>凡氏只做一件事：判讀</h2>
+        <p class="section-copy">很多人一坐下就想問「他到底愛不愛我」。這一次凡氏不回答這題，他會直接告訴妳右邊這三件事</p>
+        <p class="rule-note">免費這一次只做判讀，不給完整解法、不出報告<br>要處理、要拿報告，從付費諮詢開始<br>名額有限，凡氏會先看妳的狀況再決定接不接</p>
+        <a class="btn gold js-book" href="#offers">預約免費驗屍 <span>→</span></a>
+      </div>
+      <div class="free-list">
+        <article class="free-item">
+          <h3>妳卡在哪一步</h3>
+          <p>還在急性失控需要止血、看不懂他的套路、立不起規矩，還是其實已經可以做決定</p>
+        </article>
+        <article class="free-item">
+          <h3>這局最危險的破口</h3>
+          <p>妳最常在哪一句話、哪一個時間點，被他一招召回原本的位置</p>
+        </article>
+        <article class="free-item">
+          <h3>妳適不適合往下走</h3>
+          <p>凡氏判斷 4 次能不能幫到妳。不適合，他會直接講</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section plan" id="plan">
+    <div class="wrap">
+      <div class="plan-head">
+        <p class="eyebrow">THE 4-SESSION PLAN</p>
+        <h2>4 次小勝利計畫</h2>
+        <p>建議每週一次，大約一個月走完。每一次都有一個明確任務，做完才往下一次</p>
+      </div>
+      <div class="stage-list">
+        <article class="stage">
+          <span class="stage-time">第 1 次</span>
+          <div class="stage-card">
+            <h3>止血</h3>
+            <p>先把最急的失控壓下來。停止秒回、求和、發長文，接下來 48 小時怎麼過，凡氏直接幫妳排好</p>
+            <span class="chip">報告：局勢判讀＋48 小時止血清單</span>
+          </div>
+        </article>
+        <article class="stage">
+          <span class="stage-time">第 2 次</span>
+          <div class="stage-card">
+            <h3>拆局</h3>
+            <p>把他的話一句一句翻成白話，同時找出妳的破口：他哪一招最容易讓妳心軟回頭</p>
+            <span class="chip">報告：他的話術翻譯＋妳的破口地圖</span>
+          </div>
+        </article>
+        <article class="stage">
+          <span class="stage-time">第 3 次</span>
+          <div class="stage-card">
+            <h3>立規矩</h3>
+            <p>界線要落在行動裡。他再冷、再熱、再丟甜頭，妳要怎麼回、何時不回、什麼時候直接撤</p>
+            <span class="chip">報告：妳的界線清單＋回覆範本</span>
+          </div>
+        </article>
+        <article class="stage">
+          <span class="stage-time">第 4 次</span>
+          <div class="stage-card">
+            <h3>做決定</h3>
+            <p>走或留由妳自己決定，然後執行第一步。同時排好接下來 30 天的校準計畫，避免清醒三天又滑回去</p>
+            <span class="chip">報告：決定書＋30 天校準計畫</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section paper" id="win">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">THE SMALL WIN</p>
+        <h2>小勝利的標準<br>看妳做了什麼，不看他回不回</h2>
+      </div>
+      <p class="section-copy">他的反應凡氏控制不了，妳也控制不了。所以 4 次的目標全部放在妳自己做得到的事，結束時至少拿到其中一個</p>
+    </div>
+    <div class="wrap win-grid">
+      <article class="win"><b>WIN A</b><p>連續 14 天<br>沒有主動追他的訊息</p></article>
+      <article class="win"><b>WIN B</b><p>他再丟餌<br>妳照自己的規矩回，沒有被拖回去</p></article>
+      <article class="win"><b>WIN C</b><p>對這段關係做出走或留的決定<br>並且執行第一步</p></article>
+    </div>
+  </section>
+
+  <section class="section report-sec" id="report">
+    <div class="wrap report-grid">
+      <div>
+        <p class="eyebrow">AUTOPSY REPORT</p>
+        <h2>每一次諮詢<br>都帶走一份驗屍報告</h2>
+        <p class="lead">諮詢講完會忘，情緒一上來更記不得。報告把這次拆出來的東西寫成白紙黑字，他一冷，妳打開就知道下一步</p>
+        <ul class="report-points">
+          <li>局勢判讀：妳現在走到哪、還差什麼</li>
+          <li>他的話術翻譯：他說的話，真正的意思</li>
+          <li>妳的破口：妳最容易被召回的時間點和句子</li>
+          <li>7 天行動清單：下次見面前要做到的事</li>
+          <li>回覆範本：他再丟這招，妳照著回</li>
+        </ul>
+      </div>
+      <div class="doc" role="img" aria-label="關係驗屍報告範例">
+        <div class="doc-top">
+          <div>
+            <h3>關係驗屍報告</h3>
+            <small>第 2 次・拆局｜範例</small>
+          </div>
+          <span class="stamp">驗屍</span>
+        </div>
+        <dl>
+          <div class="doc-row"><dt>案件</dt><dd>曖昧 8 個月，對方忽冷忽熱，從沒提過名分</dd></div>
+          <div class="doc-row"><dt>局勢判讀</dt><dd>止血完成，<em>還沒立規矩</em>。他一補糖，妳就會重新上架</dd></div>
+          <div class="doc-row"><dt>話術翻譯</dt><dd>「最近太忙了」＝ 他知道妳會等，所以不用提高投入</dd></div>
+          <div class="doc-row"><dt>妳的破口</dt><dd>晚上 11 點後他一傳訊息，妳就回到原本的位置</dd></div>
+          <div class="doc-row"><dt>7 天清單</dt><dd><ul class="checks"><li>11 點後的訊息隔天中午才回</li><li>不主動問他在幹嘛</li><li>週末排兩件自己的事</li></ul></dd></div>
+        </dl>
+        <p class="doc-foot">凡氏可行｜僅供本人使用</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section guarantee">
+    <div class="wrap guarantee-panel">
+      <p class="eyebrow">THE GUARANTEE</p>
+      <h2>4 次做完、作業有交<br>還沒拿到小勝利，第 5 次凡氏免費陪妳做</h2>
+      <p>條件只有兩個：<strong>4 次都有出席</strong>，<strong>每次報告裡的行動清單妳有照做</strong>。做到這兩件事，結果還沒出來，凡氏繼續陪，不另外收費</p>
+    </div>
+  </section>
+
+  <section class="section testimonials">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <p class="eyebrow">REAL MEMBER RESULTS</p>
+          <h2>她們回來交的作業</h2>
+        </div>
+        <p class="section-copy">以下是地下會社成員的回報。她們開始有規矩、有判斷之後，男人的反應也跟著變</p>
+      </div>
+      <div class="testimonial-grid">
+        <article class="testimonial-card">
+          <div class="testimonial-copy"><small>戰績回報 01</small><h3>「我敢說換了腦袋、換了磁場<br>現在手上不缺籌碼」</h3><p>KUMA LIN・加入會社 4 個月</p></div>
+          <figure class="testimonial-shot"><img src="public/testimonials/testimony-kuma-lin.png" alt="會員 Kuma Lin 分享加入四個月後，面對前任重新掌握主導權的戰績回報" loading="lazy"></figure>
+        </article>
+        <article class="testimonial-card">
+          <div class="testimonial-copy"><small>戰績回報 02</small><h3>「當初有多冷漠<br>現在就要跪多低舔我」</h3><p>LIN HSUAN・真實會員回報</p></div>
+          <figure class="testimonial-shot"><img src="public/testimonials/testimony-lin-hsuan.png" alt="會員 Lin Hsuan 分享對方從冷漠轉為主動靠近的戰績回報" loading="lazy"></figure>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section offers" id="offers">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <p class="eyebrow">PRICING</p>
+          <h2>先從免費驗屍開始<br>再決定要走多遠</h2>
+        </div>
+        <p class="section-copy">每一筆錢都買得到一份白紙黑字的報告。已付的錢可以往上折抵，妳不會因為先試一次而多花</p>
+      </div>
+
+      <div class="free-bar">
+        <div>
+          <h3>第一次 <span>免費驗屍</span></h3>
+          <p>約 20 分鐘局勢判讀・名額有限・凡氏先看狀況再決定接不接</p>
+        </div>
+        <a class="btn gold js-book" href="#offers">預約免費驗屍 <span>→</span></a>
+      </div>
+
+      <div class="offer-main">
+        <article class="offer">
+          <div class="tag">先處理眼前這一題</div>
+          <h3>單次諮詢</h3>
+          <p>適合只想先處理眼前最急那一題的人</p>
+          <div class="price"><small>NT$</small><strong>3,980</strong><span>／次</span></div>
+          <p class="price-note">7 天內升級 4 次計畫，<em>3,980 全額折抵</em></p>
+          <ul class="clean">
+            <li>一對一諮詢一次</li>
+            <li>一份完整關係驗屍報告</li>
+            <li>報告內附 7 天行動清單與回覆範本</li>
+          </ul>
+          <a class="btn ghost js-book" href="#offers">預約單次諮詢 <span>→</span></a>
+        </article>
+        <article class="offer featured">
+          <div class="tag">建議從這裡開始・4 次小勝利計畫</div>
+          <h3>4 次小勝利計畫</h3>
+          <p>適合已經反覆破功，想在一個月內先把自己拉回來的人</p>
+          <div class="price"><small>NT$</small><strong>8,950</strong><span>／4 次</span></div>
+          <p class="price-note">單次買 4 次要 15,920，<em>這裡省下 6,970</em></p>
+          <ul class="clean">
+            <li>4 次一對一諮詢，建議每週一次</li>
+            <li>4 份關係驗屍報告</li>
+            <li>止血、拆局、立規矩、做決定四個任務</li>
+            <li>小勝利保證：沒拿到，第 5 次免費</li>
+            <li>30 天內升級高階方案，8,950 全額折抵</li>
+          </ul>
+          <a class="btn js-book" href="#offers">申請 4 次計畫 <span>→</span></a>
+        </article>
+      </div>
+
+      <p class="offer-more-head">拿到小勝利之後，想走更遠</p>
+      <div class="offer-more">
+        <article class="mini">
+          <h3>地下會社年訂閱</h3>
+          <p>適合想長期校準，不想清醒三天又復胖的人</p>
+          <div class="price"><small>NT$</small><strong>4 萬起</strong><span>／年</span></div>
+          <ul class="clean">
+            <li>壞男系統 2.0 十篇互動診斷</li>
+            <li>壞男話術翻譯機</li>
+            <li>問題 Q&amp;A 與關係判斷校準</li>
+            <li>真實匿名案例拆解</li>
+          </ul>
+          <a class="btn ghost" href="https://www.skool.com/underground-society" target="_blank" rel="noopener">了解地下會社 <span>→</span></a>
+        </article>
+        <article class="mini gold">
+          <h3>高階一對一操盤</h3>
+          <p>適合局勢牽扯婚姻、資產、長期多方博弈，或需要凡氏長期陪跑的人</p>
+          <div class="price"><strong>另外洽談</strong></div>
+          <ul class="clean">
+            <li>長期一對一私人操盤</li>
+            <li>對話框與時間表接管</li>
+            <li>含地下會社系統使用</li>
+            <li>先做免費驗屍，凡氏評估後報價</li>
+          </ul>
+          <a class="btn gold js-book" href="#offers">先預約免費驗屍 <span>→</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section paper" id="faq">
+    <div class="wrap">
+      <p class="eyebrow">FAQ</p>
+      <h2>付錢之前妳會想問的</h2>
+      <div class="faq-list">
+        <details>
+          <summary>免費那一次會被推銷嗎</summary>
+          <p>凡氏判讀完會告訴妳適不適合往下走。不適合他會直接講，妳不用買任何東西</p>
+        </details>
+        <details>
+          <summary>4 次一定有用嗎</summary>
+          <p>凡氏不保證他的反應，保證的是妳的位置。4 次都出席、行動清單有照做，還沒拿到小勝利，第 5 次免費</p>
+        </details>
+        <details>
+          <summary>可以先買單次，之後再決定嗎</summary>
+          <p>可以。單次諮詢後 7 天內升級 4 次計畫，已付的 3,980 全額折抵</p>
+        </details>
+        <details>
+          <summary>報告什麼時候拿到</summary>
+          <p>每次諮詢結束後 24 小時內傳給妳，之後隨時可以打開來看</p>
+        </details>
+        <details>
+          <summary>我的狀況很複雜，4 次夠嗎</summary>
+          <p>免費驗屍時凡氏會直接判斷。牽扯婚姻、資產或多方關係的局，他會建議妳走高階方案</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <p class="eyebrow">THE DECISION</p>
+      <h2>妳可以繼續等他賞妳一句話<br>也可以先花 20 分鐘看清楚這局</h2>
+      <p>如果妳今晚還會看他上線、猜他為什麼不回、想傳長文證明自己<br>先預約免費驗屍，讓凡氏告訴妳卡在哪</p>
+      <a class="btn js-book" href="#offers">預約免費驗屍 <span>→</span></a>
+    </div>
+  </section>
+
+  <footer>
+    <span>凡氏可行｜地下會社</span>
+    <span>免費驗屍｜4 次小勝利計畫｜地下會社年訂閱</span>
+  </footer>
+
+  <script>
+    // 預約連結改這一行就好（表單、LINE 或 Skool）
+    var BOOKING_URL = "https://www.skool.com/underground-society";
+    document.querySelectorAll(".js-book").forEach(function (a) {
+      a.href = BOOKING_URL;
+      a.target = "_blank";
+      a.rel = "noopener";
+    });
+  </script>
+</body>
+</html>
