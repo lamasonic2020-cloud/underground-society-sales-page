@@ -67,6 +67,8 @@
     h1 em{color:var(--red-hi);font-style:normal}
     .lead{max-width:640px;color:var(--soft);font-size:18px;line-height:1.9;font-weight:500;text-wrap:pretty}
     .hero-actions{display:flex;gap:18px;margin-top:40px;flex-wrap:wrap}
+    .dm-hint{margin:18px 0 0;color:var(--muted);font-size:14px;font-weight:500;line-height:1.7}
+    .kw{display:inline-block;margin:0 2px;padding:1px 8px;border:1px solid rgba(255,49,88,.6);background:rgba(195,21,56,.16);color:#ff7088;font-weight:900}
 
     .intel-card{position:relative;z-index:1;padding:42px;border:1px solid rgba(255,255,255,.16);background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.015));box-shadow:0 28px 90px rgba(0,0,0,.35)}
     .intel-card small{color:#a89d98;font-size:11px;font-weight:700;letter-spacing:.22em}
@@ -265,6 +267,7 @@
           <a class="btn js-book" href="#offers">預約免費驗屍 <span>→</span></a>
           <a class="btn ghost" href="#plan">看 4 次怎麼走 <span>→</span></a>
         </div>
+        <p class="dm-hint">預約方式：IG 私訊 @always_mkt，打<b class="kw">痛痛</b>就可以</p>
       </div>
       <aside class="intel-card">
         <small>THE REAL PROBLEM</small>
@@ -305,7 +308,8 @@
         <h2>第一次免費<br>凡氏只做一件事：判讀</h2>
         <p class="section-copy">很多人一坐下就想問「他到底愛不愛我」。這一次凡氏不回答這題，他會直接告訴妳右邊這三件事</p>
         <p class="rule-note">免費這一次只做判讀，不給完整解法、不出報告<br>要處理、要拿報告，從付費諮詢開始<br>名額有限，凡氏會先看妳的狀況再決定接不接</p>
-        <a class="btn gold js-book" href="#offers">預約免費驗屍 <span>→</span></a>
+        <a class="btn gold js-book" href="#offers">私訊預約免費驗屍 <span>→</span></a>
+        <p class="dm-hint">按鈕會打開 IG 私訊，傳<b class="kw">痛痛</b>給 @always_mkt</p>
       </div>
       <div class="free-list">
         <article class="free-item">
@@ -460,7 +464,7 @@
       <div class="free-bar">
         <div>
           <h3>第一次 <span>免費驗屍</span></h3>
-          <p>約 20 分鐘局勢判讀・名額有限・凡氏先看狀況再決定接不接</p>
+          <p>IG 私訊 @always_mkt 打<b class="kw">痛痛</b>就能預約・約 20 分鐘局勢判讀・名額有限</p>
         </div>
         <a class="btn gold js-book" href="#offers">預約免費驗屍 <span>→</span></a>
       </div>
@@ -532,6 +536,10 @@
       <h2>付錢之前妳會想問的</h2>
       <div class="faq-list">
         <details>
+          <summary>要怎麼預約</summary>
+          <p>IG 私訊 @always_mkt，打「痛痛」兩個字就可以。付費諮詢一樣從私訊預約</p>
+        </details>
+        <details>
           <summary>免費那一次會被推銷嗎</summary>
           <p>凡氏判讀完會告訴妳適不適合往下走。不適合他會直接講，妳不用買任何東西</p>
         </details>
@@ -559,7 +567,7 @@
     <div class="wrap">
       <p class="eyebrow">THE DECISION</p>
       <h2>妳可以繼續等他賞妳一句話<br>也可以先花 20 分鐘看清楚這局</h2>
-      <p>如果妳今晚還會看他上線、猜他為什麼不回、想傳長文證明自己<br>先預約免費驗屍，讓凡氏告訴妳卡在哪</p>
+      <p>如果妳今晚還會看他上線、猜他為什麼不回、想傳長文證明自己<br>現在私訊 IG 打<b class="kw">痛痛</b>，讓凡氏告訴妳卡在哪</p>
       <a class="btn js-book" href="#offers">預約免費驗屍 <span>→</span></a>
     </div>
   </section>
@@ -570,8 +578,8 @@
   </footer>
 
   <script>
-    // 預約連結改這一行就好（表單、LINE 或 Skool）
-    var BOOKING_URL = "https://www.skool.com/underground-society";
+    // 預約連結：直接打開 IG 私訊 @always_mkt
+    var BOOKING_URL = "https://ig.me/m/always_mkt";
     document.querySelectorAll(".js-book").forEach(function (a) {
       a.href = BOOKING_URL;
       a.target = "_blank";
