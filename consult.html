@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>凡氏可行｜4 次小勝利計畫</title>
-  <meta name="description" content="凡氏可行一對一諮詢：第一次免費驗屍，單次 NT$3,980，4 次小勝利計畫 NT$8,950，每次附完整關係驗屍報告">
+  <meta name="description" content="凡氏可行一對一諮詢：第一次免費驗屍，4 次小勝利計畫，每次附完整關係驗屍報告">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -67,17 +67,10 @@
     .lead{max-width:640px;color:var(--soft);font-size:18px;line-height:1.9;font-weight:500;text-wrap:pretty}
     .hero-actions{display:flex;gap:18px;margin-top:40px;flex-wrap:wrap}
 
-    .ladder{position:relative;z-index:1;border:1px solid rgba(255,255,255,.16);background:linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.015));box-shadow:0 28px 90px rgba(0,0,0,.35)}
-    .ladder-head{padding:22px 28px;border-bottom:1px solid var(--line);color:#a89d98;font-size:11px;font-weight:700;letter-spacing:.22em}
-    .rung{display:grid;grid-template-columns:1fr auto;gap:6px 18px;align-items:baseline;padding:22px 28px;border-bottom:1px solid var(--line)}
-    .rung:last-child{border-bottom:0}
-    .rung b{font-family:var(--serif);font-size:20px;font-weight:700}
-    .rung span{color:var(--muted);font-size:13px;font-weight:500;grid-column:1}
-    .rung strong{grid-column:2;grid-row:1/3;align-self:center;font-family:var(--serif);font-size:24px;font-variant-numeric:tabular-nums;white-space:nowrap}
-    .rung strong small{font-family:var(--sans);font-size:12px;color:var(--muted);margin-right:4px}
-    .rung.free strong{color:var(--gold-hi)}
-    .rung.core{background:rgba(195,21,56,.12);box-shadow:inset 3px 0 0 var(--red)}
-    .rung.core strong{color:var(--red-hi)}
+    .intel-card{position:relative;z-index:1;padding:42px;border:1px solid rgba(255,255,255,.16);background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.015));box-shadow:0 28px 90px rgba(0,0,0,.35)}
+    .intel-card small{color:#a89d98;font-size:11px;font-weight:700;letter-spacing:.22em}
+    .intel-card strong{display:block;margin:18px 0 16px;font-family:var(--serif);font-size:30px;line-height:1.45;font-weight:700;text-wrap:balance}
+    .intel-card p{margin:0;color:var(--muted);line-height:1.85;font-weight:500;text-wrap:pretty}
 
     /* sections */
     .section{padding-block:112px}
@@ -228,7 +221,7 @@
       h1{font-size:32px;line-height:1.38}
       .lead{font-size:15px;line-height:1.85}
       .hero-actions{flex-direction:column}.btn{width:100%;min-width:0;padding:18px 20px}
-      .rung{padding:18px 20px}.rung b{font-size:17px}.rung strong{font-size:20px}
+      .intel-card{padding:28px 22px}.intel-card strong{font-size:24px}
       .section{padding-block:76px}
       .section h2{font-size:29px;line-height:1.45}
       .bug,.win{padding:28px 22px}
@@ -272,11 +265,10 @@
           <a class="btn ghost" href="#plan">看 4 次怎麼走 <span>→</span></a>
         </div>
       </div>
-      <aside class="ladder" aria-label="方案一覽">
-        <div class="ladder-head">從這裡開始</div>
-        <div class="rung free"><b>第一次・免費驗屍</b><span>約 20 分鐘局勢判讀</span><strong>免費</strong></div>
-        <div class="rung"><b>單次諮詢</b><span>附 1 份驗屍報告</span><strong><small>NT$</small>3,980</strong></div>
-        <div class="rung core"><b>4 次小勝利計畫</b><span>附 4 份驗屍報告・平均每次不到 2,240</span><strong><small>NT$</small>8,950</strong></div>
+      <aside class="intel-card">
+        <small>THE REAL PROBLEM</small>
+        <strong>妳一直問「他到底愛不愛」<br>他真正享受的是妳不敢走</strong>
+        <p>只要妳還在等他給答案，他就能用冷淡、消失、幾句甜話把妳召回來。第一次免費驗屍，凡氏先告訴妳卡在哪一步</p>
       </aside>
     </div>
   </header>
@@ -508,7 +500,7 @@
         <article class="mini">
           <h3>地下會社年訂閱</h3>
           <p>適合想長期校準，不想清醒三天又復胖的人</p>
-          <div class="price"><small>NT$</small><strong>4 萬起</strong><span>／年</span></div>
+          <p class="price-note" style="margin-top:22px">價格依方案不同，私訊凡氏詢問</p>
           <ul class="clean">
             <li>壞男系統 2.0 十篇互動診斷</li>
             <li>壞男話術翻譯機</li>
