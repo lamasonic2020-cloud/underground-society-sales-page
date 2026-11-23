@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>凡氏可行｜高價值女性吸引力藍圖</title>
+  <meta name="description" content="凡氏可行高價值女性吸引力藍圖：前壞男視角，帶妳看懂男生、篩掉不認真的人，讓認真的人留下來。90 天一對一 NT$80,000（可分期），重案陪跑 US$5,000，結業後可續地下會社年訂閱">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#080708;
+      --panel:#0f0d0e;
+      --ink:#f4eee8;
+      --muted:#9c918c;
+      --soft:#d8cfc7;
+      --line:rgba(255,255,255,.14);
+      --red:#c31538;
+      --red2:#7b1023;
+      --gold:#b58835;
+      --paper:#e8e1d8;
+      --black:#131011;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;overflow-x:hidden}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:"Noto Sans TC",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      letter-spacing:.01em;
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(100% - 56px,1180px);margin:auto}
+    .serif{font-family:"Noto Serif TC","Songti TC",serif}
+    .eyebrow{
+      display:flex;align-items:center;gap:14px;
+      color:#ad9d97;
+      font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
+    }
+    .eyebrow:before{content:"";width:40px;height:1px;background:var(--red)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:space-between;gap:28px;
+      min-width:220px;padding:22px 28px;
+      border:1px solid rgba(255,255,255,.24);
+      background:var(--red);
+      color:#fff;
+      font-weight:700;
+      transition:.25s ease;
+    }
+    .btn:hover{transform:translateY(-2px);background:#df193f}
+    .btn.ghost{background:transparent}
+    .btn.gold{background:var(--gold);border-color:#d1a34d}
+    nav{
+      position:fixed;inset:0 0 auto 0;z-index:10;height:82px;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:0 44px;
+      background:rgba(8,7,8,.78);
+      border-bottom:1px solid var(--line);
+      backdrop-filter:blur(18px);
+    }
+    .brand{display:flex;align-items:center;gap:14px;font-weight:700}
+    .logo{display:block;width:48px;height:48px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 1px rgba(255,255,255,.18)}
+    .nav-links{display:flex;align-items:center;gap:24px;color:#cabfb9;font-size:13px;font-weight:600}
+    .hero{
+      position:relative;min-height:880px;padding:165px 0 90px;
+      display:grid;align-items:center;overflow:hidden;
+      background:
+        radial-gradient(circle at 73% 38%,rgba(195,21,56,.25),transparent 26%),
+        linear-gradient(90deg,rgba(195,21,56,.12),transparent 38%),
+        #080708;
+    }
+    .hero:before{
+      content:"";position:absolute;inset:0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+      background-size:92px 92px;
+      mask-image:linear-gradient(90deg,#000 0%,rgba(0,0,0,.82) 62%,transparent 100%);
+      pointer-events:none;
+    }
+    .orbit{position:absolute;right:-180px;top:120px;width:650px;height:650px;border:1px solid rgba(195,21,56,.35);border-radius:50%}
+    .orbit:before,.orbit:after{content:"";position:absolute;inset:95px;border:1px solid rgba(195,21,56,.22);border-radius:50%}
+    .orbit:after{inset:205px}
+    .hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .75fr;gap:70px;align-items:center}
+    .hero-grid > *,.split > *,.script-grid > *,.offer-grid > *,.testimonial-head > *,.testimonial-grid > *{min-width:0}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,h3,p,li,td{max-width:100%;overflow-wrap:anywhere}
+    h1{
+      margin:30px 0 28px;
+      font-family:"Noto Serif TC","Songti TC",serif;
+      font-size:clamp(38px,4.5vw,64px);
+      line-height:1.22;
+      letter-spacing:-.045em;
+      font-weight:700;
+      text-wrap:balance;
+    }
+    h1 em{color:#ff3158;font-style:normal}
+    .lead{max-width:680px;color:#d7cec8;font-size:18px;line-height:1.9;font-weight:500;text-wrap:pretty}
+    .hero-actions{display:flex;gap:18px;margin-top:44px;flex-wrap:wrap}
+    .intel-card{
+      position:relative;z-index:1;
+      padding:42px;border:1px solid rgba(255,255,255,.16);
+      background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.015));
+      box-shadow:0 28px 90px rgba(0,0,0,.35);
+    }
+    .intel-card small{color:#a89d98;font-weight:700;letter-spacing:.22em}
+    .intel-card strong{display:block;margin:18px 0 16px;font-family:"Noto Serif TC",serif;font-size:30px;line-height:1.45;font-weight:700;text-wrap:balance}
+    .intel-card p{color:#a79c96;line-height:1.85;font-weight:400;text-wrap:pretty}
+    .section{padding:118px 0}
+    .paper{background:var(--paper);color:var(--black)}
+    .dark{background:#0b0a0b}
+    .split{display:grid;grid-template-columns:.9fr 1fr;gap:70px;align-items:start}
+    .section h2{
+      font-family:"Noto Serif TC","Songti TC",serif;
+      font-size:clamp(32px,3.8vw,52px);
+      line-height:1.35;
+      letter-spacing:-.035em;
+      font-weight:700;
+      text-wrap:balance;
+    }
+    .section-copy{color:#6b625d;font-size:16px;line-height:1.9;font-weight:500;text-wrap:pretty}
+    .bug-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid #c9beb5;background:#c9beb5;margin-top:68px}
+    .bug{background:#eee8df;padding:38px;min-height:310px}
+    .bug b{display:block;color:var(--red);font-family:"Noto Serif TC",serif;font-size:32px;font-style:italic}
+    .bug h3{font-family:"Noto Serif TC",serif;font-size:24px;margin:34px 0 18px;font-weight:700;text-wrap:balance}
+    .bug p{color:#6b625d;line-height:1.85;font-weight:500;text-wrap:pretty}
+    .blueprint{background:radial-gradient(circle at 50% 0,rgba(195,21,56,.18),transparent 32%),#090909}
+    .blueprint-head{text-align:center;max-width:850px;margin:0 auto 68px}
+    .blueprint-head .eyebrow{justify-content:center}
+    .blueprint-head p{color:#938983;font-size:16px;line-height:1.85;font-weight:500;text-wrap:pretty}
+    .stage-list{position:relative;max-width:980px;margin:auto}
+    .stage-list:before{content:"";position:absolute;left:96px;top:80px;bottom:70px;width:1px;background:linear-gradient(#fff,var(--red),#fff);opacity:.34}
+    .stage{
+      position:relative;display:grid;grid-template-columns:190px 1fr;gap:34px;
+      padding:0 0 46px;
+    }
+    .stage-time{
+      position:relative;z-index:1;align-self:start;justify-self:center;
+      min-width:132px;padding:13px 15px;border:1px solid rgba(255,255,255,.25);
+      background:#0b0b0c;color:#fff;text-align:center;font-weight:700;font-size:12px;letter-spacing:.08em;
+    }
+    .stage-card{
+      padding:34px 38px;border:1px solid rgba(255,255,255,.13);
+      background:linear-gradient(135deg,rgba(255,255,255,.045),rgba(255,255,255,.012));
+    }
+    .stage-card h3{font-family:"Noto Serif TC",serif;font-size:28px;margin:0 0 12px;font-weight:700;text-wrap:balance}
+    .stage-card h3 span{
+      display:inline-grid;place-items:center;width:36px;height:36px;margin-right:12px;border-radius:50%;
+      border:1px solid rgba(255,255,255,.45);font-family:Arial,sans-serif;font-size:14px;vertical-align:4px;
+    }
+    .stage-card p{color:#a29994;line-height:1.85;font-weight:500;text-wrap:pretty}
+    .offer-chip{display:inline-flex;margin-top:10px;padding:10px 14px;border:1px solid rgba(195,21,56,.55);background:rgba(195,21,56,.12);color:#ff6d86;font-weight:700;font-size:13px}
+    .zoom{background:#12090b}
+    .zoom-panel{border:1px solid rgba(195,21,56,.28);padding:58px;background:radial-gradient(circle at 18% 0,rgba(195,21,56,.18),transparent 42%),#0b0a0b}
+    .script-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:46px}
+    .script{border:1px solid rgba(255,255,255,.13);padding:30px;background:rgba(255,255,255,.025)}
+    .script b{color:#ff3158;letter-spacing:.16em;font-size:12px}
+    .script h3{font-size:21px;margin:18px 0 14px;font-weight:700;text-wrap:balance}
+    .script p{color:#b0a5a0;line-height:1.85;font-weight:500;text-wrap:pretty}
+    .maintenance{background:linear-gradient(180deg,#0b0a0b,#070607)}
+    .maintenance-panel{max-width:980px;margin:auto}
+    .maintenance-panel h2{font-size:clamp(32px,3.8vw,52px);max-width:860px}
+    .maintenance-panel > p{max-width:840px;color:#b5aba5;line-height:1.9;font-weight:500;text-wrap:pretty}
+    .maintenance-note{margin:28px 0 0;padding-left:22px;border-left:2px solid var(--red);color:#d6ccc6;font-size:17px;line-height:1.85;font-weight:600}
+    .maintenance-steps{margin-top:46px;display:grid;gap:18px}
+    .maintenance-step{display:grid;grid-template-columns:92px 1fr;gap:22px;padding:24px;border:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.22)}
+    .maintenance-step b{color:#ff3158;font-family:"Noto Serif TC",serif;font-size:22px;font-style:italic}
+    .maintenance-step h3{font-size:22px;margin-bottom:8px;font-weight:700;text-wrap:balance}
+    .maintenance-step p{color:#aaa09a;line-height:1.8;font-weight:500;margin-bottom:0;text-wrap:pretty}
+    .offers{background:#070607}
+    .offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:58px}
+    .offer-grid.single{grid-template-columns:minmax(0,560px);justify-content:center}
+    .offer{
+      position:relative;min-height:620px;padding:42px 38px;border:1px solid rgba(255,255,255,.17);
+      background:linear-gradient(160deg,rgba(255,255,255,.045),rgba(255,255,255,.01));
+      display:flex;flex-direction:column;
+    }
+    .offer.featured{border-color:rgba(195,21,56,.75);box-shadow:0 0 0 1px rgba(195,21,56,.4),0 30px 90px rgba(195,21,56,.13)}
+    .offer.gold{border-color:rgba(181,136,53,.75);box-shadow:0 0 0 1px rgba(181,136,53,.35)}
+    .tag{position:absolute;left:0;right:0;top:0;padding:15px 20px;text-align:center;background:var(--red);font-size:12px;font-weight:700;letter-spacing:.14em}
+    .offer.gold .tag{background:var(--gold)}
+    .offer.has-tag{padding-top:72px}
+    .offer h3{font-family:"Noto Serif TC",serif;font-size:30px;margin:16px 0;font-weight:700;text-wrap:balance}
+    .offer > p{color:#a89d98;line-height:1.8;font-weight:500;min-height:100px;text-wrap:pretty}
+    .price{margin:28px 0 30px;display:flex;align-items:flex-end;gap:10px}
+    .price small{color:#ff3158;font-weight:900}
+    .offer.gold .price small{color:#e0b85f}
+    .price strong{font-family:"Noto Serif TC",serif;font-size:60px;line-height:.9}
+    .price span{color:#918781;font-weight:600}
+    .price-note{margin:-12px 0 26px;color:#a79d97;font-size:14px;font-weight:600;line-height:1.7}
+    .price-note em{color:#e0b85f;font-style:normal}
+    ul.clean{list-style:none;margin:0 0 32px;padding:0}
+    .clean li{position:relative;margin:0 0 16px;padding-left:28px;color:#cfc5bf;font-weight:600;line-height:1.65;text-wrap:pretty}
+    .clean li:before{content:"✓";position:absolute;left:0;color:#ff3158;font-weight:900}
+    .offer.gold .clean li:before{color:#e0b85f}
+    .offer .btn{margin-top:auto;width:100%}
+    .offer-grid.two{grid-template-columns:repeat(2,minmax(0,1fr));max-width:1040px;margin-left:auto;margin-right:auto}
+    .renew{max-width:1040px;margin:30px auto 0;padding:30px 34px;border:1px dashed rgba(255,255,255,.22);background:rgba(255,255,255,.02);display:grid;grid-template-columns:auto 1fr auto;gap:30px;align-items:center}
+    .renew small{color:#a89d98;font-weight:700;letter-spacing:.2em;font-size:11px}
+    .renew h3{font-family:"Noto Serif TC",serif;font-size:24px;margin:8px 0 0;font-weight:700}
+    .renew p{margin:0;color:#a89d98;line-height:1.8;font-weight:500;text-wrap:pretty}
+    .renew strong{font-family:"Noto Serif TC",serif;font-size:30px;white-space:nowrap}
+    .renew strong span{font-size:14px;color:#918781;font-family:"Noto Sans TC",sans-serif;font-weight:600}
+    .not-ready{text-align:center;margin:34px 0 0;color:#8f8580;font-size:14px;font-weight:600}
+    .not-ready a{color:#d8cfc7;border-bottom:1px solid rgba(255,255,255,.3)}
+    .compare{background:var(--paper);color:var(--black)}
+    table{width:100%;border-collapse:collapse;margin-top:54px;border:1px solid #c8beb6;background:#f1ece5}
+    th,td{border:1px solid #c8beb6;padding:24px;text-align:left;vertical-align:top;line-height:1.75;font-weight:500}
+    th{background:#ded7cf;font-weight:700}
+    td:nth-child(3){font-weight:700}
+    .testimonials{background:#0a0909}
+    .testimonial-head{display:grid;grid-template-columns:.9fr .7fr;gap:60px;align-items:end;margin-bottom:48px}
+    .testimonial-head p{color:#9c918c;line-height:1.85;font-weight:500;text-wrap:pretty}
+    .testimonial-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+    .testimonial-card{overflow:hidden;border:1px solid rgba(255,255,255,.14);background:#111}
+    .testimonial-copy{padding:32px;min-height:210px}
+    .testimonial-copy small{color:#ff3158;font-weight:900;letter-spacing:.16em}
+    .testimonial-copy h3{font-family:"Noto Serif TC",serif;font-size:24px;line-height:1.6;font-weight:700;text-wrap:pretty}
+    .testimonial-copy p{color:#9b928d;font-weight:600}
+    .testimonial-shot{margin:0;background:#080808}
+    .testimonial-shot img{display:block;width:100%;height:auto}
+    .final{position:relative;padding:125px 0;background:linear-gradient(135deg,#16080b,#050505);text-align:center}
+    .final h2{font-family:"Noto Serif TC",serif;font-size:clamp(32px,4vw,58px);line-height:1.35;font-weight:700;text-wrap:balance}
+    .final p{max-width:760px;margin:0 auto 36px;color:#c9beb8;line-height:1.9;font-weight:500;text-wrap:pretty}
+    footer{display:flex;justify-content:space-between;gap:20px;padding:30px 44px;border-top:1px solid var(--line);color:#827973;font-size:12px}
+    @media (max-width:980px){
+      .hero-grid,.split,.script-grid,.offer-grid,.testimonial-head,.testimonial-grid{grid-template-columns:1fr}
+      .hero{min-height:auto}
+      .bug-grid{grid-template-columns:1fr}
+      .offer{min-height:0}
+      .renew{grid-template-columns:1fr;gap:14px}
+      .offer-grid.two{grid-template-columns:1fr}
+    }
+    @media (max-width:640px){
+      .wrap{width:min(100% - 36px,1180px)}
+      nav{height:74px;padding:0 18px}.logo{width:42px;height:42px}.brand strong{display:none}.nav-links a:not(:last-child){display:none}
+      .nav-links a:last-child{font-size:0}.nav-links a:last-child:after{content:"看卡在哪 →";font-size:12px}
+      .eyebrow{font-size:9px;letter-spacing:.16em;gap:10px}.eyebrow:before{width:28px;flex:0 0 28px}
+      h1{font-size:33px;line-height:1.35}.lead{font-size:15px;line-height:1.8}.hero-actions{flex-direction:column}.btn{width:100%;padding:18px 20px}
+      .hero{padding:130px 0 72px}.intel-card{padding:28px 22px}.intel-card strong{font-size:24px}
+      .section{padding:76px 0}.section h2{font-size:31px;line-height:1.42}.stage-list:before{left:12px}.stage{grid-template-columns:1fr;padding-left:30px}.stage-time{justify-self:start}.stage-card{padding:26px 20px}.stage-card h3{font-size:24px}
+      .maintenance-step{grid-template-columns:1fr}
+      .zoom-panel{padding:32px 20px}.offer{padding-left:24px;padding-right:24px}.offer h3{font-size:27px}.price strong{font-size:50px}
+      th,td{display:block;width:100%}tr{display:block;border-bottom:2px solid #c8beb6}
+      footer{justify-content:center}footer span:last-child{display:none}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="brand" href="#top"><img class="logo" src="public/brand/fanshi-logo.jpg" alt="凡氏可行 ALWAYS MKT" width="48" height="48"><strong>凡氏可行｜地下會社</strong></a>
+    <div class="nav-links">
+      <a href="#blueprint">四階藍圖</a>
+      <a href="#maintenance">系統</a>
+      <a href="#offers">方案</a>
+      <a href="#blueprint">看妳卡在哪一關 →</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="orbit" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">THE HIGH-VALUE ATTRACTION BLUEPRINT</p>
+        <h1>妳條件不差<br>遇到的男生卻都不認真<br><em>問題卡在哪一關</em></h1>
+        <p class="lead">凡氏當過舔狗，也當過壞男<br>男生心裡在想、但不會跟妳說的，他直接講給妳聽<br>90 天，帶妳把認真的人吸過來，把不認真的篩掉</p>
+        <div class="hero-actions">
+          <a class="btn" href="#blueprint">看我卡在哪一關 <span>→</span></a>
+          <a class="btn ghost" href="#offers">直接看方案 <span>→</span></a>
+        </div>
+      </div>
+      <aside class="intel-card">
+        <small>WHAT MEN WON'T TELL YOU</small>
+        <strong>男生愛上一個女生<br>要過 5 關</strong>
+        <p>看順眼、聊得來、信得過、想得遠、待得住<br>很多條件好的女生卡在第 4 關，因為前面什麼都說「我都可以」，他看不出妳以後要什麼樣的生活</p>
+      </aside>
+    </div>
+  </header>
+
+  <section class="section paper">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">WHY HE DOESN'T STAY</p>
+        <h2>條件好的女生<br>最常卡在這三個地方</h2>
+      </div>
+      <p class="section-copy">妳缺的是一個男生直接告訴妳：他看到什麼、心裡在算什麼，為什麼聊得好好的，見兩次面就沒下文</p>
+    </div>
+    <div class="wrap bug-grid">
+      <article class="bug">
+        <b>01</b>
+        <h3>「我對他好，他就會喜歡我」</h3>
+        <p>妳先給、一直給，他還沒付出就全部拿到<br>不用追就拿得到的，男生很少放在心上</p>
+      </article>
+      <article class="bug">
+        <b>02</b>
+        <h3>「他一直傳訊息，應該是喜歡我吧」</h3>
+        <p>一直傳訊息、說妳很特別、一直想見妳，還在追的男生每一個都會<br>要看的是他有沒有把妳排第一，行程會不會為妳讓路</p>
+      </article>
+      <article class="bug">
+        <b>03</b>
+        <h3>「聊得超開心，那就再多聊一點」</h3>
+        <p>第一次約會就把自己全部講完，他沒有再約妳的理由<br>留一點下次講，他才會想知道後面</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section blueprint" id="blueprint">
+    <div class="wrap">
+      <div class="blueprint-head">
+        <p class="eyebrow">ATTRACTION BLUEPRINT</p>
+        <h2>凡氏可行・高價值女性吸引力四階藍圖</h2>
+        <p>從看懂男生，到讓認真的人留下來<br>先看妳現在卡在哪一階，下一步要調整什麼</p>
+      </div>
+      <div class="stage-list">
+        <article class="stage">
+          <span class="stage-time">0-30 天</span>
+          <div class="stage-card">
+            <h3><span>01</span>停止倒貼</h3>
+            <p>找出妳通常卡在第幾關，停掉秒回、先付出、一次給完<br>這一階先把需求感收起來，讓他開始要花力氣</p>
+            <span class="offer-chip">這階段需要：一對一找出卡關點</span>
+          </div>
+        </article>
+        <article class="stage">
+          <span class="stage-time">31-90 天</span>
+          <div class="stage-card">
+            <h3><span>02</span>重建吸引力</h3>
+            <p>重新調整第一印象、聊天節奏、約會怎麼收尾、什麼時候讓他追<br>同一個妳，換一套做法，認真的人會開始留下來</p>
+            <span class="offer-chip">這階段需要：一對一陪妳實際約會、實際調整</span>
+          </div>
+        </article>
+        <article class="stage">
+          <span class="stage-time">91-180 天</span>
+          <div class="stage-card">
+            <h3><span>03</span>篩選與定下來</h3>
+            <p>分得出他是還在追，還是真的喜歡<br>用案例庫、工具和 Q&A 練判斷，把只想睡的篩掉，把想定下來的留下來</p>
+            <span class="offer-chip">這階段可用：結業後續留地下會社，系統與 Q&A</span>
+          </div>
+        </article>
+        <article class="stage">
+          <span class="stage-time">181-365 天</span>
+          <div class="stage-card">
+            <h3><span>04</span>被認真對待變成習慣</h3>
+            <p>妳不用再演，也不用一直猜<br>知道自己要什麼、會挑人，認真的人自然留得住</p>
+            <span class="offer-chip">終點：妳挑人，不再等人挑</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section zoom">
+    <div class="wrap zoom-panel">
+      <p class="eyebrow">THE REAL SHIFT</p>
+      <h2>高價值女性的吸引力<br>從看懂男生開始</h2>
+      <div class="script-grid">
+        <article class="script">
+          <b>STEP 01</b>
+          <h3>先看懂男生</h3>
+          <p>男生喜歡一個人會變笨，很會聊的那個反而要小心<br>凡氏用男生的角度，告訴妳哪些訊號準、哪些不準</p>
+        </article>
+        <article class="script">
+          <b>STEP 02</b>
+          <h3>再調整妳的吸引力</h3>
+          <p>不教妳演，也不教妳操控<br>調的是節奏：什麼時候給、什麼時候收、什麼時候先走</p>
+        </article>
+        <article class="script">
+          <b>STEP 03</b>
+          <h3>最後換妳挑</h3>
+          <p>選擇權回到妳手上<br>妳看得出誰是認真的，誰只是想要今晚</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section maintenance" id="maintenance">
+    <div class="wrap maintenance-panel">
+      <p class="eyebrow">AFTERCARE SYSTEM</p>
+      <h2>前面先調整<br>後面讓妳隨時回來校準</h2>
+      <p>很多女生看完影片清醒三天，遇到一個很會撩的，又全部照舊<br>秒回、先付出、什麼都說可以，一個月後又在問同一個問題</p>
+      <p class="maintenance-note">90 天一對一期間，地下會社系統全開<br>結業後想繼續留在系統裡，再續年訂閱，用案例、工具與問題 Q&A 持續校準</p>
+      <div class="maintenance-steps">
+        <article class="maintenance-step">
+          <b>01</b>
+          <div>
+            <h3>一對一先找出妳卡在哪</h3>
+            <p>前 30 天先看清楚妳的模式<br>每次聊天、每次約會，截圖丟給凡氏，他告訴妳男生那邊在想什麼</p>
+          </div>
+        </article>
+        <article class="maintenance-step">
+          <b>02</b>
+          <div>
+            <h3>地下會社是後續校準系統</h3>
+            <p>可以看案例、看拆解，也能用系統做問題 Q&A<br>遇到新對象拿不定主意，就回到系統對一次</p>
+          </div>
+        </article>
+        <article class="maintenance-step">
+          <b>03</b>
+          <div>
+            <h3>每次快照舊，都有人提醒妳</h3>
+            <p>他一熱妳想全給、他一冷妳想追、他說「我都可以」妳就跟著模糊<br>長期環境會反覆校準這些反應，讓妳從「等人挑」變成「會挑人」</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section compare">
+    <div class="wrap">
+      <p class="eyebrow">BEFORE / AFTER</p>
+      <h2>妳買到一套吸引力的方法<br>一步步讓認真的人留下來</h2>
+      <table>
+        <thead>
+          <tr><th>妳現在的狀態</th><th>如果妳繼續自己試</th><th>進入四階藍圖後</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>聊得很好，見一兩次就沒下文</td><td>每次都檢討自己哪句話講錯<br>下一個還是一樣</td><td>知道自己卡在第幾關，下次約會怎麼收尾</td></tr>
+          <tr><td>遇到的多半只想睡</td><td>以為是自己運氣差<br>越來越不相信有認真的人</td><td>看懂哪些訊號準，提早把只想睡的篩掉</td></tr>
+          <tr><td>對他越好，他越不當一回事</td><td>付出更多想證明自己值得<br>他越拿越理所當然</td><td>調整給和收的節奏，讓他開始花力氣</td></tr>
+          <tr><td>想定下來</td><td>一直說「我都可以」<br>他看不出妳要什麼樣的以後</td><td>講得出自己要什麼，讓想定下來的人留下來</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section testimonials">
+    <div class="wrap">
+      <div class="testimonial-head">
+        <div>
+          <p class="eyebrow">REAL MEMBER RESULTS</p>
+          <h2>她們回來交的作業<br>比任何介紹更有力</h2>
+        </div>
+        <p>她們開始有底氣、會挑人之後<br>男生的反應也跟著變了</p>
+      </div>
+      <div class="testimonial-grid">
+        <article class="testimonial-card">
+          <div class="testimonial-copy"><small>戰績回報 01</small><h3>「我敢說換了腦袋、換了磁場<br>現在手上不缺籌碼」</h3><p>KUMA LIN・加入會社 4 個月</p></div>
+          <figure class="testimonial-shot"><img src="public/testimonials/testimony-kuma-lin.png" alt="會員 Kuma Lin 分享加入四個月後，面對前任重新掌握主導權的戰績回報" loading="lazy"></figure>
+        </article>
+        <article class="testimonial-card">
+          <div class="testimonial-copy"><small>戰績回報 02</small><h3>「當初有多冷漠<br>現在就要跪多低舔我」</h3><p>LIN HSUAN・真實會員回報</p></div>
+          <figure class="testimonial-shot"><img src="public/testimonials/testimony-lin-hsuan.png" alt="會員 Lin Hsuan 分享對方從冷漠轉為主動靠近的戰績回報" loading="lazy"></figure>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section offers" id="offers">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <p class="eyebrow">FINAL OFFER</p>
+          <h2>現在才講價格<br>先讓妳看清楚每一筆錢買到什麼</h2>
+        </div>
+        <p class="section-copy" style="color:#a79d97">兩個方案都是凡氏本人一對一，90 天<br>大多數人選 90 天吸引力計畫就夠了，離過婚、卡在一段關係很多年或一直選錯人的，才需要全程陪跑</p>
+      </div>
+      <div class="offer-grid two">
+        <article class="offer featured has-tag">
+          <div class="tag">主力方案・90 天一對一</div>
+          <h3>90 天高價值吸引力計畫</h3>
+          <p>適合條件不差、卻一直遇不到認真對象，或總是曖昧定不下來的人<br>凡氏一對一陪妳走完前兩階</p>
+          <div class="price"><small>NT$</small><strong>80,000</strong><span>／90 天</span></div>
+          <p class="price-note">無卡分期，<em>最高可分 36 期</em></p>
+          <ul class="clean">
+            <li>一對一諮詢 6 次，每次 60 分鐘</li>
+            <li>每次諮詢後 24 小時內給報告與行動清單</li>
+            <li>聊天、約會前後截圖丟給凡氏，私訊當天回</li>
+            <li>階段 01 停止倒貼＋階段 02 重建吸引力</li>
+            <li>90 天內地下會社系統、案例庫、Q&A 全開</li>
+          </ul>
+          <a class="btn" href="https://www.skool.com/underground-society" target="_blank" rel="noopener">申請 90 天吸引力計畫 <span>→</span></a>
+        </article>
+        <article class="offer gold has-tag">
+          <div class="tag">重案限定・全程陪跑</div>
+          <h3>90 天全程陪跑</h3>
+          <p>適合離過婚、卡在一段關係很多年，或已經反覆選錯人的人<br>從約會到定下來，每一步凡氏都跟妳一起看</p>
+          <div class="price"><small>US$</small><strong>5,000</strong><span>／90 天</span></div>
+          <p class="price-note">無卡分期，<em>最高可分 36 期</em>，名額另外審核</p>
+          <ul class="clean">
+            <li>一對一諮詢 12 次，每次 60 分鐘</li>
+            <li>每次諮詢後 24 小時內給報告與行動清單</li>
+            <li>急件優先回覆，約會前陪妳模擬、約會後陪妳復盤</li>
+            <li>階段 01 到 03 完整走完，含篩選與定下來</li>
+            <li>贈送地下會社系統使用 365 天</li>
+          </ul>
+          <a class="btn gold" href="https://www.skool.com/underground-society" target="_blank" rel="noopener">申請全程陪跑 <span>→</span></a>
+        </article>
+      </div>
+      <div class="renew">
+        <div><small>AFTER 90 DAYS</small><h3>結業後續留地下會社</h3></div>
+        <p>90 天結業後，想繼續用系統、案例庫與 Q&A 把判斷力練穩，再續年訂閱<br>只開放給結業學員續留</p>
+        <strong>US$2,000<span>／年</span></strong>
+      </div>
+      <p class="not-ready">還沒準備好一對一？先到 <a href="https://www.instagram.com/always_mkt/" target="_blank" rel="noopener">IG @always_mkt</a> 看免費拆解</p>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <p class="eyebrow" style="justify-content:center">THE DECISION</p>
+      <h2>妳可以繼續等對的人出現<br>也可以現在換一套方法</h2>
+      <p>如果妳今晚還在想他為什麼已讀不回、為什麼見兩次面就沒下文<br>先讓凡氏幫妳看卡在哪一關<br>90 天，帶妳把認真的人留下來</p>
+      <a class="btn" href="#offers">看 90 天方案 <span>→</span></a>
+    </div>
+  </section>
+
+  <footer>
+    <span>凡氏可行｜地下會社</span>
+    <span>90 天吸引力計畫 NT$80,000｜全程陪跑 US$5,000｜結業續留 US$2,000／年</span>
+  </footer>
+</body>
+</html>
