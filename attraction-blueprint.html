@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>凡氏可行｜高價值女性吸引力藍圖</title>
-  <meta name="description" content="凡氏可行高價值女性吸引力藍圖：前壞男視角，帶妳看懂男生、篩掉不認真的人，讓認真的人留下來。90 天一對一 NT$80,000（可分期），重案陪跑 US$5,000，結業後可續地下會社年訂閱">
+  <meta name="description" content="凡氏可行高價值女性吸引力藍圖：前壞男視角，帶妳看懂男生、篩掉不認真的人，讓認真的人留下來。年訂閱社群 US$1,100，90 天一對一 NT$80,000（可分期），重案陪跑 US$5,000">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;600;800;900&display=swap" rel="stylesheet">
@@ -226,7 +226,20 @@
     .final h2{font-family:"Noto Serif TC",serif;font-size:clamp(32px,4vw,58px);line-height:1.35;font-weight:700;text-wrap:balance}
     .final p{max-width:760px;margin:0 auto 36px;color:#c9beb8;line-height:1.9;font-weight:500;text-wrap:pretty}
     footer{display:flex;justify-content:space-between;gap:20px;padding:30px 44px;border-top:1px solid var(--line);color:#827973;font-size:12px}
+    nav{background:rgba(8,7,8,.94)}
+    .offer-grid.three{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+    .offer-grid.three .offer{padding-left:30px;padding-right:30px}
+    .offer-grid.three .price strong{font-size:52px}
+    .offer .tag.dim{background:#2b2527}
+    .offer > p.price-note,.offer > p.cta-note{min-height:0}
+    .offer > p.price-note{margin:-12px 0 26px;min-height:48px}
+    .offer > p.cta-note{margin:16px 0 0;text-align:center;font-size:14px}
+    .cta-note a{color:#d8cfc7;border-bottom:1px solid rgba(255,255,255,.3)}
+    .offer-grid.three .btn{min-width:0;padding:20px 22px;gap:14px}
+    .offer-chip{line-height:1.6}
+    @media (min-width:981px){.offer-grid.three .offer > p:first-of-type{min-height:150px}}
     @media (max-width:980px){
+      .offer-grid.three{grid-template-columns:1fr}.offer-grid.three .offer > p{min-height:0}
       .hero-grid,.split,.script-grid,.offer-grid,.testimonial-head,.testimonial-grid{grid-template-columns:1fr}
       .hero{min-height:auto}
       .bug-grid{grid-template-columns:1fr}
@@ -276,7 +289,7 @@
       <div>
         <p class="eyebrow">THE HIGH-VALUE ATTRACTION BLUEPRINT</p>
         <h1>妳條件不差<br>遇到的男生卻都不認真<br><em>問題卡在哪一關</em></h1>
-        <p class="lead">凡氏當過舔狗，也當過壞男<br>男生心裡在想、但不會跟妳說的，他直接講給妳聽<br>90 天，帶妳把認真的人吸過來，把不認真的篩掉</p>
+        <p class="lead">凡氏當過舔狗，也當過壞男<br>男生心裡在想、但不會跟妳說的，他直接講給妳聽<br>想自己練有社群陪跑，想快一點有 90 天一對一<br>帶妳把認真的人吸過來，把不認真的篩掉</p>
         <div class="hero-actions">
           <a class="btn" href="#blueprint">看我卡在哪一關 <span>→</span></a>
           <a class="btn ghost" href="#offers">直接看方案 <span>→</span></a>
@@ -330,7 +343,7 @@
           <div class="stage-card">
             <h3><span>01</span>停止倒貼</h3>
             <p>找出妳通常卡在第幾關，停掉秒回、先付出、一次給完<br>這一階先把需求感收起來，讓他開始要花力氣</p>
-            <span class="offer-chip">這階段需要：一對一找出卡關點</span>
+            <span class="offer-chip">年訂閱：課程自己找卡關點<br>一對一：凡氏幫妳找</span>
           </div>
         </article>
         <article class="stage">
@@ -338,7 +351,7 @@
           <div class="stage-card">
             <h3><span>02</span>重建吸引力</h3>
             <p>重新調整第一印象、聊天節奏、約會怎麼收尾、什麼時候讓他追<br>同一個妳，換一套做法，認真的人會開始留下來</p>
-            <span class="offer-chip">這階段需要：一對一陪妳實際約會、實際調整</span>
+            <span class="offer-chip">年訂閱：卡住到社群問<br>一對一：陪妳實際約會、調整</span>
           </div>
         </article>
         <article class="stage">
@@ -346,7 +359,7 @@
           <div class="stage-card">
             <h3><span>03</span>篩選與定下來</h3>
             <p>分得出他是還在追，還是真的喜歡<br>用案例庫、工具和 Q&A 練判斷，把只想睡的篩掉，把想定下來的留下來</p>
-            <span class="offer-chip">這階段可用：結業後續留地下會社，系統與 Q&A</span>
+            <span class="offer-chip">年訂閱：案例庫、課程、每月 Q&A</span>
           </div>
         </article>
         <article class="stage">
@@ -387,23 +400,23 @@
 
   <section class="section maintenance" id="maintenance">
     <div class="wrap maintenance-panel">
-      <p class="eyebrow">AFTERCARE SYSTEM</p>
-      <h2>前面先調整<br>後面讓妳隨時回來校準</h2>
+      <p class="eyebrow">COMMUNITY SUPPORT</p>
+      <h2>卡住的時候<br>妳隨時有地方問</h2>
       <p>很多女生看完影片清醒三天，遇到一個很會撩的，又全部照舊<br>秒回、先付出、什麼都說可以，一個月後又在問同一個問題</p>
-      <p class="maintenance-note">90 天一對一期間，地下會社系統全開<br>結業後想繼續留在系統裡，再續年訂閱，用案例、工具與問題 Q&A 持續校準</p>
+      <p class="maintenance-note">年訂閱社群就是妳平常練習的地方：課程、每月 Q&A、社群情感陪跑<br>90 天一對一期間也全開，結業後想留下來，再續年訂閱</p>
       <div class="maintenance-steps">
         <article class="maintenance-step">
           <b>01</b>
           <div>
-            <h3>一對一先找出妳卡在哪</h3>
-            <p>前 30 天先看清楚妳的模式<br>每次聊天、每次約會，截圖丟給凡氏，他告訴妳男生那邊在想什麼</p>
+            <h3>社群情感陪跑</h3>
+            <p>聊天聊到不知道怎麼回、約完會他沒下文，貼到社群來問<br>凡氏告訴妳男生那邊在想什麼，教妳下一步怎麼走，做完回來再調整</p>
           </div>
         </article>
         <article class="maintenance-step">
           <b>02</b>
           <div>
-            <h3>地下會社是後續校準系統</h3>
-            <p>可以看案例、看拆解，也能用系統做問題 Q&A<br>遇到新對象拿不定主意，就回到系統對一次</p>
+            <h3>每個月一場 Q&A，課程隨時看</h3>
+            <p>這個月卡住的問題帶來，凡氏直接拆給妳聽<br>平常照課程跟案例練，遇到新對象拿不定主意，就回來對一次</p>
           </div>
         </article>
         <article class="maintenance-step">
@@ -462,11 +475,27 @@
       <div class="split">
         <div>
           <p class="eyebrow">FINAL OFFER</p>
-          <h2>現在才講價格<br>先讓妳看清楚每一筆錢買到什麼</h2>
+          <h2>現在才講價格<br>先讓妳看清楚<br>每一筆錢買到什麼</h2>
         </div>
-        <p class="section-copy" style="color:#a79d97">兩個方案都是凡氏本人一對一，90 天<br>大多數人選 90 天吸引力計畫就夠了，離過婚、卡在一段關係很多年或一直選錯人的，才需要全程陪跑</p>
+        <p class="section-copy" style="color:#a79d97">想自己練、有人教，選年訂閱社群<br>想要凡氏一對一帶，大多數人選 90 天吸引力計畫就夠了<br>離過婚、卡在一段關係很多年或一直選錯人的，才需要全程陪跑</p>
       </div>
-      <div class="offer-grid two">
+      <div class="offer-grid three">
+        <article class="offer has-tag">
+          <div class="tag dim">自己練・社群陪跑</div>
+          <h3>年訂閱社群</h3>
+          <p>適合還沒準備好一對一，想照四階藍圖自己練，卡住有人教的人<br>遇到狀況貼到社群，凡氏教妳下一步</p>
+          <div class="price"><small>US$</small><strong>1,100</strong><span>／年</span></div>
+          <p class="price-note">一整年，換算一個月約 US$92</p>
+          <ul class="clean">
+            <li>社群情感陪跑：聊天、約會卡住就來問</li>
+            <li>每個月一場 Q&A，凡氏直接拆</li>
+            <li>既有課程訂閱期間都能看</li>
+            <li>四階藍圖從停止倒貼到換妳挑人，一年照著走</li>
+            <li>案例庫與地下會社系統</li>
+          </ul>
+          <a class="btn ghost" href="https://ig.me/m/always_mkt" target="_blank" rel="noopener">私訊凡氏加入年訂閱 <span>→</span></a>
+          <p class="cta-note">開 IG 私訊，傳「年訂閱」就好<br><a href="annual-community.html">看年訂閱細節</a></p>
+        </article>
         <article class="offer featured has-tag">
           <div class="tag">主力方案・90 天一對一</div>
           <h3>90 天高價值吸引力計畫</h3>
@@ -499,11 +528,11 @@
         </article>
       </div>
       <div class="renew">
-        <div><small>AFTER 90 DAYS</small><h3>結業後續留地下會社</h3></div>
-        <p>90 天結業後，想繼續用系統、案例庫與 Q&A 把判斷力練穩，再續年訂閱<br>只開放給結業學員續留</p>
-        <strong>US$2,000<span>／年</span></strong>
+        <div><small>AFTER 90 DAYS</small><h3>結業後續留年訂閱</h3></div>
+        <p>90 天結業後，想繼續用課程、每月 Q&A 跟社群陪跑把判斷力練穩，續年訂閱就好<br>價格跟年訂閱社群一樣</p>
+        <strong>US$1,100<span>／年</span></strong>
       </div>
-      <p class="not-ready">還沒準備好一對一？先到 <a href="https://www.instagram.com/always_mkt/" target="_blank" rel="noopener">IG @always_mkt</a> 看免費拆解</p>
+      <p class="not-ready">還在觀望？先到 <a href="https://www.instagram.com/always_mkt/" target="_blank" rel="noopener">IG @always_mkt</a> 看免費拆解</p>
     </div>
   </section>
 
@@ -511,14 +540,14 @@
     <div class="wrap">
       <p class="eyebrow" style="justify-content:center">THE DECISION</p>
       <h2>妳可以繼續等對的人出現<br>也可以現在換一套方法</h2>
-      <p>如果妳今晚還在想他為什麼已讀不回、為什麼見兩次面就沒下文<br>先讓凡氏幫妳看卡在哪一關<br>90 天，帶妳把認真的人留下來</p>
-      <a class="btn" href="#offers">看 90 天方案 <span>→</span></a>
+      <p>如果妳今晚還在想他為什麼已讀不回、為什麼見兩次面就沒下文<br>先看自己卡在哪一關，再選自己練或一對一<br>把認真的人留下來</p>
+      <a class="btn" href="#offers">看三個方案 <span>→</span></a>
     </div>
   </section>
 
   <footer>
     <span>凡氏可行｜地下會社</span>
-    <span>90 天吸引力計畫 NT$80,000｜全程陪跑 US$5,000｜結業續留 US$2,000／年</span>
+    <span>年訂閱社群 US$1,100／年｜90 天吸引力計畫 NT$80,000｜全程陪跑 US$5,000</span>
   </footer>
 </body>
 </html>
