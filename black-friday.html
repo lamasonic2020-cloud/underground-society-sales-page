@@ -217,6 +217,9 @@
     .slab li:before{content:"";position:absolute;left:3px;top:.55em;width:13px;height:7px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg)}
     .slab .btn{width:100%;margin-top:40px;min-height:68px;font-size:19px}
     .slab .hint{margin-top:16px;text-align:center;color:var(--soft);font-size:16px}
+    .ask{margin-top:28px;padding-top:24px;border-top:1px solid var(--line2);text-align:center;color:var(--soft);font-size:16px}
+    .ask a{display:inline-block;margin-left:10px;padding:8px 2px;color:#fff;font-weight:700;text-decoration:underline;text-decoration-color:var(--muted);text-underline-offset:6px;transition:text-decoration-color .3s}
+    .ask a:hover{text-decoration-color:#fff}
     .fit{max-width:960px;margin:56px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:48px}
     .fit ul{padding:0;margin-top:16px;list-style:none;color:var(--soft);display:grid;gap:10px}
     .fit li{padding-left:22px;position:relative}
@@ -276,6 +279,7 @@
       .bar{margin-bottom:14px}
       .in .bar i,html:not(.js) .bar i{transform:scaleX(var(--e))}
       .fit{grid-template-columns:1fr}
+      .ask a{display:block;margin:6px 0 0}
       .slab .top{display:block}
       .slab .top>div+div{margin-top:30px}
       .units i{width:13px;height:13px}
@@ -328,7 +332,7 @@
           <p class="until">到台灣時間 11/30 23:59</p>
           <div class="clock" data-clock aria-hidden="true"></div>
         </div>
-        <a class="btn" href="#join"><span class="live">用黑五價加入</span><span class="after">看年訂閱方案</span></a>
+        <a class="btn" href="https://www.skool.com/underground-society/about" target="_blank" rel="noopener"><span class="live">用黑五價加入</span><span class="after">加入年訂閱</span></a>
       </div>
     </div>
   </header>
@@ -443,8 +447,9 @@
             <li>壞男系統 2.0 十篇互動課程</li>
             <li>真實匿名案例拆解</li>
           </ul>
-          <a class="btn" href="https://ig.me/m/always_mkt" target="_blank" rel="noopener"><span class="live">私訊凡氏，用黑五價加入</span><span class="after">私訊凡氏加入</span></a>
-          <p class="hint">按下去會開 IG 私訊，傳<span class="live">「黑五」</span><span class="after">「年訂閱」</span>就好</p>
+          <a class="btn" href="https://www.skool.com/underground-society/about" target="_blank" rel="noopener"><span class="live">用黑五價加入</span><span class="after">加入年訂閱</span></a>
+          <p class="hint">按下去會到 Skool 付款加入</p>
+          <p class="ask">需要分期，或想先問清楚<a href="https://ig.me/m/always_mkt" target="_blank" rel="noopener">私訊凡氏 IG</a></p>
         </div>
       </div>
       <div class="fit rv">
@@ -459,6 +464,7 @@
     <div class="wrap">
       <h2 class="rv">加入前想問</h2>
       <details class="live" open><summary>特價到什麼時候？</summary><p>台灣時間 11/30 晚上 23:59<br>時間一到，這一頁會自動改回 US$5,000</p></details>
+      <details><summary>可以分期嗎？</summary><p>可以先私訊凡氏 IG 問，<a href="https://ig.me/m/always_mkt" target="_blank" rel="noopener">按這裡開私訊</a></p></details>
       <details><summary>這跟一對一差在哪？</summary><p>年訂閱是在社群裡陪，妳發問、凡氏教妳下一步，其他會員也看得到、學得到<br>一對一是凡氏只處理妳這一局，兩個分開</p></details>
       <details><summary>不想讓別人知道是我怎麼辦？</summary><p>發問前把名字、頭像、公司這些可以認出人的資料遮掉<br>只留他說的話跟做的事就夠判斷了</p></details>
       <details><summary>現在單身，加入有用嗎？</summary><p>有用，先把挑人的標準練起來，下一個出現的時候妳就看得懂</p></details>
@@ -471,13 +477,13 @@
       <h2 class="rv">下一個認真的人出現<br>妳會知道怎麼留住</h2>
       <p class="rv" style="--d:.1s">想自己練，又希望旁邊有人教，就從這一年開始<br>要不要，妳自己決定</p>
       <div class="clock live" data-clock aria-hidden="true"></div>
-      <a class="btn" href="#join"><span class="live">用黑五價加入</span><span class="after">看年訂閱方案</span></a>
+      <a class="btn" href="https://www.skool.com/underground-society/about" target="_blank" rel="noopener"><span class="live">用黑五價加入</span><span class="after">加入年訂閱</span></a>
     </div>
   </section>
 
   <footer><span>凡氏可行｜地下會社</span><span class="live">黑五特價 US$1,100／年（約 NT$36,000），到台灣時間 11/30 23:59</span><span class="after">年訂閱社群 US$5,000／年（約 NT$164,000）</span></footer>
 
-  <div class="dock live" id="dock"><p>剩 <span data-mini aria-hidden="true"></span><strong>US$1,100</strong></p><a class="btn" href="#join">用黑五價加入</a></div>
+  <div class="dock live" id="dock"><p>剩 <span data-mini aria-hidden="true"></span><strong>US$1,100</strong></p><a class="btn" href="https://www.skool.com/underground-society/about" target="_blank" rel="noopener">用黑五價加入</a></div>
 
   <script>
   (function(){
