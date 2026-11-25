@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b0b0c">
   <title>凡氏可行｜黑五特價 年訂閱社群</title>
-  <meta name="description" content="凡氏可行地下會社年訂閱社群，黑五特價 US$1,100（原價 US$5,000），到台灣時間 11/30 23:59">
+  <meta name="description" content="凡氏可行地下會社年訂閱社群，黑五特價到台灣時間 11/30 23:59">
   <meta property="og:title" content="凡氏可行｜黑五特價 年訂閱社群">
-  <meta property="og:description" content="社群情感陪跑、每月 Q&amp;A、既有課程全部開放，黑五特價 US$1,100（原價 US$5,000），到台灣時間 11/30 23:59">
+  <meta property="og:description" content="社群情感陪跑、每月 Q&amp;A、既有課程全部開放，黑五特價到台灣時間 11/30 23:59">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lamasonic2020-cloud.github.io/underground-society-sales-page/black-friday.html">
   <meta property="og:image" content="https://lamasonic2020-cloud.github.io/underground-society-sales-page/public/brand/fanshi-logo.jpg">
@@ -82,12 +82,12 @@
     @keyframes fade{to{opacity:1}}
 
     .deal{position:relative;z-index:2;margin-top:clamp(40px,6vw,72px);border-top:1px solid var(--line2)}
-    .deal .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:24px 56px;align-items:center;padding-top:28px;padding-bottom:36px}
+    .deal .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px 56px;align-items:center;padding-top:28px;padding-bottom:36px}
     .deal .tagp{font-size:15px;color:var(--muted);line-height:1.5}
     .was{position:relative;display:inline-block;color:var(--muted);font-family:var(--num);font-weight:500;font-size:24px;line-height:1.2;white-space:nowrap}
     .was:after{content:"";position:absolute;left:-3px;right:-3px;top:52%;height:2px;background:#fff;transform:rotate(-4deg)}
     .js .was:after{transform:rotate(-4deg) scaleX(0);transform-origin:0 50%;transition:transform .9s .35s var(--ease)}
-    .js .in .was:after,.js .was.in:after{transform:rotate(-4deg) scaleX(1)}
+    .js .top.in .was:after{transform:rotate(-4deg) scaleX(1)}
     .big{font-family:var(--num);font-weight:600;font-size:clamp(60px,6.4vw,88px);line-height:1;white-space:nowrap;font-variant-numeric:tabular-nums;
       background:linear-gradient(100deg,#a9acb1 0%,#fbfbfc 22%,#c6c8cc 40%,#fff 52%,#a3a6ac 72%,#eeeef0 100%);background-size:240% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:steel 7s ease-in-out infinite alternate}
     .big small{font-size:.42em;margin-right:.12em}
@@ -212,7 +212,7 @@
     .slab .flip .t,.slab .flip .ft{background:linear-gradient(#43454a,#313337)}
     .slab .flip .b,.slab .flip .fb{background:linear-gradient(#2b2d30,#232427)}
     .until{font-size:16px;color:var(--soft);margin-bottom:12px}
-    .slab ul{list-style:none;padding:36px 0 0;margin:40px 0 0;border-top:1px solid var(--line2);display:grid;gap:14px}
+    .slab ul{list-style:none;padding:0 0 40px;margin:0 0 40px;border-bottom:1px solid var(--line2);display:grid;gap:14px}
     .slab li{position:relative;padding-left:34px}
     .slab li:before{content:"";position:absolute;left:3px;top:.55em;width:13px;height:7px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg)}
     .slab .btn{width:100%;margin-top:40px;min-height:68px;font-size:19px}
@@ -220,14 +220,14 @@
     .ask{margin-top:28px;padding-top:24px;border-top:1px solid var(--line2);text-align:center;color:var(--soft);font-size:16px}
     .ask a{display:inline-block;margin-left:10px;padding:8px 2px;color:#fff;font-weight:700;text-decoration:underline;text-decoration-color:var(--muted);text-underline-offset:6px;transition:text-decoration-color .3s}
     .ask a:hover{text-decoration-color:#fff}
-    .fit{max-width:960px;margin:56px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:48px}
+    .fit{max-width:960px;margin:0 auto 64px;display:grid;grid-template-columns:1fr 1fr;gap:48px}
     .fit ul{padding:0;margin-top:16px;list-style:none;color:var(--soft);display:grid;gap:10px}
     .fit li{padding-left:22px;position:relative}
     .fit li:before{content:"";position:absolute;left:0;top:.9em;width:10px;height:1px;background:var(--muted)}
     .rate{margin-top:56px;text-align:center;color:var(--muted);font-size:15px}
 
     /* 常見問題 */
-    .faq{background:var(--bg2)}
+    .faq{padding-bottom:0}
     .faq .wrap{max-width:900px}
     .faq h2{margin-bottom:44px}
     details{border-top:1px solid var(--line2)}
@@ -238,18 +238,14 @@
     details[open] summary:after{transform:translateY(5px) rotate(225deg)}
     details p{padding:0 0 28px;color:var(--soft);max-width:44em}
 
-    .final{text-align:center;padding-bottom:clamp(120px,13vw,190px)}
-    .final p{margin:24px 0 44px;color:var(--soft)}
-    .final .clock{justify-content:center;margin-bottom:44px}
+    .final{text-align:center;padding-bottom:clamp(40px,5vw,72px)}
+    .final p{margin:24px 0 0;color:var(--soft)}
     footer{border-top:1px solid var(--line);padding:28px var(--gut) 34px;display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-between;color:var(--muted);font-size:14px}
 
-    .dock{display:none}
     .ended .live{display:none!important}
     html:not(.ended) .after{display:none!important}
 
     @media(max-width:980px){
-      .deal .wrap{grid-template-columns:1fr auto}
-      .deal .btn{grid-column:1/-1}
       .got .head,.how .grid,.proof .grid{grid-template-columns:1fr}
       .how .side{position:static}
       .plates{grid-template-columns:1fr;grid-template-rows:none}
@@ -268,11 +264,11 @@
       .hero:after{background:linear-gradient(0deg,#0b0b0c 0%,rgba(11,11,12,.78) 48%,rgba(11,11,12,.3) 100%)}
       .hero .lead{margin-top:20px;font-size:16px}
       .deal{margin-top:32px}
-      .deal .wrap{grid-template-columns:1fr;gap:22px;padding-top:24px}
+      .deal .wrap{gap:26px;padding-top:24px}
+      .deal .wrap>.live{width:100%}
       .clock{--w:min(34px,8.4vw);gap:10px;justify-content:space-between}
       .slab .clock{--w:min(30px,7vw);gap:8px}
       .deal .clock,.slab .clock{max-width:340px}
-      .final .clock{justify-content:center}
       .btn{width:100%}
       .road{grid-template-columns:1fr;gap:34px}
       .leg{padding:0}
@@ -284,12 +280,6 @@
       .slab .top>div+div{margin-top:30px}
       .units i{width:13px;height:13px}
       .chat div{max-width:94%}
-      footer{padding-bottom:110px}
-      .dock{position:fixed;z-index:49;left:0;right:0;bottom:0;display:flex;align-items:center;gap:14px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#131315;border-top:1px solid var(--line2);transform:translateY(110%);transition:transform .5s var(--ease)}
-      .dock.show{transform:none}
-      .dock p{line-height:1.25;font-size:13px;color:var(--soft);white-space:nowrap}
-      .dock strong{display:block;font-family:var(--num);font-weight:600;font-size:25px;color:#fff}
-      .dock .btn{min-height:50px;padding:8px 14px;font-size:16px;width:auto;flex:1}
     }
     @media(prefers-reduced-motion:reduce){
       html{scroll-behavior:auto}
@@ -320,24 +310,15 @@
     <div class="deal fade">
       <div class="wrap" data-in>
         <div class="live">
-          <span class="was">原價 US$5,000</span>
-          <div class="big"><small>US$</small>1,100<em>／年</em></div>
-          <p class="twd">約 NT$36,000／年</p>
-        </div>
-        <div class="after">
-          <div class="big"><small>US$</small>5,000<em>／年</em></div>
-          <p class="twd">約 NT$164,000／年</p>
-        </div>
-        <div class="live">
-          <p class="until">到台灣時間 11/30 23:59</p>
+          <p class="until">黑五特價到台灣時間 11/30 23:59</p>
           <div class="clock" data-clock aria-hidden="true"></div>
         </div>
-        <a class="btn" href="https://www.skool.com/underground-society/about" target="_blank" rel="noopener"><span class="live">用黑五價加入</span><span class="after">加入年訂閱</span></a>
+        <a class="btn" href="#why">先看完整內容</a>
       </div>
     </div>
   </header>
 
-  <section class="pain" aria-label="妳是不是這樣">
+  <section class="pain" id="why" aria-label="妳是不是這樣">
     <div class="wrap">
       <p><span class="lit">聊得很好</span><span class="lit">見一兩次就沒下文</span></p>
       <p><span class="lit">一喜歡上</span><span class="lit">就全部給出去</span></p>
@@ -418,52 +399,10 @@
     </div>
   </section>
 
-  <section class="offer" id="join">
-    <div class="wrap">
-      <h2 class="rv"><span class="live">一整年<br>黑五只要 US$1,100</span><span class="after">黑五特價已結束<br>現在恢復原價</span></h2>
-      <div class="slab rv">
-        <div data-in>
-          <h3>地下會社・年訂閱社群</h3>
-          <div class="top">
-            <div class="live">
-              <span class="was">原價 US$5,000</span>
-              <div class="big" aria-label="US$1,100 一年"><small>US$</small><span data-drop>1,100</span><em>／年</em></div>
-              <p class="twd">約 NT$36,000／年，一個月約 US$92</p>
-              <span class="save">現省 US$3,900（約 NT$128,000）</span>
-            </div>
-            <div class="after">
-              <div class="big"><small>US$</small>5,000<em>／年</em></div>
-              <p class="twd">約 NT$164,000／年</p>
-            </div>
-            <div class="live">
-              <p class="until">到台灣時間 11/30 23:59</p>
-              <div class="clock" data-clock aria-hidden="true"></div>
-            </div>
-          </div>
-          <ul>
-            <li>社群情感陪跑，卡住就來問</li>
-            <li>每個月一場 Q&A</li>
-            <li>6 門課、61 個單元全部開放</li>
-            <li>壞男系統 2.0 十篇互動課程</li>
-            <li>真實匿名案例拆解</li>
-          </ul>
-          <a class="btn" href="https://www.skool.com/underground-society/about" target="_blank" rel="noopener"><span class="live">用黑五價加入</span><span class="after">加入年訂閱</span></a>
-          <p class="hint">按下去會到 Skool 付款加入</p>
-          <p class="ask">需要分期，或想先問清楚<a href="https://ig.me/m/always_mkt" target="_blank" rel="noopener">私訊凡氏 IG</a></p>
-        </div>
-      </div>
-      <div class="fit rv">
-        <div><h3>適合妳</h3><ul><li>條件不差，卻一直遇不到認真的人</li><li>願意照著做，做完回來講結果</li><li>想用一年把吸引力跟看人的眼光練好</li></ul></div>
-        <div><h3>先不要買</h3><ul><li>只想找人陪妳罵他</li><li>想要凡氏保證他回來</li><li>需要一對一專屬處理</li></ul></div>
-      </div>
-      <p class="rate">標「約」的是換算金額，以 1 美元約 32.8 台幣計算<br>實際以付款時為準</p>
-    </div>
-  </section>
-
   <section class="faq">
     <div class="wrap">
       <h2 class="rv">加入前想問</h2>
-      <details class="live" open><summary>特價到什麼時候？</summary><p>台灣時間 11/30 晚上 23:59<br>時間一到，這一頁會自動改回 US$5,000</p></details>
+      <details class="live" open><summary>特價到什麼時候？</summary><p>台灣時間 11/30 晚上 23:59<br>時間一到就恢復原價</p></details>
       <details><summary>可以分期嗎？</summary><p>可以先私訊凡氏 IG 問，<a href="https://ig.me/m/always_mkt" target="_blank" rel="noopener">按這裡開私訊</a></p></details>
       <details><summary>這跟一對一差在哪？</summary><p>年訂閱是在社群裡陪，妳發問、凡氏教妳下一步，其他會員也看得到、學得到<br>一對一是凡氏只處理妳這一局，兩個分開</p></details>
       <details><summary>不想讓別人知道是我怎麼辦？</summary><p>發問前把名字、頭像、公司這些可以認出人的資料遮掉<br>只留他說的話跟做的事就夠判斷了</p></details>
@@ -475,15 +414,55 @@
   <section class="final">
     <div class="wrap">
       <h2 class="rv">下一個認真的人出現<br>妳會知道怎麼留住</h2>
-      <p class="rv" style="--d:.1s">想自己練，又希望旁邊有人教，就從這一年開始<br>要不要，妳自己決定</p>
-      <div class="clock live" data-clock aria-hidden="true"></div>
-      <a class="btn" href="https://www.skool.com/underground-society/about" target="_blank" rel="noopener"><span class="live">用黑五價加入</span><span class="after">加入年訂閱</span></a>
+      <p class="rv" style="--d:.1s">想自己練，又希望旁邊有人教，就從這一年開始</p>
     </div>
   </section>
 
-  <footer><span>凡氏可行｜地下會社</span><span class="live">黑五特價 US$1,100／年（約 NT$36,000），到台灣時間 11/30 23:59</span><span class="after">年訂閱社群 US$5,000／年（約 NT$164,000）</span></footer>
+  <section class="offer" id="join">
+    <div class="wrap">
+      <h2 class="rv">看到這裡<br>妳再決定要不要</h2>
+      <div class="fit rv">
+        <div><h3>適合妳</h3><ul><li>條件不差，卻一直遇不到認真的人</li><li>願意照著做，做完回來講結果</li><li>想用一年把吸引力跟看人的眼光練好</li></ul></div>
+        <div><h3>先不要買</h3><ul><li>只想找人陪妳罵他</li><li>想要凡氏保證他回來</li><li>需要一對一專屬處理</li></ul></div>
+      </div>
+      <div class="slab rv">
+        <div>
+          <h3>地下會社・年訂閱社群<br>一整年妳會拿到</h3>
+          <ul>
+            <li>社群情感陪跑，卡住就來問</li>
+            <li>每個月一場 Q&A</li>
+            <li>6 門課、61 個單元全部開放</li>
+            <li>壞男系統 2.0 十篇互動課程</li>
+            <li>真實匿名案例拆解</li>
+          </ul>
+          <div class="top" data-in>
+            <div class="live">
+              <span class="was">原價 US$5,000</span>
+              <div class="big" aria-label="US$1,100 一年"><small>US$</small><span data-drop>1,100</span><em>／年</em></div>
+              <p class="twd">約 NT$36,000／年，一個月約 US$92</p>
+              <span class="save">現省 US$3,900（約 NT$128,000）</span>
+            </div>
+            <div class="after">
+              <p class="until">黑五特價已結束</p>
+              <div class="big"><small>US$</small>5,000<em>／年</em></div>
+              <p class="twd">約 NT$164,000／年</p>
+            </div>
+            <div class="live">
+              <p class="until">到台灣時間 11/30 23:59</p>
+              <div class="clock" data-clock aria-hidden="true"></div>
+            </div>
+          </div>
+          <a class="btn" href="https://www.skool.com/underground-society/about" target="_blank" rel="noopener"><span class="live">用黑五價加入</span><span class="after">加入年訂閱</span></a>
+          <p class="hint">按下去會到 Skool 付款加入</p>
+          <p class="ask">需要分期，或想先問清楚<a href="https://ig.me/m/always_mkt" target="_blank" rel="noopener">私訊凡氏 IG</a></p>
+        </div>
+      </div>
+      <p class="rate">標「約」的是換算金額，以 1 美元約 32.8 台幣計算<br>實際以付款時為準</p>
+    </div>
+  </section>
 
-  <div class="dock live" id="dock"><p>剩 <span data-mini aria-hidden="true"></span><strong>US$1,100</strong></p><a class="btn" href="https://www.skool.com/underground-society/about" target="_blank" rel="noopener">用黑五價加入</a></div>
+  <footer><span>凡氏可行｜地下會社</span><span class="live">黑五特價到台灣時間 11/30 23:59</span><span class="after">年訂閱社群</span></footer>
+
 
   <script>
   (function(){
@@ -546,14 +525,14 @@
       })(t0);
     }
     var items=$$('.rv,[data-in]');
-    function show(el){ el.classList.add('in'); $$('[data-drop]',el).forEach(drop); }
+    function show(el){ el.classList.add('in'); if(el.hasAttribute('data-in')) $$('[data-drop]',el).forEach(drop); }
     if('IntersectionObserver' in window){
-      var io=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){show(e.target);io.unobserve(e.target);} })},{threshold:.18,rootMargin:'0px 0px -6% 0px'});
+      var io=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){show(e.target);io.unobserve(e.target);} })},{threshold:.08,rootMargin:'0px 0px -6% 0px'});
       items.forEach(function(el){io.observe(el)});
     } else items.forEach(show);
 
     /* 隨捲動 */
-    var lits=$$('.lit'), scrubs=$$('[data-scrub]'), nav=document.getElementById('nav'), dock=document.getElementById('dock'), join=document.getElementById('join'), hero=document.getElementById('top'), queued=false;
+    var lits=$$('.lit'), scrubs=$$('[data-scrub]'), nav=document.getElementById('nav'), queued=false;
     var clamp=function(v){return Math.max(0,Math.min(1,v))};
     function scroll(){
       queued=false;
@@ -561,8 +540,6 @@
       nav.classList.toggle('on',scrollY>40);
       lits.forEach(function(el){ var r=el.getBoundingClientRect(); el.style.setProperty('--p',still?1:clamp((H*.9-r.top)/(H*.42)).toFixed(3)); });
       scrubs.forEach(function(el){ var r=el.getBoundingClientRect(); el.style.setProperty('--p',clamp((H*.68-r.top)/r.height).toFixed(3)); });
-      var j=join.getBoundingClientRect();
-      dock.classList.toggle('show',hero.getBoundingClientRect().bottom<H*.35 && !(j.top<H*.8&&j.bottom>H*.2));
     }
     function q(){ if(!queued){queued=true;requestAnimationFrame(scroll);} }
     addEventListener('scroll',q,{passive:true}); addEventListener('resize',q); scroll();
