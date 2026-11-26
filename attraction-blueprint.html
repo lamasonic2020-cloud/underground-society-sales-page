@@ -319,6 +319,29 @@
     .testimonial-shot img{filter:grayscale(1) contrast(1.04)}
     @media(max-width:980px){.hero:before{background:linear-gradient(0deg,#0b0b0c 0%,rgba(9,9,10,.74) 40%,rgba(9,9,10,.5) 100%)}}
     @media(prefers-reduced-motion:reduce){h1 em{animation:none}.btn:before{display:none}}
+    /* 全頁黑暗風：原本淺灰的三段（卡點、挽回、前後對照）改深色 */
+    .paper,.compare{background:#080808;color:var(--ink);--red:#e9e9e9;border-top:1px solid rgba(255,255,255,.07)}
+    .paper{background:radial-gradient(circle at 85% 0,rgba(255,255,255,.06),transparent 45%),#080808}
+    .paper .eyebrow,.compare .eyebrow{color:#9a9a9a}
+    .section-copy{color:#9a9a9a}
+    .bug-grid{border-color:rgba(255,255,255,.14);background:rgba(255,255,255,.14)}
+    .bug{background:#0e0e0e}
+    .bug b{color:#fff}
+    .bug h3{color:#f2f2f2}
+    .bug p{color:#9b9b9b}
+    table{border-color:rgba(255,255,255,.14);background:#0e0e0e}
+    th,td{border-color:rgba(255,255,255,.14)}
+    th{background:#181818;color:#fff}
+    td:nth-child(1){color:#f2f2f2}
+    td:nth-child(2){color:#8f8f8f}
+    .compare td:nth-child(3){color:#fff;border-left-color:#e9e9e9}
+    @media (max-width:640px){
+      td:nth-child(1){background:#161616}
+      td:nth-child(2){background:#0e0e0e}
+      td:nth-child(2):before{color:#7a7a7a}
+      .compare td:nth-child(3){background:#121212;border-top-color:rgba(255,255,255,.14)}
+      td:nth-child(3):before{color:#cfcfcf}
+    }
   </style>
   <script>
   (function(){
